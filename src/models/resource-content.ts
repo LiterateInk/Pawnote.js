@@ -16,6 +16,7 @@ export type ResourceContent = Readonly<{
   description?: string;
 
   category: ResourceContentCategory;
+  categoryText?: string;
   files: Attachment[];
   /** Themes associated with the lesson. */
   themes: AssignmentTheme[];

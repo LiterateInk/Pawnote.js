@@ -8,6 +8,7 @@ export const decodeResourceContent = (content: any, session: SessionHandle): Res
     title: content.L,
     description: content.descriptif.V,
     category: content.categorie.V.G,
+    categoryText: content.category.V.L,
     files: content.ListePieceJointe.V.map((attachment: any) => decodeAttachment(attachment, session)),
     themes: content.ListeThemes.V.map((theme: any) => decodeAssignmentTheme(theme)),
     // TODO: Investigate to see what is contained here when not `-1`.
