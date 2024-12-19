@@ -6,7 +6,7 @@ export const decodeNotebookAbsence = (absence: any): NotebookAbsence => {
   const isReasonUnknown = absence.estMotifNonEncoreConnu;
 
   return {
-    id: absence.name,
+    id: absence.N,
     startDate: decodePronoteDate(absence.dateDebut.V),
     endDate: decodePronoteDate(absence.dateFin.V),
     justified: absence.justifie,
