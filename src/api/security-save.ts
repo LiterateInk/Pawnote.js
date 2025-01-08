@@ -2,6 +2,7 @@ import { RequestFN } from "~/core/request-function";
 import { DoubleAuthMode, DoubleAuthServerAction, SecurityModal, type SessionHandle } from "~/models";
 import { aesKeys } from "./private/keys";
 import { AES } from "./private/aes";
+import { dataProperty } from "./private/data-property";
 
 export const securitySave = async (session: SessionHandle, handle: SecurityModal, options: {
   password?: string,
@@ -32,12 +33,14 @@ export const securitySave = async (session: SessionHandle, handle: SecurityModal
     data.strIdentification = options.deviceName;
   }
 
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "SecurisationCompteDoubleAuth", {
-    donnees: data
+    [property]: data
   });
 
   const response = await request.send();
-  const token = response.data.donnees.jetonConnexionAppliMobile;
+  const token = response.data[property].jetonConnexionAppliMobile;
 
   if (token) { // update the token to use for refresh information generation
     handle.context.authentication.jetonConnexionAppliMobile = token;

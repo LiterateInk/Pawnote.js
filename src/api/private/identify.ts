@@ -1,5 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import type { SessionHandle } from "~/models";
+import { dataProperty } from "./data-property";
 
 export const identify = async (session: SessionHandle, parameters: {
   requestFirstMobileAuthentication: boolean,
@@ -10,8 +11,10 @@ export const identify = async (session: SessionHandle, parameters: {
   username: string
   deviceUUID: string
 }): Promise<any> => {
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "Identification", {
-    donnees: {
+    [property]: {
       genreConnexion: 0, // NOTE: Probably the `accessKind` property, not sure though.
       genreEspace: session.information.accountKind,
       identifiant: parameters.username,
@@ -27,5 +30,5 @@ export const identify = async (session: SessionHandle, parameters: {
   });
 
   const response = await request.send();
-  return response.data.donnees;
+  return response.data[property];
 };

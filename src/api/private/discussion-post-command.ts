@@ -1,5 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { DiscussionCommand, EntityState, TabLocation, type SessionHandle } from "~/models";
+import { dataProperty } from "./data-property";
 
 export const discussionPostCommand = async (session: SessionHandle, command: DiscussionCommand | "", extra: any): Promise<void> => {
   let payload;
@@ -59,7 +60,7 @@ export const discussionPostCommand = async (session: SessionHandle, command: Dis
 
   const request = new RequestFN(session, "SaisieMessage", {
     _Signature_: { onglet: TabLocation.Discussions },
-    donnees: payload
+    [dataProperty(session)]: payload
   });
 
   await request.send();

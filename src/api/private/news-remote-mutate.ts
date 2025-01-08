@@ -3,6 +3,7 @@ import { encodeDomain } from "~/encoders/domain";
 import { NewsInformation, type NewsItem, NewsSurvey, type SessionHandle, TabLocation } from "~/models";
 import type { NewsQuestion } from "~/models/news-question";
 import { NewsQuestionKind } from "~/models/news-question-kind";
+import { dataProperty } from "./data-property";
 
 /**
  * Updates the status of a news item.
@@ -19,7 +20,7 @@ export const newsRemoteMutate = async (session: SessionHandle, item: NewsInforma
   const request = new RequestFN(session, "SaisieActualites", {
     _Signature_: { onglet: TabLocation.News },
 
-    donnees: {
+    [dataProperty(session)]: {
       listeActualites: [{
         N: item.id,
         L: item.title ?? "",

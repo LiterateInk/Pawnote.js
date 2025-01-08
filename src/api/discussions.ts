@@ -3,12 +3,15 @@ import { decodeDiscussion } from "~/decoders/discussion";
 import { decodeDiscussionFolder } from "~/decoders/discussion-folder";
 import { type Discussion, type Discussions, TabLocation, type SessionHandle } from "~/models";
 import type { _DiscussionsCache } from "./private/discussions-cache";
+import { dataProperty } from "./private/data-property";
 
 export const discussions = async (session: SessionHandle, cache: _DiscussionsCache = {_:[]}): Promise<Discussions> => {
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "ListeMessagerie", {
     _Signature_: { onglet: TabLocation.Discussions },
 
-    donnees: {
+    [property]: {
       avecLu: true,
       avecMessage: true,
       possessionMessageDiscussionUnique: null
@@ -16,7 +19,7 @@ export const discussions = async (session: SessionHandle, cache: _DiscussionsCac
   });
 
   const response = await request.send();
-  const data = response.data.donnees;
+  const data = response.data[property];
 
   const folders = data.listeEtiquettes.V.map(decodeDiscussionFolder);
 

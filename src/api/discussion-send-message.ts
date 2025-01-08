@@ -4,6 +4,7 @@ import { RequestFN } from "~/core/request-function";
 import { discussionMessages } from "./discussion-messages";
 import { createEntityID } from "./helpers/entity-id";
 import { discussions } from "./discussions";
+import { dataProperty } from "./private/data-property";
 
 export const discussionSendMessage = async (
   session: SessionHandle,
@@ -20,7 +21,7 @@ export const discussionSendMessage = async (
 
   const action = encodeDiscussionSendAction(discussion.messages.sendAction, includeParentsAndStudents);
   const request = new RequestFN(session, "SaisieMessage", {
-    donnees: {
+    [dataProperty(session)]: {
       contenu: session.user.authorizations.hasAdvancedDiscussionEditor ? {
         _T: 21,
         V: content
@@ -50,4 +51,3 @@ export const discussionSendMessage = async (
   await discussions(session, discussion.cache);
   await discussionMessages(session, discussion);
 };
-

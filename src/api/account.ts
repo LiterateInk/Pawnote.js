@@ -1,6 +1,7 @@
 import { RequestFN } from "~/core/request-function";
 import { decodeAccount } from "~/decoders/account";
 import { type Account, type SessionHandle, TabLocation } from "~/models";
+import { dataProperty } from "./private/data-property";
 
 export const account = async (session: SessionHandle): Promise<Account> => {
   const request = new RequestFN(session, "PageInfosPerso", {
@@ -15,5 +16,5 @@ export const account = async (session: SessionHandle): Promise<Account> => {
   });
 
   const response = await request.send();
-  return decodeAccount(response.data.donnees, session);
+  return decodeAccount(response.data[dataProperty(session)], session);
 };

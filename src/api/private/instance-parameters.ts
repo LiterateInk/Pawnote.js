@@ -19,13 +19,20 @@ export const instanceParameters = async (session: SessionHandle, navigatorIdenti
     uuid = forge.util.encode64(rsaKey.encrypt(aesIV));
   }
 
+  const data = {
+    identifiantNav: navigatorIdentifier,
+    Uuid: uuid
+  };
+
   const request = new RequestFN(session, "FonctionParametres", {
-    donnees: {
-      identifiantNav: navigatorIdentifier,
-      Uuid: uuid
-    }
+    // Since we don't know the version yet,
+    // we're going to send it twice to prevent
+    // doing extra requests or weird scraping from HTML.
+    data, donnees: data
   });
 
   const response = await request.send();
-  return decodeInstanceParameters(response.data.donnees);
+
+  // Same here, we're going to check both data keys.
+  return decodeInstanceParameters(response.data.data || response.data.donnees);
 };

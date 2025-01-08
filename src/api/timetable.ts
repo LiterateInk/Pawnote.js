@@ -4,12 +4,15 @@ import { RequestFN } from "~/core/request-function";
 import { encodeUserResource } from "~/encoders/user-resource";
 import { decodeTimetable } from "~/decoders/timetable";
 import { encodePronoteDate } from "~/encoders/pronote-date";
+import { dataProperty } from "./private/data-property";
 
 const timetable = async (session: SessionHandle, additional = {}): Promise<Timetable> => {
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "PageEmploiDuTemps", {
     _Signature_: { onglet: TabLocation.Timetable },
 
-    donnees: {
+    [property]: {
       estEDTAnnuel: false,
       estEDTPermanence: false,
 
@@ -31,7 +34,7 @@ const timetable = async (session: SessionHandle, additional = {}): Promise<Timet
   });
 
   const response = await request.send();
-  return decodeTimetable(response.data.donnees, session);
+  return decodeTimetable(response.data[property], session);
 };
 
 export const timetableFromWeek = async (session: SessionHandle, weekNumber: number): Promise<Timetable> => {

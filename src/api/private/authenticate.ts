@@ -1,9 +1,12 @@
 import { RequestFN } from "~/core/request-function";
 import { AccessDeniedError, AccountDisabledError, AuthenticateError, BadCredentialsError, type SessionHandle } from "~/models";
+import { dataProperty } from "./data-property";
 
 export const authenticate = async (session: SessionHandle, challenge: string) => {
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "Authentification", {
-    donnees: {
+    [property]: {
       connexion: 0, // NOTE: Probably the `accessKind` property, not sure though.
       challenge,
       espace: session.information.accountKind
@@ -11,7 +14,7 @@ export const authenticate = async (session: SessionHandle, challenge: string) =>
   });
 
   const response = await request.send();
-  const data = response.data.donnees;
+  const data = response.data[property];
 
   // Handle potential errors.
   if (typeof data.Acces === "number" && data.Acces !== 0) {

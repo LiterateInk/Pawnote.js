@@ -1,6 +1,7 @@
 import { RequestFN } from "~/core/request-function";
 import { decodeDiscussionMessages } from "~/decoders/discussion-messages";
 import { type Discussion, DiscussionMessages, type SessionHandle, TabLocation } from "~/models";
+import { dataProperty } from "./private/data-property";
 
 /**
  * Fetches the messages and writes them in the discussion.
@@ -12,10 +13,12 @@ import { type Discussion, DiscussionMessages, type SessionHandle, TabLocation } 
  * @param markAsRead Whether to mark the messages as read after fetching them.
  */
 export const discussionMessages = async (session: SessionHandle, discussion: Discussion, markAsRead = false): Promise<DiscussionMessages> => {
+  const property = dataProperty(session);
+
   const request = new RequestFN(session, "ListeMessages", {
     _Signature_: { onglet: TabLocation.Discussions },
 
-    donnees: {
+    [property]: {
       listePossessionsMessages: discussion.possessions,
       marquerCommeLu: markAsRead,
       nbMessagesVus: 0 // fetch all messages
@@ -23,7 +26,7 @@ export const discussionMessages = async (session: SessionHandle, discussion: Dis
   });
 
   const response = await request.send();
-  const messages = decodeDiscussionMessages(response.data.donnees, session);
+  const messages = decodeDiscussionMessages(response.data[property], session);
 
   if (!discussion.messages) // setup the reference
     discussion.messages = messages;

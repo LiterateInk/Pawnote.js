@@ -1,5 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { EntityState, NewDiscussionRecipient, SessionHandle, TabLocation } from "~/models";
+import { dataProperty } from "./private/data-property";
 
 /**
  * Create a discussion.
@@ -17,7 +18,7 @@ export const newDiscussion = async (
   const request = new RequestFN(session, "SaisieMessage", {
     _Signature_: { onglet: TabLocation.Discussions },
 
-    donnees: {
+    [dataProperty(session)]: {
       contenu: session.user.authorizations.hasAdvancedDiscussionEditor ? {
         _T: 21,
         V: content

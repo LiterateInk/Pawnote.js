@@ -1,4 +1,4 @@
-import { type AccountKind, type RefreshInformation, type SessionHandle, BadCredentialsError, DoubleAuthClientAction, DoubleAuthMode, SecurityError } from "~/models";
+import { type AccountKind, type RefreshInformation, type SessionHandle, BadCredentialsError, SecurityError } from "~/models";
 import { sessionInformation } from "../session-information";
 import { instanceParameters } from "../private/instance-parameters";
 import { cleanURL } from "./clean-url";
@@ -36,6 +36,7 @@ export const loginCredentials = async (session: SessionHandle, auth: {
     cookies: [], // none
     params: {
       ...BASE_PARAMS,
+      // bypasss delegation
       bydlg: "A6ABB224-12DD-4E31-AD3E-8A39A1C2C335"
     }
   }, session.fetcher);
