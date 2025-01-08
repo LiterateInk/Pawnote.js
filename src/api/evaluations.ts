@@ -2,21 +2,21 @@ import { RequestFN } from "~/core/request-function";
 import { decodeEvaluation } from "~/decoders/evaluation";
 import { encodePeriod } from "~/encoders/period";
 import { type Evaluation, type Period, type SessionHandle, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const evaluations = async (session: SessionHandle, period: Period): Promise<Array<Evaluation>> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "DernieresEvaluations", {
-    _Signature_: { onglet: TabLocation.Evaluations },
+    [properties.signature]: { onglet: TabLocation.Evaluations },
 
-    [property]: {
+    [properties.data]: {
       periode: encodePeriod(period)
     }
   });
 
   const response = await request.send();
 
-  return response.data[property].listeEvaluations.V
+  return response.data[properties.data].listeEvaluations.V
     .map(decodeEvaluation);
 };

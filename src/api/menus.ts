@@ -2,14 +2,14 @@ import { RequestFN } from "~/core/request-function";
 import { decodeWeekMenu } from "~/decoders/week-menu";
 import { encodePronoteDate } from "~/encoders/pronote-date";
 import { TabLocation, type WeekMenu, type SessionHandle } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const menus = async (session: SessionHandle, date = new Date()): Promise<WeekMenu> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "PageMenus", {
-    _Signature_: { onglet: TabLocation.Menus },
-    [property]: {
+    [properties.signature]: { onglet: TabLocation.Menus },
+    [properties.data]: {
       date: {
         _T: 7,
         V: encodePronoteDate(date)
@@ -18,5 +18,5 @@ export const menus = async (session: SessionHandle, date = new Date()): Promise<
   });
 
   const response = await request.send();
-  return decodeWeekMenu(response.data[property]);
+  return decodeWeekMenu(response.data[properties.data]);
 };

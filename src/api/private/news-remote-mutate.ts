@@ -1,9 +1,8 @@
 import { RequestFN } from "~/core/request-function";
 import { encodeDomain } from "~/encoders/domain";
 import { NewsInformation, type NewsItem, NewsSurvey, type SessionHandle, TabLocation } from "~/models";
-import type { NewsQuestion } from "~/models/news-question";
 import { NewsQuestionKind } from "~/models/news-question-kind";
-import { dataProperty } from "./data-property";
+import { apiProperties } from "./api-properties";
 
 /**
  * Updates the status of a news item.
@@ -14,13 +13,15 @@ export const newsRemoteMutate = async (session: SessionHandle, item: NewsInforma
   markAsRead: true,
   onlyMarkAsRead: false
 }) => {
+  const properties = apiProperties(session);
+
   const answers = (options.onlyMarkAsRead || options.delete) ? []
     : item.is === "information" ? [item.question] : item.questions;
 
   const request = new RequestFN(session, "SaisieActualites", {
-    _Signature_: { onglet: TabLocation.News },
+    [properties.signature]: { onglet: TabLocation.News },
 
-    [dataProperty(session)]: {
+    [properties.data]: {
       listeActualites: [{
         N: item.id,
         L: item.title ?? "",

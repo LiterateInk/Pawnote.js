@@ -1,17 +1,17 @@
 import { RequestFN } from "~/core/request-function";
 import { encodePeriod } from "~/encoders/period";
 import { type Period, type SessionHandle, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 /**
  * @param period - Period the grades report will be from.
  * @returns URL to download the PDF file.
  */
 export const gradebookPDF = async (session: SessionHandle, period: Period): Promise<string> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "GenerationPDF", {
-    [property]: {
+    [properties.data]: {
       avecCodeCompetences: false,
       genreGenerationPDF: 2,
 
@@ -32,9 +32,9 @@ export const gradebookPDF = async (session: SessionHandle, period: Period): Prom
       periode: encodePeriod(period)
     },
 
-    _Signature_: { onglet: TabLocation.Gradebook }
+    [properties.signature]: { onglet: TabLocation.Gradebook }
   });
 
   const response = await request.send();
-  return session.information.url + "/" + encodeURI(response.data[property].url.V);
+  return session.information.url + "/" + encodeURI(response.data[properties.data].url.V);
 };

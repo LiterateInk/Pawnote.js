@@ -1,12 +1,14 @@
 import { RequestFN } from "~/core/request-function";
 import { type Partner, type SessionHandle, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const partnerURL = async (session: SessionHandle, partner: Partner): Promise<string> => {
-  const request = new RequestFN(session, "SaisieURLPartenaire", {
-    _Signature_: { onglet: TabLocation.Presence },
+  const properties = apiProperties(session);
 
-    [dataProperty(session)]: {
+  const request = new RequestFN(session, "SaisieURLPartenaire", {
+    [properties.signature]: { onglet: TabLocation.Presence },
+
+    [properties.data]: {
       SSO: partner.sso
     }
   });

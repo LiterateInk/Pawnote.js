@@ -33,8 +33,15 @@ export class ResponseFN {
         this.data = JSON.parse(this.data);
       }
 
+      // RETROCOMPAT: _Signature_ is only available on versions < `2024.3.9`
+      // We can't use `session` to check the version here because
+      // we use `ResponseFN` before the `version` property is known.
       if (typeof this.data?._Signature_?.Erreur !== "undefined") {
         throw new ServerSideError(this.data._Signature_.MessageErreur);
+      }
+
+      if (typeof this.data?.Signature?.Erreur !== "undefined") {
+        throw new ServerSideError(this.data.Signature.MessageErreur);
       }
     }
     catch (error) {

@@ -3,15 +3,15 @@ import { decodeNotebook } from "~/decoders/notebook";
 import { encodePeriod } from "~/encoders/period";
 import { encodePronoteDate } from "~/encoders/pronote-date";
 import { type SessionHandle, type Notebook, type Period, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const notebook = async (session: SessionHandle, period: Period): Promise<Notebook> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "PagePresence", {
-    _Signature_: { onglet: TabLocation.Notebook },
+    [properties.signature]: { onglet: TabLocation.Notebook },
 
-    [property]: {
+    [properties.data]: {
       periode: encodePeriod(period),
 
       DateDebut: {
@@ -27,5 +27,5 @@ export const notebook = async (session: SessionHandle, period: Period): Promise<
   });
 
   const response = await request.send();
-  return decodeNotebook(response.data[property], session);
+  return decodeNotebook(response.data[properties.data], session);
 };

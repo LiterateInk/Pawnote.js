@@ -3,7 +3,7 @@ import type { FormDataFile } from "@literate.ink/utilities";
 import { createEntityID } from "~/api/helpers/entity-id";
 import { RequestUpload } from "~/core/request-upload";
 import { RequestFN } from "~/core/request-function";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const assignmentUploadFile = async (session: SessionHandle, assignmentID: string, file: FormDataFile, fileName: string): Promise<void> => {
   // Check if the file can be uploaded.
@@ -19,11 +19,14 @@ export const assignmentUploadFile = async (session: SessionHandle, assignmentID:
   const fileUpload = new RequestUpload(session, "SaisieTAFARendreEleve", file, fileName);
   await fileUpload.send();
 
+  const properties = apiProperties(session);
+
+
   // Now we can link the file to the assignment.
   const request = new RequestFN(session, "SaisieTAFARendreEleve", {
-    _Signature_: { onglet: TabLocation.Assignments },
+    [properties.signature]: { onglet: TabLocation.Assignments },
 
-    [dataProperty(session)]: {
+    [properties.data]: {
       listeFichiers: [{
         E: EntityState.CREATION,
         G: DocumentKind.FILE,

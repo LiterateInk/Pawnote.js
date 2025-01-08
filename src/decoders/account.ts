@@ -5,6 +5,7 @@ import type { Account, SessionHandle } from "~/models";
  * such email, phone, address and INE if the user is a student.
  */
 export const decodeAccount = (account: any, session: SessionHandle): Account => {
+  console.log(account);
   const information = account.Informations;
   let iCalToken: string | undefined;
 

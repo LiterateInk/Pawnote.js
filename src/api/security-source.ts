@@ -1,6 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { DoubleAuthServerAction, SecuritySourceTooLongError, SessionHandle } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 /**
  * @returns true if the source is already known
@@ -9,15 +9,15 @@ export const securitySource = async (session: SessionHandle, source: string): Pr
   const LIMIT = 30;
   if (source.length > LIMIT) throw new SecuritySourceTooLongError(LIMIT);
 
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "SecurisationCompteDoubleAuth", {
-    [property]: {
+    [properties.data]: {
       action: DoubleAuthServerAction.csch_LibellesSourceConnexionDejaConnus,
       libelle: source
     }
   });
 
   const response = await request.send();
-  return response.data[property].dejaConnu;
+  return response.data[properties.data].dejaConnu;
 };

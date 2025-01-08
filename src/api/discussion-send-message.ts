@@ -4,7 +4,7 @@ import { RequestFN } from "~/core/request-function";
 import { discussionMessages } from "./discussion-messages";
 import { createEntityID } from "./helpers/entity-id";
 import { discussions } from "./discussions";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const discussionSendMessage = async (
   session: SessionHandle,
@@ -19,9 +19,11 @@ export const discussionSendMessage = async (
   if (typeof discussion.messages.sendAction === "undefined")
     throw new DiscussionActionError();
 
+  const properties = apiProperties(session);
+
   const action = encodeDiscussionSendAction(discussion.messages.sendAction, includeParentsAndStudents);
   const request = new RequestFN(session, "SaisieMessage", {
-    [dataProperty(session)]: {
+    [properties.data]: {
       contenu: session.user.authorizations.hasAdvancedDiscussionEditor ? {
         _T: 21,
         V: content
@@ -41,7 +43,7 @@ export const discussionSendMessage = async (
       listeFichiers: []
     },
 
-    _Signature_: {
+    [properties.signature]: {
       onglet: TabLocation.Discussions
     }
   });

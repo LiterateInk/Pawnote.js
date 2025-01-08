@@ -1,6 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { DiscussionCommand, EntityState, TabLocation, type SessionHandle } from "~/models";
-import { dataProperty } from "./data-property";
+import { apiProperties } from "./api-properties";
 
 export const discussionPostCommand = async (session: SessionHandle, command: DiscussionCommand | "", extra: any): Promise<void> => {
   let payload;
@@ -58,9 +58,11 @@ export const discussionPostCommand = async (session: SessionHandle, command: Dis
       };
   }
 
+  const properties = apiProperties(session);
+
   const request = new RequestFN(session, "SaisieMessage", {
-    _Signature_: { onglet: TabLocation.Discussions },
-    [dataProperty(session)]: payload
+    [properties.signature]: { onglet: TabLocation.Discussions },
+    [properties.data]: payload
   });
 
   await request.send();

@@ -1,12 +1,14 @@
 import { RequestFN } from "~/core/request-function";
 import { EntityState, TabLocation, type SessionHandle } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const assignmentRemoveFile = async (session: SessionHandle, assignmentID: string): Promise<void> => {
-  const request = new RequestFN(session, "SaisieTAFARendreEleve", {
-    _Signature_: { onglet: TabLocation.Assignments },
+  const properties = apiProperties(session);
 
-    [dataProperty(session)]: {
+  const request = new RequestFN(session, "SaisieTAFARendreEleve", {
+    [properties.signature]: { onglet: TabLocation.Assignments },
+
+    [properties.data]: {
       listeFichiers: [{
         E: EntityState.DELETION,
         TAF: { N: assignmentID }

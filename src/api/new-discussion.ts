@@ -1,6 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { EntityState, NewDiscussionRecipient, SessionHandle, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 /**
  * Create a discussion.
@@ -15,10 +15,11 @@ export const newDiscussion = async (
   content: string,
   recipients: Array<NewDiscussionRecipient>
 ): Promise<void> => {
+  const properties = apiProperties(session);
   const request = new RequestFN(session, "SaisieMessage", {
-    _Signature_: { onglet: TabLocation.Discussions },
+    [properties.signature]: { onglet: TabLocation.Discussions },
 
-    [dataProperty(session)]: {
+    [properties.data]: {
       contenu: session.user.authorizations.hasAdvancedDiscussionEditor ? {
         _T: 21,
         V: content

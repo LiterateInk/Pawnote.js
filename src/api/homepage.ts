@@ -4,21 +4,21 @@ import { TabLocation, type SessionHandle } from "~/models";
 import { translateToWeekNumber } from "./helpers/week-number";
 import { decodeHomepage } from "~/decoders/homepage";
 import type { Homepage } from "~/models/homepage";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 /**
  * Retrieve data from the homepage for the given session.
  */
 export const homepage = async (session: SessionHandle, day = session.instance.nextBusinessDay): Promise<Homepage> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const weekNumber = translateToWeekNumber(day, session.instance.firstMonday);
   const next = encodePronoteDate(day);
 
   const request = new RequestFN(session, "PageAccueil", {
-    _Signature_: { onglet: TabLocation.Presence },
+    [properties.signature]: { onglet: TabLocation.Presence },
 
-    [property]: {
+    [properties.data]: {
       avecConseilDeClasse: true,
 
       dateGrille: {
@@ -105,5 +105,5 @@ export const homepage = async (session: SessionHandle, day = session.instance.ne
   });
 
   const response = await request.send();
-  return decodeHomepage(response.data[property]);
+  return decodeHomepage(response.data[properties.data]);
 };

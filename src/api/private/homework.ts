@@ -2,14 +2,14 @@ import { RequestFN } from "~/core/request-function";
 import { type SessionHandle, TabLocation } from "~/models";
 import { getUTCDate } from "./dates";
 import { translateToWeekNumber } from "../helpers/week-number";
-import { dataProperty } from "./data-property";
+import { apiProperties } from "./api-properties";
 
 export const homeworkFromWeek = async (session: SessionHandle, tab: TabLocation, weekNumber: number, extendsToWeekNumber?: number): Promise<any> => {
-  const property = dataProperty(session);
+  const properties = apiProperties(session);
 
   const request = new RequestFN(session, "PageCahierDeTexte", {
-    _Signature_: { onglet: tab },
-    [property]: {
+    [properties.signature]: { onglet: tab },
+    [properties.data]: {
       domaine: {
         _T: 8,
         V: typeof extendsToWeekNumber === "number" ? `[${weekNumber}..${extendsToWeekNumber}]` : `[${weekNumber}]`
@@ -18,7 +18,7 @@ export const homeworkFromWeek = async (session: SessionHandle, tab: TabLocation,
   });
 
   const response = await request.send();
-  return response.data[property];
+  return response.data[properties.data];
 };
 
 export const homeworkFromIntervals = async (session: SessionHandle, tab: TabLocation, startDate: Date, endDate: Date): Promise<any> => {

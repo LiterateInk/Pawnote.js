@@ -1,12 +1,14 @@
 import { RequestFN } from "~/core/request-function";
 import { EntityState, SessionHandle, TabLocation } from "~/models";
-import { dataProperty } from "./private/data-property";
+import { apiProperties } from "./private/api-properties";
 
 export const assignmentStatus = async (session: SessionHandle, assignmentID: string, done: boolean): Promise<void> => {
-  const request = new RequestFN(session, "SaisieTAFFaitEleve", {
-    _Signature_: { onglet: TabLocation.Assignments },
+  const properties = apiProperties(session);
 
-    [dataProperty(session)]: {
+  const request = new RequestFN(session, "SaisieTAFFaitEleve", {
+    [properties.signature]: { onglet: TabLocation.Assignments },
+
+    [properties.data]: {
       listeTAF: [{
         E: EntityState.MODIFICATION,
         TAFFait: done,
