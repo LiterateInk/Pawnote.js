@@ -86,9 +86,9 @@ void async function main () {
   overview.subjectsAverages.forEach((average) => {
     console.log("->", average.subject.name);
     console.log("Student:", average.student);
-    console.log("Class:", average.class_average);
-    console.log("Max:", average.max);
-    console.log("Min:", average.min);
+    console.log("Class:", average.class_average ?? "Unspecified");
+    console.log("Max:", average.max ?? "Unspecified");
+    console.log("Min:", average.min ?? "Unspecified");
 
     // Break line for next entry.
     console.log();
