@@ -5,11 +5,11 @@ export type SubjectAverages = Readonly<{
   /** students average in the subject */
   student?: GradeValue;
   /** classes average in the subject */
-  class_average: GradeValue;
+  class_average?: GradeValue;
   /** highest average in the class */
-  max: GradeValue;
+  max?: GradeValue;
   /** lowest average in the class */
-  min: GradeValue;
+  min?: GradeValue;
   /** maximum amount of points */
   outOf?: GradeValue;
   /** the default maximum amount of points */
