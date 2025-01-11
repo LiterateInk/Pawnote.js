@@ -11,6 +11,9 @@ void async function main () {
     deviceUUID: credentials.deviceUUID
   });
 
+  // You can maually make presence requests.
+  await pronote.presence(session);
+
   // Start presence requests every 2 minutes.
   pronote.startPresenceInterval(session);
   // `setInterval` return value will be stored under `session.presence`.
