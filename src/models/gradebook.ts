@@ -1,16 +1,7 @@
 import { Subject } from "./subject";
 
-export type GradeBook =
-  | GradeBookNot
-  | GradeBookOk;
-
-type GradeBookNot = Readonly<{
-  available: false;
+export type GradeBook = Readonly<{
   message?: string;
-}>;
-
-type GradeBookOk = Readonly<{
-  available: true;
   /**
    * The differents assessments like the mentions or the overall rating
    */

@@ -1,5 +1,6 @@
 import * as pronote from "../src";
 import { credentials } from "./_credentials";
+import { GradeBook } from "~/models/gradebook";
 
 void async function main() {
   const session = pronote.createSessionHandle();
@@ -17,9 +18,14 @@ void async function main() {
   console.log("Available periods for this tab ->", tab.periods.map((period) => period.name).join(", "));
   console.log("We selected the default period,", selectedPeriod.name, "!\n");
 
-  const gradebook = await pronote.gradebook(session, selectedPeriod);
-
-  if (!gradebook.available) throw new Error(`The gradebook for "${selectedPeriod.name}" is not available` + (gradebook.message ? ` : ${gradebook.message}`:""));
+  let gradebook: GradeBook;
+  try {
+    gradebook = await pronote.gradebook(session, selectedPeriod);
+  }
+  catch (error) {
+    console.error("The period is not accesibles");
+    throw error;
+  }
 
   console.group("--- Subjects ---");
 

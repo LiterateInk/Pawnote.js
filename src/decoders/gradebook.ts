@@ -1,7 +1,7 @@
 import { GradeBook, GradeBookSubject } from "~/models/gradebook";
 import { decodeSubject } from "./subject";
 import { gradebookPDF } from "~/api";
-import { Period, SessionHandle } from "~/models";
+import { PageUnavailableError, Period, SessionHandle } from "~/models";
 
 /**
  * @param gradeBookData response from PageBulletins
@@ -9,7 +9,7 @@ import { Period, SessionHandle } from "~/models";
 export const decodeGradeBook = async (session: SessionHandle, period: Period, gradeBookData: any): Promise<GradeBook> => {
   // When bad period is used, the return is `{ data: {}, nom: 'PageBulletins' }` but the session don't expire.
   if (Object.keys(gradeBookData).length == 0 || gradeBookData.message)
-    return { available: false, message: gradeBookData.message ?? undefined };
+    throw new PageUnavailableError();
 
   let overallAssessments: { name: string; value: string; }[] = gradeBookData.ObjetListeAppreciations.V.ListeAppreciations.V.map(
     (assessment: any) => {
@@ -39,7 +39,6 @@ export const decodeGradeBook = async (session: SessionHandle, period: Period, gr
   );
 
   return {
-    available: true,
     overallAssessments,
     graph: gradeBookData?.graphe?.replace("\\n", ""),
     subjects,
