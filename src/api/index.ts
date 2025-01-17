@@ -29,6 +29,7 @@ export * from "./discussions";
 export * from "./evaluations";
 export * from "./geolocation";
 export * from "./gradebook-pdf";
+export * from "./gradebook";
 export * from "./grades-overview";
 export * from "./homepage";
 export * from "./instance";
