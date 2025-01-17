@@ -9,14 +9,13 @@ import { GradeBook } from "~/models/gradebook";
 export const gradebook = async (session: SessionHandle, period: Period): Promise<GradeBook> => {
   const properties = apiProperties(session);
 
-  const periodModified = JSON.parse(JSON.stringify(period));
-  periodModified.kind = 2; // Why ? Idk, but needed
+  period = {...period, kind: 2};
 
   const request = new RequestFN(session, "PageBulletins", {
     [properties.data]: {
       classe: {},
       eleve: {},
-      periode: encodePeriod(periodModified)
+      periode: encodePeriod(period)
     },
     [properties.signature]: { onglet: TabLocation.Gradebook }
   });
