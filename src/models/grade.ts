@@ -18,9 +18,9 @@ export type Grade = Readonly<{
   /** the average of the class */
   average?: GradeValue;
   /** the highest grade */
-  max: GradeValue;
+  max?: GradeValue;
   /** the lowest grade */
-  min: GradeValue;
+  min?: GradeValue;
   /** the coefficient of the grade */
   coefficient: number;
   /** comment on the grade description */

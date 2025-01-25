@@ -62,8 +62,8 @@ void async function main () {
 
       console.log("Grade:  ", handleGradeValue(grade.value, grade.outOf.points, grade.coefficient));
       if (grade.average) console.log("Average:", handleGradeValue(grade.average, grade.outOf.points, grade.coefficient));
-      console.log("Minimum:", handleGradeValue(grade.min, grade.outOf.points, grade.coefficient));
-      console.log("Maximum:", handleGradeValue(grade.max, grade.outOf.points, grade.coefficient));
+      if (grade.min) console.log("Minimum:", handleGradeValue(grade.min, grade.outOf.points, grade.coefficient));
+      if (grade.max) console.log("Maximum:", handleGradeValue(grade.max, grade.outOf.points, grade.coefficient));
       if (grade.commentaireSurNote) {
         console.log("Note on grade:", grade.commentaireSurNote);
       }
