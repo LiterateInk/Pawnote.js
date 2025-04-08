@@ -155,8 +155,8 @@ const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classe
           let withCanceledClasses = false;
           let withNormalClasses = false;
 
-          for (let j = 0; j < superimposedClassesIndexes.length; j++) {
-            const superimposedClass = classes[superimposedClassesIndexes[j]];
+          for (const classe of superimposedClassesIndexes) {
+            const superimposedClass = classes[classe];
 
             if (!withNormalClasses) {
               withNormalClasses = !(superimposedClass.is === "lesson" && superimposedClass.canceled);
@@ -168,8 +168,8 @@ const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classe
           }
 
           if (withNormalClasses && withCanceledClasses) {
-            for (let j = 0; j < superimposedClassesIndexes.length; j++) {
-              const superimposedClass = classes[superimposedClassesIndexes[j]];
+            for (const classe of superimposedClassesIndexes) {
+              const superimposedClass = classes[classe];
 
               if (superimposedClass && superimposedClass.is === "lesson" && superimposedClass.canceled) {
                 superimposedClass._visible = false;
