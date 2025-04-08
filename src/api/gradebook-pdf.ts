@@ -4,8 +4,8 @@ import { type Period, type SessionHandle, TabLocation } from "~/models";
 import { apiProperties } from "./private/api-properties";
 
 /**
- * @param period - Period the grades report will be from.
- * @returns URL to download the PDF file.
+ * @param {Period} period - Period the grades report will be from.
+ * @returns {Promise<string>} URL to download the PDF file.
  */
 export const gradebookPDF = async (session: SessionHandle, period: Period): Promise<string> => {
   const properties = apiProperties(session);

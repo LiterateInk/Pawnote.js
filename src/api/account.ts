@@ -3,6 +3,11 @@ import { decodeAccount } from "~/decoders/account";
 import { type Account, type SessionHandle, TabLocation } from "~/models";
 import { apiProperties } from "./private/api-properties";
 
+/**
+ * Get information about the user
+ * @param {SessionHandle} session - The session handle
+ * @returns {Promise<Account>} The account information
+ */
 export const account = async (session: SessionHandle): Promise<Account> => {
   const properties = apiProperties(session);
 

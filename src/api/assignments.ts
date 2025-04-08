@@ -6,11 +6,25 @@ const decoder = (session: SessionHandle, data: any): Array<Assignment> => {
   return data.ListeTravauxAFaire.V.map((homework: any) => decodeAssignment(homework, session));
 };
 
+/**
+ * Fetches assignments for a specific week or range of weeks.
+ * @param {SessionHandle} session - The current session handle.
+ * @param {number} weekNumber - The week number to fetch homework for.
+ * @param {number=} extendsToWeekNumber - Optional, the week number to extend the range to.
+ * @returns {Promise<Array<Assignment>>} A promise that resolves to the assignments data.
+ */
 export const assignmentsFromWeek = async (session: SessionHandle, weekNumber: number, extendsToWeekNumber?: number): Promise<Array<Assignment>> => {
   const reply = await homeworkFromWeek(session, TabLocation.Assignments, weekNumber, extendsToWeekNumber);
   return decoder(session, reply);
 };
 
+/**
+ * Fetches assignments for a specific range of dates.
+ * @param {SessionHandle} session - The current session handle.
+ * @param {Date} startDate - The start date of the range.
+ * @param {Date} endDate - The end date of the range.
+ * @returns {Promise<Array<Assignment>>} A promise that resolves to the assignments data.
+ */
 export const assignmentsFromIntervals = async (session: SessionHandle, startDate: Date, endDate: Date): Promise<Array<Assignment>> => {
   const reply = await homeworkFromIntervals(session, TabLocation.Assignments, startDate, endDate);
   // Only keep items assignments are in the intervals.
