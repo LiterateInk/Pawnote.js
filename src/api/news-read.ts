@@ -9,7 +9,7 @@ import { newsRemoteMutate } from "./private/news-remote-mutate";
  * @param {boolean} read - The new read state.
  * @returns {Promise<void>} - Nothing.
  */
-export const newsRead = async (session: SessionHandle, item: NewsInformation | NewsSurvey, read: boolean) => {
+export const newsRead = async (session: SessionHandle, item: NewsInformation | NewsSurvey, read: boolean): Promise<void> => {
   // Do nothing if the status is already the same.
   if (item.read === read) {
     return;

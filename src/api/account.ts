@@ -5,7 +5,7 @@ import { apiProperties } from "./private/api-properties";
 
 /**
  * Get information about the user
- * @param {SessionHandle} session - The session handle
+ * @param {SessionHandle} session - The current session handle
  * @returns {Promise<Account>} The account information
  */
 export const account = async (session: SessionHandle): Promise<Account> => {

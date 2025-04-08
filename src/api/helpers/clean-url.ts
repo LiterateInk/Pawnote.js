@@ -1,3 +1,8 @@
+/**
+ * Cleans a given URL by removing unwanted data and ensuring it has a consistent format.
+ * @param {string} url - The URL to clean.
+ * @returns {string} The cleaned URL.
+ */
 export const cleanURL = (url: string): string => {
   let pronoteURL = new URL(url);
   // Clean any unwanted data from URL.

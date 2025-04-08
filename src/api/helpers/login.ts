@@ -232,7 +232,7 @@ const transformCredentials = (auth: { username: string, token?: string, password
 /**
  * Resolves the authentication challenge.
  *
- * @param {SessionHandle} session - The session handle containing session information.
+ * @param {SessionHandle} session - The current session handle containing session information.
  * @param {any} identity - The identity object returned from the `identify()` function.
  * @param {forge.util.ByteStringBuffer} key - The middleware key used for decryption.
  * @returns {string} The encrypted solution to the challenge.
@@ -263,7 +263,7 @@ const solveChallenge = (session: SessionHandle, identity: any, key: forge.util.B
 /**
  * Switches the session to use the authentication key.
  *
- * @param {SessionHandle} session - The session handle containing session information.
+ * @param {SessionHandle} session - The current session handle containing session information.
  * @param {any} authentication - The authentication object returned from the `authenticate()` function.
  * @param {forge.util.ByteStringBuffer} key - The middleware key used for decryption.
  * @returns {void}
