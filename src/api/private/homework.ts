@@ -4,6 +4,14 @@ import { getUTCDate } from "./dates";
 import { translateToWeekNumber } from "../helpers/week-number";
 import { apiProperties } from "./api-properties";
 
+/**
+ * Fetches homework for a specific week or range of weeks.
+ * @param {SessionHandle} session - The current session handle.
+ * @param {TabLocation} tab - The tab location to fetch homework from.
+ * @param {number} weekNumber - The week number to fetch homework for.
+ * @param {number=} extendsToWeekNumber - Optional, the week number to extend the range to.
+ * @returns {Promise<any>} - A promise that resolves to the homework data.
+ */
 export const homeworkFromWeek = async (session: SessionHandle, tab: TabLocation, weekNumber: number, extendsToWeekNumber?: number): Promise<any> => {
   const properties = apiProperties(session);
 
