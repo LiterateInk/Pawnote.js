@@ -1,6 +1,11 @@
 import { type Meal, DishKind, UnreachableError } from "~/models";
 import { decodeFood } from "./food";
 
+/**
+ * Decode a meal from the server response.
+ * @param {*} meal - The meal data from the server.
+ * @returns {Meal} The decoded meal object.
+ */
 export const decodeMeal = (meal: any): Meal => {
   const dishes = meal.ListePlats.V.reduce((acc: any, dish: any) => {
     let key: string;

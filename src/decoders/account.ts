@@ -3,6 +3,9 @@ import type { Account, SessionHandle } from "~/models";
 /**
  * Get more information on the user
  * such email, phone, address and INE if the user is a student.
+ * @param {*} account - The account object containing user information.
+ * @param {SessionHandle} session - The current session handle.
+ * @returns {Account} The decoded account information.
  */
 export const decodeAccount = (account: any, session: SessionHandle): Account => {
   const information = account.Informations;

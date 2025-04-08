@@ -5,6 +5,12 @@ import { decodeNotebookPunishment } from "./notebook-punishment";
 import { decodeNotebookObservation } from "./notebook-observation";
 import { decodeNotebookPrecautionaryMeasure } from "./notebook-precautionary-measure";
 
+/**
+ * Decode a notebook from the server response.
+ * @param {*} notebook - The notebook data from the server.
+ * @param {SessionHandle} session - The current session handle.
+ * @returns {Notebook} The decoded notebook object.
+ */
 export const decodeNotebook = (notebook: any, session: SessionHandle): Notebook => {
   const absences: NotebookAbsence[] = [];
   const delays: NotebookDelay[] = [];
