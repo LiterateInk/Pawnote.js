@@ -1,6 +1,6 @@
 import { RequestFN } from "~/core/request-function";
 import { decodeAssignment } from "~/decoders/assignment";
-import { TabLocation, type Assignment, type Resource, type SessionHandle } from "~/models";
+import { TabLocation, type Assignment, type SessionHandle } from "~/models";
 import { apiProperties } from "./private/api-properties";
 
 /**

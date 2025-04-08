@@ -1,4 +1,4 @@
-import type { NewsInformation, NewsItem, NewsSurvey, SessionHandle } from "~/models";
+import type { NewsInformation, NewsSurvey, SessionHandle } from "~/models";
 import { newsRemoteMutate } from "./private/news-remote-mutate";
 
 /**
