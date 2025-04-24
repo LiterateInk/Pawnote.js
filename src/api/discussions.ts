@@ -7,9 +7,9 @@ import { apiProperties } from "./private/api-properties";
 
 /**
  * Retrieve discussions from the server.
- * @param {SessionHandle} session - The current session handle.
- * @param {_DiscussionsCache=} cache - The cache to store discussions.
- * @returns {Promise<Discussions>} A promise that resolves to the discussions.
+ * @param session - The current session handle.
+ * @param cache - The cache to store discussions.
+ * @returns A promise that resolves to the discussions.
  */
 export const discussions = async (session: SessionHandle, cache: _DiscussionsCache = {_:[]}): Promise<Discussions> => {
   const properties = apiProperties(session);

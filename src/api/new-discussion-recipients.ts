@@ -9,8 +9,8 @@ import { apiProperties } from "./private/api-properties";
  * This step is required before creating a discussion.
  * It allows to know who can be the recipient of the discussion.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {EntityKind} kind - The kind of entity to create a discussion with. Only `Teacher`, `Student` and `Personal` are allowed.
+ * @param session - The current session handle.
+ * @param kind - The kind of entity to create a discussion with. Only `Teacher`, `Student` and `Personal` are allowed.
  */
 export const newDiscussionRecipients = async (session: SessionHandle, kind: EntityKind): Promise<Array<NewDiscussionRecipient>> => {
   const properties = apiProperties(session);

@@ -5,10 +5,10 @@ import { PageUnavailableError, Period, SessionHandle } from "~/models";
 
 /**
  * Decode the grade book from the response of PageBulletins.
- * @param {SessionHandle} session - The current session handle.
- * @param {Period} period - The current period.
- * @param {*} gradeBookData response from PageBulletins.
- * @returns {Promise<GradeBook>} The decoded grade book.
+ * @param session - The current session handle.
+ * @param period - The current period.
+ * @param gradeBookData response from PageBulletins.
+ * @returns The decoded grade book.
  */
 export const decodeGradeBook = async (session: SessionHandle, period: Period, gradeBookData: any): Promise<GradeBook> => {
   // When bad period is used, the return is `{ data: {}, nom: 'PageBulletins' }` but the session don't expire.

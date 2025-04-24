@@ -8,10 +8,10 @@ const decoder = (session: SessionHandle, data: any): Array<Resource> => {
 
 /**
  * Get the resources from a specific week.
- * @param {SessionHandle} session - The current session handle.
- * @param {number} weekNumber - The week number to get resources from.
- * @param {number} extendsToWeekNumber - The week number to extend the search to (optional).
- * @returns {Promise<Resource[]>} A promise that resolves to an array of resources.
+ * @param session - The current session handle.
+ * @param weekNumber - The week number to get resources from.
+ * @param extendsToWeekNumber - The week number to extend the search to (optional).
+ * @returns A promise that resolves to an array of resources.
  */
 export const resourcesFromWeek = async (session: SessionHandle, weekNumber: number, extendsToWeekNumber?: number): Promise<Resource[]> => {
   const reply = await homeworkFromWeek(session, TabLocation.Resources, weekNumber, extendsToWeekNumber);
@@ -20,10 +20,10 @@ export const resourcesFromWeek = async (session: SessionHandle, weekNumber: numb
 
 /**
  * Get the resources from a specific date range.
- * @param {SessionHandle} session - The current session handle.
- * @param {Date} startDate - The start date of the range.
- * @param {Date} endDate - The end date of the range.
- * @returns {Promise<Resource[]>} A promise that resolves to an array of resources.
+ * @param session - The current session handle.
+ * @param startDate - The start date of the range.
+ * @param endDate - The end date of the range.
+ * @returns A promise that resolves to an array of resources.
  */
 export const resourcesFromIntervals = async (session: SessionHandle, startDate: Date, endDate: Date): Promise<Resource[]> => {
   const reply = await homeworkFromIntervals(session, TabLocation.Resources, startDate, endDate);

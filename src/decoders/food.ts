@@ -4,8 +4,8 @@ import { decodeFoodLabel } from "./food-label";
 
 /**
  * Decode a food from the server response.
- * @param {*} food - The food data from the server.
- * @returns {Food} The decoded food object.
+ * @param food - The food data from the server.
+ * @returns The decoded food object.
  */
 export const decodeFood = (food: any): Food => {
   return {

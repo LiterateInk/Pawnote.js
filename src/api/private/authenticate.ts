@@ -4,9 +4,9 @@ import { apiProperties } from "./api-properties";
 
 /**
  * Authenticates the user with the given challenge.
- * @param {SessionHandle} session - The current session handle.
- * @param {string} challenge - The challenge to authenticate with.
- * @returns {Promise<any>} - The authentication data.
+ * @param session - The current session handle.
+ * @param challenge - The challenge to authenticate with.
+ * @returns The authentication data.
  */
 export const authenticate = async (session: SessionHandle, challenge: string) => {
   const properties = apiProperties(session);

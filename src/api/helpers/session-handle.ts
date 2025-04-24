@@ -6,8 +6,8 @@ import { Queue } from "~/api/private/queue";
 /**
  * Creates a session handle with default values.
  *
- * @param {Fetcher} fetcher - The fetcher to use for the current session handle.
- * @returns {SessionHandle} A session handle with default values.
+ * @param fetcher - The fetcher to use for the current session handle.
+ * @returns A session handle with default values.
  */
 export const createSessionHandle = (fetcher: Fetcher = defaultFetcher): SessionHandle => {
   return {

@@ -23,9 +23,9 @@ const BASE_PARAMS = {
 /**
  * Logs in using user credentials.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {PasswordAuthenticationParams} auth - The authentication details including URL, username, password, account kind, device UUID, and optional navigator identifier.
- * @returns {Promise<RefreshInformation>} A promise resolving to the refreshed session information.
+ * @param session - The current session handle.
+ * @param auth - The authentication details including URL, username, password, account kind, device UUID, and optional navigator identifier.
+ * @returns A promise resolving to the refreshed session information.
  */
 export const loginCredentials = async (session: SessionHandle, auth: PasswordAuthenticationParams): Promise<RefreshInformation> => {
   const base = cleanURL(auth.url);
@@ -73,9 +73,9 @@ export const loginCredentials = async (session: SessionHandle, auth: PasswordAut
 /**
  * Logs in using a token.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {TokenAuthenticationParams} auth - The authentication details including URL, username, token, account kind, device UUID, and optional navigator identifier.
- * @returns {Promise<RefreshInformation>} A promise resolving to the refreshed session information.
+ * @param session - The current session handle.
+ * @param auth - The authentication details including URL, username, token, account kind, device UUID, and optional navigator identifier.
+ * @returns A promise resolving to the refreshed session information.
  */
 export const loginToken = async (session: SessionHandle, auth: TokenAuthenticationParams): Promise<RefreshInformation> => {
   const base = cleanURL(auth.url);
@@ -116,9 +116,9 @@ export const loginToken = async (session: SessionHandle, auth: TokenAuthenticati
 /**
  * Logs in using a QR code.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {{ deviceUUID: string, pin: string, qr: any, navigatorIdentifier?: string }} info - The authentication information including device UUID, PIN, QR code data, and optional navigator identifier.
- * @returns {Promise<RefreshInformation>} A promise resolving to the refreshed session information.
+ * @param session - The current session handle.
+ * @param info - The authentication information including device UUID, PIN, QR code data, and optional navigator identifier.
+ * @returns A promise resolving to the refreshed session information.
  */
 export const loginQrCode = async (session: SessionHandle, info: {
   deviceUUID: string
@@ -175,9 +175,9 @@ export const loginQrCode = async (session: SessionHandle, info: {
 /**
  * Switches the session to token-based login.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {Pick<TokenAuthenticationParams, "token" | "username" | "deviceUUID">} auth - The authentication details including token, username, and device UUID.
- * @returns {Promise<RefreshInformation>} A promise resolving to the refreshed session information.
+ * @param session - The current session handle.
+ * @param auth - The authentication details including token, username, and device UUID.
+ * @returns A promise resolving to the refreshed session information.
  */
 const switchToTokenLogin = (session: SessionHandle, auth: Pick<TokenAuthenticationParams, "token" | "username" | "deviceUUID">): Promise<RefreshInformation> => {
   // TODO: Add and call logout function for current `session`.
@@ -195,10 +195,10 @@ const switchToTokenLogin = (session: SessionHandle, auth: Pick<TokenAuthenticati
 /**
  * Creates a middleware key for authentication.
  *
- * @param {any} identity - The identity object returned from the `identify()` function.
- * @param {string} username - The username to authenticate with.
- * @param {string} mod - The password or token used for authentication.
- * @returns {forge.util.ByteStringBuffer} A buffer containing the middleware key.
+ * @param identity - The identity object returned from the `identify()` function.
+ * @param username - The username to authenticate with.
+ * @param mod - The password or token used for authentication.
+ * @returns A buffer containing the middleware key.
  */
 const createMiddlewareKey = (identity: any, username: string, mod: string): forge.util.ByteStringBuffer => {
   const hash = forge.md.sha256.create()
@@ -214,10 +214,9 @@ const createMiddlewareKey = (identity: any, username: string, mod: string): forg
 /**
  * Transforms the credentials based on the identity's compatibility modes.
  *
- * @param {{ username: string, token?: string, password?: string }} auth - The authentication object containing username, token, or password.
- * @param {"token" | "password"} modProperty - The property to modify, either "token" or "password".
- * @param {any} identity - The identity object returned from the `identify()` function.
- * @returns {void}
+ * @param auth - The authentication object containing username, token, or password.
+ * @param modProperty - The property to modify, either "token" or "password".
+ * @param identity - The identity object returned from the `identify()` function.
  */
 const transformCredentials = (auth: { username: string, token?: string, password?: string }, modProperty: "token" | "password", identity: any): void => {
   if (identity.modeCompLog === 1) {
@@ -232,11 +231,11 @@ const transformCredentials = (auth: { username: string, token?: string, password
 /**
  * Resolves the authentication challenge.
  *
- * @param {SessionHandle} session - The current session handle containing session information.
- * @param {any} identity - The identity object returned from the `identify()` function.
- * @param {forge.util.ByteStringBuffer} key - The middleware key used for decryption.
- * @returns {string} The encrypted solution to the challenge.
- * @throws {BadCredentialsError} If the challenge cannot be solved.
+ * @param session - The current session handle containing session information.
+ * @param identity - The identity object returned from the `identify()` function.
+ * @param key - The middleware key used for decryption.
+ * @returns The encrypted solution to the challenge.
+ * @throws `BadCredentialsError` if the challenge cannot be solved.
  */
 const solveChallenge = (session: SessionHandle, identity: any, key: forge.util.ByteStringBuffer): string => {
   const iv = forge.util.createBuffer(session.information.aesIV);
@@ -263,9 +262,9 @@ const solveChallenge = (session: SessionHandle, identity: any, key: forge.util.B
 /**
  * Switches the session to use the authentication key.
  *
- * @param {SessionHandle} session - The current session handle containing session information.
- * @param {any} authentication - The authentication object returned from the `authenticate()` function.
- * @param {forge.util.ByteStringBuffer} key - The middleware key used for decryption.
+ * @param session - The current session handle containing session information.
+ * @param authentication - The authentication object returned from the `authenticate()` function.
+ * @param key - The middleware key used for decryption.
  * @returns {void}
  */
 const switchToAuthKey = (session: SessionHandle, authentication: any, key: forge.util.ByteStringBuffer): void => {
@@ -279,19 +278,19 @@ const switchToAuthKey = (session: SessionHandle, authentication: any, key: forge
 /**
  * Checks if the authentication response contains a security modal.
  *
- * @param {any} authentication - The authentication object returned from the `authenticate()` function.
- * @returns {boolean} `true` if a security modal is present, otherwise `false`.
+ * @param authentication - The authentication object returned from the `authenticate()` function.
+ * @returns `true` if a security modal is present, otherwise `false`.
  */
 const hasSecurityModal = (authentication: any): boolean => Boolean(authentication.actionsDoubleAuth);
 
 /**
  * Completes the login process manually.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {any} authentication - The authentication object returned from the `authenticate()` function.
- * @param {any} identity - The identity object returned from the `identify()` function.
- * @param {string} [initialUsername] - The initial username used for login.
- * @returns {Promise<RefreshInformation>} A promise resolving to the refreshed session information.
+ * @param session - The current session handle.
+ * @param authentication - The authentication object returned from the `authenticate()` function.
+ * @param identity - The identity object returned from the `identify()` function.
+ * @param [initialUsername] - The initial username used for login.
+ * @returns A promise resolving to the refreshed session information.
  */
 export const finishLoginManually = async (session: SessionHandle, authentication: any, identity: any, initialUsername?: string): Promise<RefreshInformation> => {
   session.user = await userParameters(session);

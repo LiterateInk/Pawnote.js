@@ -11,10 +11,10 @@ type temp = Array<(Timetable["classes"][number] & { _visible?: boolean })>;
  * We must provide the data as is and let the user decide what to do with it.
  *
  * That's why we provide this helper function to parse the timetable.
- * @param {SessionHandle} session - The current session handle.
- * @param {Timetable} timetable - The timetable to parse.
- * @param {Object} options - The options to parse the timetable.
- * @returns {void} - Nothing.
+ * @param session - The current session handle.
+ * @param timetable - The timetable to parse.
+ * @param options - The options to parse the timetable.
+ * @returns Nothing.
  */
 export const parseTimetable = (session: SessionHandle, timetable: Timetable, {
   withSuperposedCanceledClasses = false,
@@ -69,9 +69,9 @@ export const parseTimetable = (session: SessionHandle, timetable: Timetable, {
 
 /**
  * Returns the end block position of a given class.
- * @param {SessionHandle} session - The current session handle.
- * @param {TimetableClass} givenClass - The class to get the end block position of.
- * @returns {number} The end block position of the class.
+ * @param session - The current session handle.
+ * @param givenClass - The class to get the end block position of.
+ * @returns The end block position of the class.
  */
 const getClassEndBlockPosition = (session: SessionHandle, givenClass: TimetableClass): number => {
   const blocksPerDay = session.instance.blocksPerDay;
@@ -88,11 +88,11 @@ const getClassEndBlockPosition = (session: SessionHandle, givenClass: TimetableC
 
 /**
  * Returns the indexes of the superimposed classes.
- * @param {SessionHandle} session - The current session handle.
- * @param {TimetableClass} classItem - The class to get the superimposed classes of.
- * @param {number} classIndex - The index of the class to get the superimposed classes of.
- * @param {Array<number>} busyPositions - The busy positions of the classes.
- * @returns {Array<number>} The indexes of the superimposed classes.
+ * @param session - The current session handle.
+ * @param classItem - The class to get the superimposed classes of.
+ * @param classIndex - The index of the class to get the superimposed classes of.
+ * @param busyPositions - The busy positions of the classes.
+ * @returns The indexes of the superimposed classes.
  */
 const getSuperimposedClassesIndexes = (
   session: SessionHandle,
@@ -122,9 +122,9 @@ const getSuperimposedClassesIndexes = (
 
 /**
  * Makes the superimposed canceled classes invisible.
- * @param {SessionHandle} session - The current session handle.
- * @param {Array<TimetableClass>} classes - The classes to make invisible.
- * @returns {boolean} True if a class was made invisible, false otherwise.
+ * @param session - The current session handle.
+ * @param classes - The classes to make invisible.
+ * @returns True if a class was made invisible, false otherwise.
  */
 const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classes: temp): boolean => {
   /** key = week number, value */

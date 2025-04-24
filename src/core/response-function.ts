@@ -8,15 +8,15 @@ import { aesKeys } from "../api/private/keys";
  * ResponseFN is a class that handles the response from the server.
  * It decrypts and decompresses the data if necessary.
  * It also checks for errors in the response.
- * @param {SessionHandle} session - The current session handle.
- * @param {any} data - The data from the server.
- * @throws {ServerSideError} - If there is an error in the response.
- * @throws {SessionExpiredError} - If the session has expired.
- * @throws {SuspendedIPError} - If the IP address is suspended.
- * @throws {PageUnavailableError} - If the page is unavailable.
- * @throws {RateLimitedError} - If the rate limit is exceeded.
- * @throws {AccessDeniedError} - If access is denied.
- * @throws {Error} - If there is an unknown error.
+ * @param session - The current session handle.
+ * @param data - The data from the server.
+ * @throws `ServerSideError` If there is an error in the response.
+ * @throws `SessionExpiredError` If the session has expired.
+ * @throws `SuspendedIPError` If the IP address is suspended.
+ * @throws `PageUnavailableError` If the page is unavailable.
+ * @throws `RateLimitedError` If the rate limit is exceeded.
+ * @throws `AccessDeniedError` If access is denied.
+ * @throws `Error` If there is an unknown error.
  */
 export class ResponseFN {
   public constructor (

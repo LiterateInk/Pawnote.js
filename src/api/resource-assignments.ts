@@ -5,9 +5,9 @@ import { apiProperties } from "./private/api-properties";
 
 /**
  * Retrieve assignments from a resource.
- * @param {SessionHandle} session - The current session handle.
- * @param {string} resourceID - The ID of the resource.
- * @returns {Promise<Array<Assignment>>} - A promise that resolves to an array of assignments.
+ * @param session - The current session handle.
+ * @param resourceID - The ID of the resource.
+ * @returns A promise that resolves to an array of assignments.
  */
 export const resourceAssignments = async (session: SessionHandle, resourceID: string): Promise<Array<Assignment>> => {
   const properties = apiProperties(session);

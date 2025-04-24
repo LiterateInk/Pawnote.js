@@ -5,9 +5,9 @@ import { decodeSubject } from "./subject";
 
 /**
  * Decode a resource from the server response.
- * @param {*} resource - The resource data from the server.
- * @param {SessionHandle} session - The current session handle.
- * @returns {Resource} The decoded resource object.
+ * @param resource - The resource data from the server.
+ * @param session - The current session handle.
+ * @returns The decoded resource object.
  */
 export const decodeResource = (resource: any, session: SessionHandle): Resource => {
   return {

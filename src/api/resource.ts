@@ -5,9 +5,9 @@ import { apiProperties } from "./private/api-properties";
 
 /**
  * Retrieve a specific resource by its ID.
- * @param {SessionHandle} session - The current session handle.
- * @param {string} resourceID - The ID of the resource to retrieve.
- * @returns {Promise<Resource>} A promise that resolves to the resource.
+ * @param session - The current session handle.
+ * @param resourceID - The ID of the resource to retrieve.
+ * @returns A promise that resolves to the resource.
  */
 export const resource = async (session: SessionHandle, resourceID: string): Promise<Resource> => {
   const properties = apiProperties(session);

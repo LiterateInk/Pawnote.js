@@ -29,7 +29,7 @@ export class RequestFN {
 
   /**
    * Make the order generation, encryption and compression.
-   * @returns {{order: string;url: URL}} The order and the URL to send the request to.
+   * @returns The order and the URL to send the request to.
    */
   public process (): { order: string; url: URL; } {
     this.session.information.order++;
@@ -85,7 +85,7 @@ export class RequestFN {
 
   /**
    * Send the request to the server.
-   * @returns {Promise<ResponseFN>} The response from the server.
+   * @returns The response from the server.
    */
   public async send (): Promise<ResponseFN> {
     return this.session.queue.push(async () => {

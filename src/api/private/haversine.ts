@@ -10,7 +10,7 @@ const hav     = (x: number): number => squared(Math.sin(x / 2));
  * Applies the following formula :
  * `hav(theta) = hav(bLat - aLat) + cos(aLat) * cos(bLat) * hav(bLon - aLon)`
  *
- * @returns {number} Distance in meters.
+ * @returns Distance in meters.
  */
 export const haversine = (a: [lat: number, lon: number], b: [lat: number, lon: number]): number => {
   const aLat = toRad(a[0]);

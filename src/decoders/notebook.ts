@@ -7,9 +7,9 @@ import { decodeNotebookPrecautionaryMeasure } from "./notebook-precautionary-mea
 
 /**
  * Decode a notebook from the server response.
- * @param {*} notebook - The notebook data from the server.
- * @param {SessionHandle} session - The current session handle.
- * @returns {Notebook} The decoded notebook object.
+ * @param notebook - The notebook data from the server.
+ * @param session - The current session handle.
+ * @returns The decoded notebook object.
  */
 export const decodeNotebook = (notebook: any, session: SessionHandle): Notebook => {
   const absences: NotebookAbsence[] = [];

@@ -3,8 +3,8 @@ import { decodePronoteDate } from "./pronote-date";
 
 /**
  * Decode a notebook absence from the server response.
- * @param {*} absence - The absence data from the server.
- * @returns {NotebookAbsence} The decoded notebook absence object.
+ * @param absence - The absence data from the server.
+ * @returns The decoded notebook absence object.
  */
 export const decodeNotebookAbsence = (absence: any): NotebookAbsence => {
   const [hoursMissed, minutesMissed] = (absence.NbrHeures as string).split("h").map(Number);

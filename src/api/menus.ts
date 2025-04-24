@@ -6,9 +6,9 @@ import { apiProperties } from "./private/api-properties";
 
 /**
  * Retrieve the week menu for a specific date.
- * @param {SessionHandle} session - The current session handle.
- * @param {Date=} date - The date for which to retrieve the menus. Defaults to the current date.
- * @returns {Promise<WeekMenu>} A promise that resolves to the week menu.
+ * @param session - The current session handle.
+ * @param date - The date for which to retrieve the menus. Defaults to the current date.
+ * @returns A promise that resolves to the week menu.
  */
 export const menus = async (session: SessionHandle, date = new Date()): Promise<WeekMenu> => {
   const properties = apiProperties(session);

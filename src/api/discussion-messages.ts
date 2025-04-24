@@ -10,9 +10,9 @@ import { apiProperties } from "./private/api-properties";
  * You can change this behavior by setting `markAsRead` to `true`.
  * There's no other way to mark the messages as read.
  *
- * @param {SessionHandle} session - The current session handle.
- * @param {Discussion} discussion - The discussion object to fetch messages for.
- * @param {boolean} [markAsRead=false] Whether to mark the messages as read after fetching them.
+ * @param session - The current session handle.
+ * @param discussion - The discussion object to fetch messages for.
+ * @param [markAsRead=false] Whether to mark the messages as read after fetching them.
  */
 export const discussionMessages = async (session: SessionHandle, discussion: Discussion, markAsRead: boolean = false): Promise<DiscussionMessages> => {
   const properties = apiProperties(session);
