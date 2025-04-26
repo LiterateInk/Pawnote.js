@@ -75,7 +75,6 @@ export * from "./period";
 export * from "./refresh-information";
 export * from "./resource-content-category";
 export * from "./resource-content";
-export * from "./resource-params";
 export * from "./resource";
 export * from "./security-modal";
 export * from "./session-access-kind";
