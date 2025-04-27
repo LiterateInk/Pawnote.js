@@ -4,6 +4,12 @@ import { encodePronoteDate } from "~/encoders/pronote-date";
 import { TabLocation, type WeekMenu, type SessionHandle } from "~/models";
 import { apiProperties } from "./private/api-properties";
 
+/**
+ * Retrieve the week menu for a specific date.
+ * @param session - The current session handle.
+ * @param date - The date for which to retrieve the menus. Defaults to the current date.
+ * @returns A promise that resolves to the week menu.
+ */
 export const menus = async (session: SessionHandle, date = new Date()): Promise<WeekMenu> => {
   const properties = apiProperties(session);
 

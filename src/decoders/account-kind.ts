@@ -1,7 +1,9 @@
 import { AccountKind, UnreachableError } from "~/models";
 
 /**
+ * Decode the account kind from the path.
  * @param path mobile.eleve.html or eleve.html, both works.
+ * @returns The account kind.
  */
 export const decodeAccountKindFromPath = (path: string): AccountKind => {
   const segments = path.split(".");

@@ -3,6 +3,12 @@ import { decodeResource } from "~/decoders/resource";
 import { TabLocation, type Resource, type SessionHandle } from "~/models";
 import { apiProperties } from "./private/api-properties";
 
+/**
+ * Retrieve a specific resource by its ID.
+ * @param session - The current session handle.
+ * @param resourceID - The ID of the resource to retrieve.
+ * @returns A promise that resolves to the resource.
+ */
 export const resource = async (session: SessionHandle, resourceID: string): Promise<Resource> => {
   const properties = apiProperties(session);
 

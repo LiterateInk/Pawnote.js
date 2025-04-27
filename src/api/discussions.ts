@@ -5,6 +5,12 @@ import { type Discussion, type Discussions, TabLocation, type SessionHandle } fr
 import type { _DiscussionsCache } from "./private/discussions-cache";
 import { apiProperties } from "./private/api-properties";
 
+/**
+ * Retrieve discussions from the server.
+ * @param session - The current session handle.
+ * @param cache - The cache to store discussions.
+ * @returns A promise that resolves to the discussions.
+ */
 export const discussions = async (session: SessionHandle, cache: _DiscussionsCache = {_:[]}): Promise<Discussions> => {
   const properties = apiProperties(session);
 

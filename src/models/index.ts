@@ -9,6 +9,7 @@ export * from "./assignment-theme";
 export * from "./assignment";
 export * from "./attachment-kind";
 export * from "./attachment";
+export * from "./authentication-params";
 export * from "./authentication-qr";
 export * from "./discussion-command";
 export * from "./discussion-draft-message";

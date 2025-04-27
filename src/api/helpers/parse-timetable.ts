@@ -11,6 +11,10 @@ type temp = Array<(Timetable["classes"][number] & { _visible?: boolean })>;
  * We must provide the data as is and let the user decide what to do with it.
  *
  * That's why we provide this helper function to parse the timetable.
+ * @param session - The current session handle.
+ * @param timetable - The timetable to parse.
+ * @param options - The options to parse the timetable.
+ * @returns Nothing.
  */
 export const parseTimetable = (session: SessionHandle, timetable: Timetable, {
   withSuperposedCanceledClasses = false,
@@ -63,6 +67,12 @@ export const parseTimetable = (session: SessionHandle, timetable: Timetable, {
   }
 };
 
+/**
+ * Returns the end block position of a given class.
+ * @param session - The current session handle.
+ * @param givenClass - The class to get the end block position of.
+ * @returns The end block position of the class.
+ */
 const getClassEndBlockPosition = (session: SessionHandle, givenClass: TimetableClass): number => {
   const blocksPerDay = session.instance.blocksPerDay;
 
@@ -76,6 +86,14 @@ const getClassEndBlockPosition = (session: SessionHandle, givenClass: TimetableC
   return endBlockPosition;
 };
 
+/**
+ * Returns the indexes of the superimposed classes.
+ * @param session - The current session handle.
+ * @param classItem - The class to get the superimposed classes of.
+ * @param classIndex - The index of the class to get the superimposed classes of.
+ * @param busyPositions - The busy positions of the classes.
+ * @returns The indexes of the superimposed classes.
+ */
 const getSuperimposedClassesIndexes = (
   session: SessionHandle,
   classItem: TimetableClass,
@@ -101,6 +119,13 @@ const getSuperimposedClassesIndexes = (
   return classesSuperimposed;
 };
 
+
+/**
+ * Makes the superimposed canceled classes invisible.
+ * @param session - The current session handle.
+ * @param classes - The classes to make invisible.
+ * @returns True if a class was made invisible, false otherwise.
+ */
 const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classes: temp): boolean => {
   /** key = week number, value */
   const busyPositionsPerWeek: Record<number, number[]> = {};
@@ -130,8 +155,8 @@ const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classe
           let withCanceledClasses = false;
           let withNormalClasses = false;
 
-          for (let j = 0; j < superimposedClassesIndexes.length; j++) {
-            const superimposedClass = classes[superimposedClassesIndexes[j]];
+          for (const classe of superimposedClassesIndexes) {
+            const superimposedClass = classes[classe];
 
             if (!withNormalClasses) {
               withNormalClasses = !(superimposedClass.is === "lesson" && superimposedClass.canceled);
@@ -143,8 +168,8 @@ const makeSuperimposedCanceledClassesInvisible = (session: SessionHandle, classe
           }
 
           if (withNormalClasses && withCanceledClasses) {
-            for (let j = 0; j < superimposedClassesIndexes.length; j++) {
-              const superimposedClass = classes[superimposedClassesIndexes[j]];
+            for (const classe of superimposedClassesIndexes) {
+              const superimposedClass = classes[classe];
 
               if (superimposedClass && superimposedClass.is === "lesson" && superimposedClass.canceled) {
                 superimposedClass._visible = false;

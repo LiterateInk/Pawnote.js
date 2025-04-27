@@ -3,6 +3,12 @@ import { decodeResourceContent } from "./resource-content";
 import { decodePronoteDate } from "./pronote-date";
 import { decodeSubject } from "./subject";
 
+/**
+ * Decode a resource from the server response.
+ * @param resource - The resource data from the server.
+ * @param session - The current session handle.
+ * @returns The decoded resource object.
+ */
 export const decodeResource = (resource: any, session: SessionHandle): Resource => {
   return {
     id: resource.N,

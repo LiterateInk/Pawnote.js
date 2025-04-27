@@ -3,6 +3,9 @@ import { DoubleAuthServerAction, SecuritySourceTooLongError, SessionHandle } fro
 import { apiProperties } from "./private/api-properties";
 
 /**
+ * Check if the source is already known.
+ * @param session - The current session handle.
+ * @param source - The source to check.
  * @returns true if the source is already known
  */
 export const securitySource = async (session: SessionHandle, source: string): Promise<boolean> => {

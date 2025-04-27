@@ -11,7 +11,7 @@ import { aesKeys } from "../api/private/keys";
  */
 export class RequestFN {
   public constructor (
-    private session: SessionHandle,
+    private readonly session: SessionHandle,
 
     /**
      * Function name.
@@ -31,7 +31,7 @@ export class RequestFN {
    * Make the order generation, encryption and compression.
    * @returns The order and the URL to send the request to.
    */
-  public process () {
+  public process (): { order: string; url: URL; } {
     this.session.information.order++;
 
     const order = this.generateOrder();
@@ -83,6 +83,10 @@ export class RequestFN {
     this.data = AES.encrypt(data, key, iv);
   }
 
+  /**
+   * Send the request to the server.
+   * @returns The response from the server.
+   */
   public async send (): Promise<ResponseFN> {
     return this.session.queue.push(async () => {
       const payload = this.process();

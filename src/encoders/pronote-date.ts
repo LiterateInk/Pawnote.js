@@ -1,4 +1,6 @@
 /**
+ * Encode a Date object to a pronote date format.
+ * @param date - The date to encode.
  * @returns A string formatted as `$d/$m/$yyyy $H:$M:$S`.
  * @example
  * encodePronoteDate(new Date());

@@ -2,6 +2,12 @@ import { RequestFN } from "~/core/request-function";
 import { AccessDeniedError, AccountDisabledError, AuthenticateError, BadCredentialsError, type SessionHandle } from "~/models";
 import { apiProperties } from "./api-properties";
 
+/**
+ * Authenticates the user with the given challenge.
+ * @param session - The current session handle.
+ * @param challenge - The challenge to authenticate with.
+ * @returns The authentication data.
+ */
 export const authenticate = async (session: SessionHandle, challenge: string) => {
   const properties = apiProperties(session);
 
