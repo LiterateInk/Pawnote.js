@@ -1,4 +1,4 @@
-import { type RefreshInformation, type SessionHandle, BadCredentialsError, SecurityError, type PasswordAuthenticationParams, type TokenAuthenticationParams } from "~/models";
+import { type RefreshInformation, type SessionHandle, BadCredentialsError, SecurityError, type PasswordAuthenticationParams, type TokenAuthenticationParams, InstanceParameters } from "~/models";
 import { sessionInformation } from "../session-information";
 import { instanceParameters } from "../private/instance-parameters";
 import { cleanURL } from "./clean-url";
@@ -30,7 +30,7 @@ const BASE_PARAMS = {
 export const loginCredentials = async (session: SessionHandle, auth: PasswordAuthenticationParams): Promise<RefreshInformation> => {
   const base = cleanURL(auth.url);
 
-  session.information = await sessionInformation({
+  const { information, version } = await sessionInformation({
     base,
     kind: auth.kind,
     cookies: [], // none
@@ -41,6 +41,8 @@ export const loginCredentials = async (session: SessionHandle, auth: PasswordAut
     }
   }, session.fetcher);
 
+  session.information = information;
+  session.instance = <InstanceParameters>{ version };
   session.instance = await instanceParameters(session, auth.navigatorIdentifier);
 
   const identity = await identify(session, {
@@ -80,13 +82,15 @@ export const loginCredentials = async (session: SessionHandle, auth: PasswordAut
 export const loginToken = async (session: SessionHandle, auth: TokenAuthenticationParams): Promise<RefreshInformation> => {
   const base = cleanURL(auth.url);
 
-  session.information = await sessionInformation({
+  const { information, version } = await sessionInformation({
     base,
     kind: auth.kind,
     cookies: ["appliMobile=1"],
     params: BASE_PARAMS
   }, session.fetcher);
 
+  session.information = information;
+  session.instance = <InstanceParameters>{ version };
   session.instance = await instanceParameters(session, auth.navigatorIdentifier);
 
   const identity = await identify(session, {
@@ -136,13 +140,15 @@ export const loginQrCode = async (session: SessionHandle, info: {
     token: read("token")
   };
 
-  session.information = await sessionInformation({
+  const { information, version } = await sessionInformation({
     base: qr.url,
     kind: qr.kind,
     cookies: ["appliMobile=1"],
     params: BASE_PARAMS
   }, session.fetcher);
 
+  session.information = information;
+  session.instance = <InstanceParameters>{ version };
   session.instance = await instanceParameters(session, info.navigatorIdentifier);
 
   const identity = await identify(session, {

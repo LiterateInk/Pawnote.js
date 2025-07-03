@@ -3,6 +3,7 @@ import forge from "node-forge";
 import { AES } from "../api/private/aes";
 import pako from "pako";
 import { aesKeys } from "../api/private/keys";
+import { apiProperties } from "~/api/private/api-properties";
 
 /**
  * ResponseFN is a class that handles the response from the server.
@@ -23,17 +24,20 @@ export class ResponseFN {
     private readonly session: SessionHandle,
     public data: any
   ) {
+    const properties = apiProperties(this.session);
+
     this.session.information.order++;
     const content = data;
 
     try {
       const response = JSON.parse(content);
+
       if (response.Erreur) {
         const error = response.Erreur.Titre || "Server Error";
         throw new ServerSideError(error);
       }
 
-      this.data = response.donneesSec;
+      this.data = response[properties.secureData];
 
       if (!this.session.information.skipEncryption) {
         this.decrypt();
@@ -47,15 +51,8 @@ export class ResponseFN {
         this.data = JSON.parse(this.data);
       }
 
-      // RETROCOMPAT: _Signature_ is only available on versions < `2024.3.9`
-      // We can't use `session` to check the version here because
-      // we use `ResponseFN` before the `version` property is known.
-      if (typeof this.data?._Signature_?.Erreur !== "undefined") {
-        throw new ServerSideError(this.data._Signature_.MessageErreur);
-      }
-
-      if (typeof this.data?.Signature?.Erreur !== "undefined") {
-        throw new ServerSideError(this.data.Signature.MessageErreur);
+      if (typeof this.data?.[properties.signature]?.Erreur !== "undefined") {
+        throw new ServerSideError(this.data[properties.signature].MessageErreur);
       }
     }
     catch (error) {

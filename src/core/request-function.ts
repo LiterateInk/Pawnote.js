@@ -4,6 +4,7 @@ import pako from "pako";
 import { AES } from "../api/private/aes";
 import { ResponseFN } from "./response-function";
 import { aesKeys } from "../api/private/keys";
+import { apiProperties } from "~/api/private/api-properties";
 
 /**
  * Abstraction to make requests to function API
@@ -90,6 +91,7 @@ export class RequestFN {
   public async send (): Promise<ResponseFN> {
     return this.session.queue.push(async () => {
       const payload = this.process();
+      const properties = apiProperties(this.session);
 
       const response = await this.session.fetcher({
         url: payload.url,
@@ -99,9 +101,9 @@ export class RequestFN {
         },
         content: JSON.stringify({
           session: this.session.information.id,
-          numeroOrdre: payload.order,
-          nom: this.name,
-          donneesSec: this.data
+          [properties.orderNumber]: payload.order,
+          [properties.requestId]: this.name,
+          [properties.secureData]: this.data
         })
       });
 
