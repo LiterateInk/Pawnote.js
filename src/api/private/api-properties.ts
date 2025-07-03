@@ -12,6 +12,13 @@ export const apiProperties = (session: SessionHandle): {
   signature: string;
   orderNumber: string;
   secureData: string;
+  session: string;
+
+  fileUploadOrderNumber: string
+  fileUploadSession: string
+  fileUploadRequestId: string
+  fileUploadFileId: string
+  fileUploadMd5: string
 } => {
   if (isVersionGte2025_1_3(session.instance.version)) {
     return {
@@ -19,26 +26,42 @@ export const apiProperties = (session: SessionHandle): {
       orderNumber: "no",
       secureData: "dataSec",
       requestId: "id",
-      signature: "Signature"
+      signature: "Signature",
+      session: "session",
+
+      fileUploadOrderNumber: "u_no",
+      fileUploadSession: "u_ns",
+      fileUploadRequestId: "u_idR",
+      fileUploadFileId: "u_idF",
+      fileUploadMd5: "u_md5"
     };
   }
 
-  else if (isVersionGte2024_3_9(session.instance.version)) {
+  let common = {
+    orderNumber: "numeroOrdre",
+    secureData: "donneesSec",
+    requestId: "nom",
+    session: "session",
+
+    fileUploadOrderNumber: "numeroOrdre",
+    fileUploadSession: "numeroSession",
+    fileUploadRequestId: "nomRequete",
+    fileUploadFileId: "idFichier",
+    fileUploadMd5: "md5"
+  };
+
+  if (isVersionGte2024_3_9(session.instance.version)) {
     return {
+      ...common,
       data: "data",
-      orderNumber: "numeroOrdre",
-      secureData: "donneesSec",
-      requestId: "nom",
       signature: "Signature"
     };
   }
 
   // older versions.
-  else return {
+  return {
+    ...common,
     data: "donnees",
-    orderNumber: "numeroOrdre",
-    secureData: "donneesSec",
-    requestId: "nom",
     signature: "_Signature_"
   };
 };

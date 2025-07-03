@@ -2,6 +2,7 @@ import type { FormDataFile } from "@literate.ink/utilities";
 import { UploadFailedError, type SessionHandle } from "~/models";
 import { aesKeys } from "~/api/private/keys";
 import { AES } from "~/api/private/aes";
+import { apiProperties } from "~/api/private/api-properties";
 
 export class RequestUpload {
   public order: string;
@@ -22,12 +23,14 @@ export class RequestUpload {
     const { iv, key } = aesKeys(session);
     this.order = AES.encrypt(session.information.order.toString(), key, iv);
 
+    const properties = apiProperties(this.session);
+
     const form = new FormData();
-    form.append("numeroOrdre", this.order);
-    form.append("numeroSession", session.information.id.toString());
-    form.append("nomRequete", functionName);
-    form.append("idFichier", this.id);
-    form.append("md5", "");
+    form.append(properties.fileUploadOrderNumber, this.order);
+    form.append(properties.fileUploadSession, session.information.id.toString());
+    form.append(properties.fileUploadRequestId, functionName);
+    form.append(properties.fileUploadFileId, this.id);
+    form.append(properties.fileUploadMd5, "");
     // @ts-expect-error : trust me.
     form.append("files[]", file, fileName);
 

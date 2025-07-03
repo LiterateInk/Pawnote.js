@@ -100,7 +100,7 @@ export class RequestFN {
           "Content-Type": "application/json"
         },
         content: JSON.stringify({
-          session: this.session.information.id,
+          [properties.session]: this.session.information.id,
           [properties.orderNumber]: payload.order,
           [properties.requestId]: this.name,
           [properties.secureData]: this.data
