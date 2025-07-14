@@ -1,6 +1,10 @@
-<img alt="Pawnote: A purrfect API wrapper for PRONOTE" src="https://raw.githubusercontent.com/LiterateInk/Pawnote/index/.github/assets/banner.svg" width="100%" />
+<img alt="Pawnote: A purrfect API wrapper for PRONOTE" src=".github/assets/banner.svg" width="100%" />
 
-*This library **is not** affiliated with [Index-Education](https://www.index-education.com/) or [PRONOTE](https://www.index-education.com/fr/logiciel-gestion-vie-scolaire.php) in any way.*
+_This library **is not** affiliated with [Index-Education](https://www.index-education.com/) or [PRONOTE](https://www.index-education.com/fr/logiciel-gestion-vie-scolaire.php) in any way._
+
+## What is "PRONOTE" ?
+
+[PRONOTE](https://www.index-education.com/fr/logiciel-gestion-vie-scolaire.php) is a school management application used by educational establishments in France to centralize and facilitate communication between teachers, students and parents. It lets you manage and consult timetables, grades, absences and homework, as well as communicate via messages. PRONOTE aims to improve the transparency and efficiency of day-to-day school management.
 
 ## Installation
 

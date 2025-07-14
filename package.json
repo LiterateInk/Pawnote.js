@@ -2,7 +2,7 @@
   "name": "pawnote",
   "version": "1.5.0",
   "description": "A purrfect API wrapper for PRONOTE.",
-  "repository": "https://github.com/LiterateInk/Pawnote",
+  "repository": "https://github.com/LiterateInk/Pawnote.js",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -31,9 +31,9 @@
     "api"
   ],
   "author": "LiterateInk <contact@literate.ink> (https://literate.ink)",
-  "homepage": "https://docs.literate.ink/pawnote",
+  "homepage": "https://pawnote.docs.literate.ink/",
   "bugs": {
-    "url": "https://github.com/LiterateInk/Pawnote/issues"
+    "url": "https://github.com/LiterateInk/Pawnote.js/issues"
   },
   "license": "GPL-3.0-or-later",
   "engines": {
