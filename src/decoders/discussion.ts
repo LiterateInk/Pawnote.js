@@ -23,7 +23,7 @@ export const decodeDiscussion = (discussion: any, folders: DiscussionFolder[], c
 };
 
 function convertLabelToDate(
-    label: string,
+  label: string
 ): Date {
   const now = new Date();
   const weekdays = [
@@ -33,11 +33,11 @@ function convertLabelToDate(
     "mercredi",
     "jeudi",
     "vendredi",
-    "samedi",
+    "samedi"
   ];
 
   const weekdayTimeMatch = label.match(
-      /(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)?\s*(\d{1,2})h(\d{2})/i
+    /(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)?\s*(\d{1,2})h(\d{2})/i
   );
   if (weekdayTimeMatch) {
     const [, weekdayStr, h, m] = weekdayTimeMatch;
@@ -70,13 +70,13 @@ function convertLabelToDate(
   if (shortDateMatch) {
     let [_, day, month] = shortDateMatch;
     const parsed = new Date(
-        now.getFullYear(),
-        parseInt(month) - 1,
-        parseInt(day)
+      now.getFullYear(),
+      parseInt(month) - 1,
+      parseInt(day)
     );
 
     if (
-        parsed > now &&
+      parsed > now &&
         parsed.getTime() - now.getTime() > 3 * 24 * 60 * 60 * 1000
     ) {
       parsed.setFullYear(parsed.getFullYear() - 1);
