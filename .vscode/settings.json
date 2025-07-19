@@ -1,11 +1,17 @@
 {
-  "editor.detectIndentation": false,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
   },
-
-  "eslint.useFlatConfig": true
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "xml"
+  ]
 }
