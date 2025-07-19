@@ -1,6 +1,6 @@
 {
   "name": "pawnote",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A purrfect API wrapper for PRONOTE.",
   "repository": {
     "type": "git",
