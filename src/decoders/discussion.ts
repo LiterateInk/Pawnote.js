@@ -24,7 +24,7 @@ export const decodeDiscussion = (discussion: any, folders: DiscussionFolder[], c
 
 function convertLabelToDate(
     label: string,
-): Date | undefined {
+): Date {
   const now = new Date();
   const weekdays = [
     "dimanche",
