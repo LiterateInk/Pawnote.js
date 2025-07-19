@@ -24,6 +24,10 @@ const handle: SessionHandle = {
     // Will reset and change depending on the test.
     skipCompression: true,
     skipEncryption: true
+  },
+  // @ts-expect-error : we only fill the necessary fields.
+  instance: {
+    version: [2024, 1, 0]
   }
 };
 
