@@ -18,6 +18,7 @@ export type Discussion = Readonly<{
    * "07h26"
    */
   dateAsFrenchText: string
+  date?: Date
 
   /**
    * Internal string containing the ID of the message
