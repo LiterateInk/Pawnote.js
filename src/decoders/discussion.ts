@@ -5,7 +5,6 @@ export const decodeDiscussion = (discussion: any, folders: DiscussionFolder[], c
   return {
     cache,
     creator: discussion.initiateur,
-    dateAsFrenchText: discussion.libelleDate,
     date: convertLabelToDate(discussion.libelleDate),
     recipientName: discussion.public,
     participantsMessageID: discussion.messagePourParticipants.V.N,
