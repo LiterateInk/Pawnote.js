@@ -6,18 +6,7 @@ export type Discussion = Readonly<{
   creator?: string
   recipientName?: string
 
-  /**
-   * Output is very variable, see example below.
-   * Because of this behavior, we can't transform this into a date.
-   *
-   * Maybe, we could parse this manually, but it's not a priority.
-   *
-   * @example
-   * "lundi 08h53"
-   * // or can just be the hour
-   * "07h26"
-   */
-  dateAsFrenchText: string
+  date: Date
 
   /**
    * Internal string containing the ID of the message
