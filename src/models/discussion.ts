@@ -6,7 +6,7 @@ export type Discussion = Readonly<{
   creator?: string
   recipientName?: string
 
-  date?: Date
+  date: Date
 
   /**
    * Internal string containing the ID of the message
