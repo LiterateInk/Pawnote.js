@@ -85,5 +85,5 @@ function convertLabelToDate(
     return parsed;
   }
 
-  return undefined;
+  throw new Error("Couldn't convert this label to a date, please open an issue with the label to improve this function.");
 }
