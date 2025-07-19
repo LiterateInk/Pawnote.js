@@ -2,7 +2,10 @@
   "name": "pawnote",
   "version": "1.6.0",
   "description": "A purrfect API wrapper for PRONOTE.",
-  "repository": "https://github.com/LiterateInk/Pawnote.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiterateInk/Pawnote.js.git"
+  },
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -18,9 +21,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
-    "checks": "tsc && eslint .",
-    "test": "bun test"
+    "build": "tsup"
   },
   "files": [
     "dist"
@@ -36,9 +37,6 @@
     "url": "https://github.com/LiterateInk/Pawnote.js/issues"
   },
   "license": "GPL-3.0-or-later",
-  "engines": {
-    "node": ">=18"
-  },
   "devDependencies": {
     "@inquirer/prompts": "^4.3.3",
     "@stylistic/eslint-plugin": "^2.7.2",
