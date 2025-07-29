@@ -1,0 +1,13 @@
+{
+  "name": "Pawnote",
+  "hideGenerator": true,
+  "cleanOutputDir": true,
+  "customFooterHtml": "<a href=\"https://www.netlify.com\"><img src=\"https://www.netlify.com/assets/badges/netlify-badge-dark.svg\" alt=\"Deploys by Netlify\" /></a>",
+  "entryPoints": ["src/index.ts"],
+  "basePath": "src",
+  "navigationLinks": {
+    "Website": "https://pawnote.docs.literate.ink/",
+    "GitHub": "https://github.com/LiterateInk/Pawnote.js",
+    "Discord": "https://discord.gg/f5KNCnMWzB"
+  }
+}
