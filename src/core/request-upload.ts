@@ -3,6 +3,7 @@ import { UploadFailedError, type SessionHandle } from "~/models";
 import { aesKeys } from "~/api/private/keys";
 import { AES } from "~/api/private/aes";
 import { apiProperties } from "~/api/private/api-properties";
+import { USER_AGENT } from "~/api/private/user-agent";
 
 export class RequestUpload {
   public order: string;
@@ -10,7 +11,9 @@ export class RequestUpload {
 
   private url: string;
   private form: FormData;
-  private headers: Record<string, string> = {};
+  private headers: Record<string, string> = {
+    "User-Agent": USER_AGENT
+  };
 
   public constructor (
     private session: SessionHandle,

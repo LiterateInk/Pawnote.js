@@ -5,6 +5,7 @@ import { AES } from "../api/private/aes";
 import { ResponseFN } from "./response-function";
 import { aesKeys } from "../api/private/keys";
 import { apiProperties } from "~/api/private/api-properties";
+import { USER_AGENT } from "~/api/private/user-agent";
 
 /**
  * Abstraction to make requests to function API
@@ -97,7 +98,8 @@ export class RequestFN {
         url: payload.url,
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "User-Agent": USER_AGENT
         },
         content: JSON.stringify({
           [properties.session]: this.session.information.id,

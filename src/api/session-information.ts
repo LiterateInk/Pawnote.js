@@ -1,7 +1,8 @@
-import { defaultFetcher, type Fetcher, type Request, setCookiesArrayToRequest } from "@literate.ink/utilities";
+import { defaultFetcher, type Fetcher, type Request, setCookiesArrayToRequest, setHeaderToRequest } from "@literate.ink/utilities";
 import { decodeSessionInformation } from "~/decoders/session-information";
 import { encodeAccountKindToPath } from "~/encoders/account-kind";
 import { BusyPageError, PageUnavailableError, SuspendedIPError, type AccountKind, type SessionInformation } from "~/models";
+import { USER_AGENT } from "./private/user-agent";
 
 const VERSION_FROM_HTML_REGEX = />PRONOTE (?<version>\d+\.\d+\.\d+)/;
 
@@ -18,6 +19,7 @@ export const sessionInformation = async (options: {
 
   const request: Request = { url, redirect: "manual" };
   setCookiesArrayToRequest(request, options.cookies);
+  setHeaderToRequest(request, "User-Agent", USER_AGENT);
 
   const { content: html } = await fetcher(request);
   const version = html.match(VERSION_FROM_HTML_REGEX)?.groups?.version?.split(".").map(Number);
