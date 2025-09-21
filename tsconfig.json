@@ -1,23 +1,27 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@!/*": ["./tests/*"],
+      "pawnote": ["./src/index.ts"]
     },
-    
+
     "strict": true,
     "noEmit": true,
-    "skipLibCheck": true,
 
-    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
 
-  "include": ["src", "examples", "eslint.config.js"],
+  "include": ["src", "src-new", "examples", "examples-new", "tests", "eslint.config.ts", "tsup.config.ts"],
   "exclude": ["node_modules", "dist"]
 }
