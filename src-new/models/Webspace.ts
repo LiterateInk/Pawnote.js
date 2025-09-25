@@ -11,6 +11,15 @@ export enum Webspace {
 }
 
 export namespace Webspace {
+  const SENIOR_MANAGEMENT = "direction";
+  const TEACHER = "professeur";
+  const STUDENT_ADMINISTRATION = "viescolaire";
+  const PARENT = "parent";
+  const TEACHING_ASSISTANT = "accompagnant";
+  const STUDENT = "eleve";
+  const COMPANY = "entreprise";
+
+
   /**
    * @example
    * Webspace.fromPath("eleve.html"); // Webspace.Students
@@ -21,14 +30,28 @@ export namespace Webspace {
     segments.pop(); // remove .html
 
     switch (segments.pop()) {
-      case "direction": return Webspace.SeniorManagement;
-      case "professeur": return Webspace.Teachers;
-      case "viescolaire": return Webspace.StudentAdministration;
-      case "parent": return Webspace.Parents;
-      case "accompagnant": return Webspace.TeachingAssistants;
-      case "eleve": return Webspace.Students;
-      case "entreprise": return Webspace.Company;
+      case SENIOR_MANAGEMENT: return Webspace.SeniorManagement;
+      case TEACHER: return Webspace.Teachers;
+      case STUDENT_ADMINISTRATION: return Webspace.StudentAdministration;
+      case PARENT: return Webspace.Parents;
+      case TEACHING_ASSISTANT: return Webspace.TeachingAssistants;
+      case STUDENT: return Webspace.Students;
+      case COMPANY: return Webspace.Company;
       default: throw new UnreachableError("Webspace.fromPath");
+    }
+  }
+
+  export function toMobilePath(webspace: Webspace): string {
+    const wrap = (name: string) => `mobile.${name}.html`;
+
+    switch(webspace) {
+      case Webspace.SeniorManagement: return wrap(SENIOR_MANAGEMENT);
+      case Webspace.Teachers: return wrap(TEACHER);
+      case Webspace.StudentAdministration: return wrap(STUDENT_ADMINISTRATION);
+      case Webspace.Parents: return wrap(PARENT);
+      case Webspace.TeachingAssistants: return wrap(TEACHING_ASSISTANT);
+      case Webspace.Students: return wrap(STUDENT);
+      case Webspace.Company: return wrap(COMPANY);
     }
   }
 }
