@@ -15,7 +15,7 @@ export class InstanceInformation {
   public date = t.instance<Date>();
 
   @rename("espaces")
-  public webspaces = t.array(t.reference);
+  public webspaces = t.array(t.reference(InstanceInformationWebspace));
 
   @rename("CAS")
   public cas = t.option(t.reference(InstanceInformationCAS));
@@ -29,7 +29,7 @@ export class InstanceInformationWebspace {
   public path = t.string();
 
   @rename("genreEspace")
-  public id = t.enum(Webspace);
+  public kind = t.enum(Webspace);
 }
 
 export class InstanceInformationCAS {
