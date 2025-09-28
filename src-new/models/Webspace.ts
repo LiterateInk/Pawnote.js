@@ -1,4 +1,4 @@
-import { UnreachableError } from "..";
+import { UnreachableError } from "./Errors/UnreachableError";
 
 export enum Webspace {
   SeniorManagement = 17,
