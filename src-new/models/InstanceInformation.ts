@@ -1,5 +1,6 @@
 import { deserializeWith, rename, t, u } from "desero";
 import { Webspace } from "./Webspace";
+import { Version } from "./Version";
 
 export class InstanceInformation {
   @rename("nomEtab")
@@ -9,7 +10,7 @@ export class InstanceInformation {
    * Three integers that represents the version of the PRONOTE instance,
    * usually goes by `[year, major, minor]`.
    */
-  public version = t.array(t.number());
+  public version = t.array(t.number()) as Version;
 
   @deserializeWith((date: string) => new Date(date))
   public date = t.instance<Date>();
