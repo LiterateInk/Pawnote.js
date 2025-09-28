@@ -1,5 +1,5 @@
 import { deserialize } from "desero";
-import { HttpRequest, send } from "schwi";
+import { HeaderKeys, HttpRequest, send } from "schwi";
 import { UA } from "src-new/core/user-agent";
 import { InstanceInformation } from "./InstanceInformation";
 
@@ -52,7 +52,7 @@ export class Instance {
   public async getInformation(): Promise<InstanceInformation> {
     const request = new HttpRequest.Builder(`${this.base}/infoMobileApp.json`)
       .setUrlSearchParameter("id", "0D264427-EEFC-4810-A9E9-346942A862A4")
-      .setHeader("User-Agent", UA)
+      .setHeader(HeaderKeys.USER_AGENT, UA)
       .build();
 
     const response = await send(request);
