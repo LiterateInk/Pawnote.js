@@ -40,8 +40,7 @@ export class SessionAES {
     return cbc(this._mKey, this._mIv).encrypt(input);
   }
 
-  public decrypt(hex: string): Uint8Array {
-    const bytes = hexToBytes(hex);
+  public decrypt(bytes: Uint8Array): Uint8Array {
     return cbc(this._mKey, this._mIv).decrypt(bytes);
   }
 }
