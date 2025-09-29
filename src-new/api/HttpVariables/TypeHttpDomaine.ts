@@ -6,7 +6,7 @@ enum ValeurSemaine {
   Empty = "0"
 }
 
-interface Domaine {
+export interface Domaine {
   _T: TypeHttpVariable.TypeHttpDomaine | TypeHttpVariable.TypeHttpEnsemble | TypeHttpVariable.TypeHttpEnsembleCardinal
   V: string
 }

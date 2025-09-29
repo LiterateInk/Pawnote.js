@@ -1,6 +1,6 @@
 import { TypeHttpVariable } from "./TypeHttpVariable";
 
-interface EnsembleNombre {
+export interface EnsembleNombre {
   _T: TypeHttpVariable.TypeHttpEnsembleNombre
   V: string
 }
