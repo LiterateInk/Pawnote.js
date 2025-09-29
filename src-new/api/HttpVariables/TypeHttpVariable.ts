@@ -6,6 +6,7 @@ import type { TypeHttpDomaine } from "./TypeHttpDomaine";
 import type { TypeHttpEnsemble } from "./TypeHttpEnsemble";
 import type { TypeHttpEnsembleCardinal } from "./TypeHttpEnsembleCardinal";
 import type { TypeHttpEnsembleNombre } from "./TypeHttpEnsembleNombre";
+import type { TypeHttpNote } from "./TypeHttpNote";
 
 export enum TypeHttpVariable {
   TypeHttpCategorie = 0,
@@ -20,6 +21,7 @@ export enum TypeHttpVariable {
   /** @see {@link TypeHttpDomaine | implementation} */
   TypeHttpDomaine = 8,
   TypeHttpTraduction = 9,
+  /** @see {@link TypeHttpNote | implementation} */
   TypeHttpNote = 10,
   /** @see {@link TypeHttpEnsembleCardinal | implementation} */
   TypeHttpEnsembleCardinal = 11,
