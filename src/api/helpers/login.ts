@@ -80,35 +80,35 @@ export const loginCredentials = async (session: SessionHandle, auth: PasswordAut
  * @returns A promise resolving to the refreshed session information.
  */
 export const loginToken = async (session: SessionHandle, auth: TokenAuthenticationParams): Promise<RefreshInformation> => {
-  const base = cleanURL(auth.url);
+  // const base = cleanURL(auth.url);
 
-  const { information, version } = await sessionInformation({
-    base,
-    kind: auth.kind,
-    cookies: ["appliMobile=1"],
-    params: BASE_PARAMS
-  }, session.fetcher);
+  // const { information, version } = await sessionInformation({
+  //   base,
+  //   kind: auth.kind,
+  //   cookies: ["appliMobile=1"],
+  //   params: BASE_PARAMS
+  // }, session.fetcher);
 
-  session.information = information;
-  session.instance = <InstanceParameters>{ version };
-  session.instance = await instanceParameters(session, auth.navigatorIdentifier);
+  // session.information = information;
+  // session.instance = <InstanceParameters>{ version };
+  // session.instance = await instanceParameters(session, auth.navigatorIdentifier);
 
-  const identity = await identify(session, {
-    username: auth.username,
-    deviceUUID: auth.deviceUUID,
+  // const identity = await identify(session, {
+  //   username: auth.username,
+  //   deviceUUID: auth.deviceUUID,
 
-    requestFirstMobileAuthentication: false,
-    reuseMobileAuthentication: true,
-    requestFromQRCode: false,
-    useCAS: false
-  });
+  //   requestFirstMobileAuthentication: false,
+  //   reuseMobileAuthentication: true,
+  //   requestFromQRCode: false,
+  //   useCAS: false
+  // });
 
-  transformCredentials(auth, "token", identity);
-  const key = createMiddlewareKey(identity, auth.username, auth.token);
+  // transformCredentials(auth, "token", identity);
+  // const key = createMiddlewareKey(identity, auth.username, auth.token);
 
-  const challenge = solveChallenge(session, identity, key);
-  const authentication = await authenticate(session, challenge);
-  switchToAuthKey(session, authentication, key);
+  // const challenge = solveChallenge(session, identity, key);
+  // const authentication = await authenticate(session, challenge);
+  // switchToAuthKey(session, authentication, key);
 
   if (hasSecurityModal(authentication)) {
     throw new SecurityError(authentication, identity, auth.username);
@@ -198,88 +198,6 @@ const switchToTokenLogin = (session: SessionHandle, auth: Pick<TokenAuthenticati
   });
 };
 
-/**
- * Creates a middleware key for authentication.
- *
- * @param identity - The identity object returned from the `identify()` function.
- * @param username - The username to authenticate with.
- * @param mod - The password or token used for authentication.
- * @returns A buffer containing the middleware key.
- */
-const createMiddlewareKey = (identity: any, username: string, mod: string): forge.util.ByteStringBuffer => {
-  const hash = forge.md.sha256.create()
-    .update(identity.alea ?? "")
-    .update(forge.util.encodeUtf8(mod))
-    .digest()
-    .toHex()
-    .toUpperCase();
-
-  return forge.util.createBuffer(username + hash);
-};
-
-/**
- * Transforms the credentials based on the identity's compatibility modes.
- *
- * @param auth - The authentication object containing username, token, or password.
- * @param modProperty - The property to modify, either "token" or "password".
- * @param identity - The identity object returned from the `identify()` function.
- */
-const transformCredentials = (auth: { username: string, token?: string, password?: string }, modProperty: "token" | "password", identity: any): void => {
-  if (identity.modeCompLog === 1) {
-    auth.username = auth.username.toLowerCase();
-  }
-
-  if (identity.modeCompMdp === 1) {
-    auth[modProperty] = auth[modProperty]!.toLowerCase();
-  }
-};
-
-/**
- * Resolves the authentication challenge.
- *
- * @param session - The current session handle containing session information.
- * @param identity - The identity object returned from the `identify()` function.
- * @param key - The middleware key used for decryption.
- * @returns The encrypted solution to the challenge.
- * @throws `BadCredentialsError` if the challenge cannot be solved.
- */
-const solveChallenge = (session: SessionHandle, identity: any, key: forge.util.ByteStringBuffer): string => {
-  const iv = forge.util.createBuffer(session.information.aesIV);
-
-  try {
-    const bytes = forge.util.decodeUtf8(AES.decrypt(identity.challenge, key, iv));
-
-    // Modify the plain text by removing every second character.
-    const unscrambled = new Array(bytes.length);
-    for (let i = 0; i < bytes.length; i += 1) {
-      if (i % 2 === 0) {
-        unscrambled.push(bytes.charAt(i));
-      }
-    }
-
-    const solution = forge.util.encodeUtf8(unscrambled.join(""));
-    return AES.encrypt(solution, key, iv);
-  }
-  catch {
-    throw new BadCredentialsError();
-  }
-};
-
-/**
- * Switches the session to use the authentication key.
- *
- * @param session - The current session handle containing session information.
- * @param authentication - The authentication object returned from the `authenticate()` function.
- * @param key - The middleware key used for decryption.
- * @returns {void}
- */
-const switchToAuthKey = (session: SessionHandle, authentication: any, key: forge.util.ByteStringBuffer): void => {
-  const iv = forge.util.createBuffer(session.information.aesIV);
-  const authKeyDecrypted = AES.decrypt(authentication.cle, key, iv);
-  const authKey = authKeyDecrypted.split(",").map((char) => String.fromCharCode(parseInt(char))).join("");
-
-  session.information.aesKey = authKey;
-};
 
 /**
  * Checks if the authentication response contains a security modal.
