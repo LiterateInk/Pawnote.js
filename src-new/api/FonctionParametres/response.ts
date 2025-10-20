@@ -3,7 +3,6 @@ import { Version } from "src-new/models/Version";
 import { TypeHttpElement } from "../HttpVariables/TypeHttpElement";
 import { Police } from "../models/Police";
 import { TypeHttpChaineBrute } from "../HttpVariables/TypeHttpChaineBrute";
-import { TypeHttpHtmlSafe } from "../HttpVariables/TypeHttpHtmlSafe";
 import { MentionsPagesPubliques } from "../models/MentionsPagesPubliques";
 import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
 import { Langue } from "../models/Langue";
@@ -389,7 +388,7 @@ export class FonctionParametresModel {
 
   @rename("DateDemo")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public demoDateTime = t.instance(Date);
+  public demoDateTime = t.option(t.instance(Date));
 
   @rename("URLEspace")
   public webspaceUrl = t.string();

@@ -5,6 +5,7 @@ import { base64 } from "@scure/base";
 import { randomBytes } from "@noble/ciphers/utils.js";
 import { ResponseFunction, ResponseFunctionWrapper } from "../../models/ResponseFunction";
 import { FonctionParametresModel, FonctionParametresSignature } from "./response";
+import type { FonctionParametresRequest } from "./request";
 
 export type FonctionParametresResponse = ResponseFunctionWrapper<FonctionParametresModel, FonctionParametresSignature>;
 

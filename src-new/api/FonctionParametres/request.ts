@@ -1,4 +1,4 @@
-interface FonctionParametresRequest {
+export interface FonctionParametresRequest {
   identifiantNav: string | null
   Uuid: string
 }
