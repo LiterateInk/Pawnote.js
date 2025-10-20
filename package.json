@@ -21,6 +21,7 @@
     }
   },
   "scripts": {
+    "example": "bun --env-file examples-new/.env",
     "build": "tsup"
   },
   "files": [
