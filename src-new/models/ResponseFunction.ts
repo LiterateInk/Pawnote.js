@@ -1,7 +1,7 @@
 import { HttpResponse } from "schwi";
 import { Session } from "./Session";
 import { ServerSideError } from "./Errors/ServerSideError";
-import { defaultValue, deserialize, rename, t } from "desero";
+import { deserialize } from "desero";
 import { SessionExpiredError } from "./Errors/SessionExpiredError";
 import { SuspendedIpError } from "./Errors/SuspendedIpError";
 import { PageUnavailableError } from "./Errors/PageUnavailableError";
@@ -51,7 +51,7 @@ export class ResponseFunction<
         }
 
         if (!this.session.api.skipCompression) {
-          data = inflate(data);
+          data = await inflate(data);
         }
 
         data = JSON.parse(bytesToUtf8(data));
