@@ -62,7 +62,7 @@ export class ResponseFunction<
       }
 
       return {
-        data: deserialize(this.DataModel, data),
+        data: deserialize(this.DataModel, data[this.session.api.properties.data]),
         signature: this.SignatureModel && deserialize(this.SignatureModel, data[this.session.api.properties.signature])
       };
     }
