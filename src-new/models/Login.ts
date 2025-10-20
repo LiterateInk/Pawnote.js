@@ -10,9 +10,16 @@ import { deserialize } from "desero";
 import { Session } from "./Session";
 import { FonctionParametres } from "src-new/api/FonctionParametres";
 import { Parameters } from "./Parameters";
+import { Identification } from "src-new/api/Identification";
+import { sha256 } from "@noble/hashes/sha2.js";
+import { bytesToHex, utf8ToBytes } from "@noble/hashes/utils.js";
+import { bytesToUtf8, hexToBytes } from "@noble/ciphers/utils.js";
+import { Authentification } from "src-new/api/Authentification";
+import { BadCredentialsError } from "./Errors/BadCredentialsError";
 
 abstract class Login {
   private _session?: Session;
+  public requires2FA = false;
 
   protected constructor (
     protected readonly _instance: Instance
@@ -24,7 +31,7 @@ abstract class Login {
     password: string,
     deviceUUID: string,
     navigatorIdentifier: string | null
-  ) {
+  ): Promise<void> {
     const instance = await this._instance.getInformation();
     const homepage = await this._getWebspaceHomepageSession(webspace);
 
@@ -33,7 +40,17 @@ abstract class Login {
       await new FonctionParametres(this._session).send(navigatorIdentifier)
     );
 
-    console.log(parameters);
+    const { data: identity } = await new Identification(this._session).send(username, deviceUUID);
+
+    if (identity.lowerUsername) username = username.toLowerCase();
+    if (identity.lowerPassword) password = password.toLowerCase();
+
+    const key = this._createMiddlewareKey(identity.seed, username, password);
+    const challenge = this._solveChallenge(identity.challenge, key);
+    const { data: authentication } = await new Authentification(this._session).send(challenge);
+
+    this._switchDefinitiveKey(key, authentication.key);
+    this.requires2FA = Boolean(authentication.actionsDoubleAuth);
   }
 
   private async _getWebspaceHomepageSession(webspace: Webspace, cookies: Record<string, string> = {}): Promise<HomepageSession> {
@@ -85,6 +102,48 @@ abstract class Login {
 
     return deserialize(HomepageSession, json);
   }
+
+  private _createMiddlewareKey(seed: string | null, username: string, mod: string): Uint8Array {
+    try {
+      const hash = bytesToHex(sha256.create()
+        .update(utf8ToBytes(seed ?? ""))
+        .update(utf8ToBytes(mod))
+        .digest()).toUpperCase();
+
+      return utf8ToBytes(username + hash);
+    }
+    catch {
+      throw new BadCredentialsError();
+    }
+  }
+
+  private _solveChallenge(challenge: string, key: Uint8Array): Uint8Array {
+    try {
+      const pkey = this._session!.aes.key;
+      this._session!.aes.key = key; // temp switch key
+
+      const encoded = bytesToUtf8(this._session!.aes.decrypt(hexToBytes(challenge)));
+      const decoded = encoded.split("")
+        .filter((_, i) => i % 2 === 0)
+        .join("");
+
+      const response = this._session!.aes.encrypt(decoded);
+      this._session!.aes.key = pkey; // revert key
+      return response;
+    }
+    catch {
+      throw new BadCredentialsError();
+    }
+  }
+
+  private _switchDefinitiveKey(key: Uint8Array, authKey: string): void {
+    this._session!.aes.key = key; // temp switch key
+
+    const decrypted = bytesToUtf8(this._session!.aes.decrypt(hexToBytes(authKey)));
+    this._session!.aes.key = new Uint8Array(
+      decrypted.split(",").map(Number)
+    );
+  }
 }
 
 export class StudentLogin extends Login {
@@ -97,7 +156,7 @@ export class StudentLogin extends Login {
     password: string,
     deviceUUID = crypto.randomUUID() as string,
     navigatorIdentifier: string | null = null
-  ) {
+  ): Promise<void> {
     return this._initializeWithCredentials(
       Webspace.Students,
       username,
