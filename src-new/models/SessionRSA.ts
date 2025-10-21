@@ -12,7 +12,7 @@ export class SessionRSA {
    * Whether the modulus and exponent are coming from
    * the webspace HTML homepage or not.
    */
-  public custom = false;
+  public readonly custom: boolean;
 
   public get publicKey(): PublicKey {
     return {

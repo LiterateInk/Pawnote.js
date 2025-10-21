@@ -27,7 +27,7 @@ export class FonctionParametres extends RequestFunction<FonctionParametresReques
   private generateUUID (): string {
     let iv = this.iv;
 
-    if (!this.session.rsa.custom || (this.session.rsa.custom && this.session.homepage.http)) {
+    if (this.session.rsa.custom || (!this.session.rsa.custom && this.session.homepage.http)) {
       iv = PKCS1_KEM.encrypt(this.session.rsa.publicKey, this.iv);
     }
 
