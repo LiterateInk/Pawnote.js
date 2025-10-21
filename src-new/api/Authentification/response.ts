@@ -1,6 +1,9 @@
 import { deserializeWith, rename, t } from "desero";
 import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
 import { TypeHttpEnsembleNombre } from "../HttpVariables/TypeHttpEnsembleNombre";
+import { TypeModeGestionDoubleAuthentification } from "../models/TypeModeGestionDoubleAuthentification";
+import { TypeActionIHMSecurisationCompte } from "../models/TypeActionIHMSecurisationCompte";
+import { TypeOptionGenerationMotDePasse } from "../models/TypeOptionGenerationMotDePasse";
 
 export class AuthentificationModel {
   @rename("Acces")
@@ -10,7 +13,7 @@ export class AuthentificationModel {
   public label = t.string();
 
   @rename("modeSecurisationParDefaut")
-  public defaultSecurityMode = t.number(); // TODO: find enum
+  public defaultSecurityMode = t.enum(TypeModeGestionDoubleAuthentification);
 
   @rename("cle")
   public key = t.string();
@@ -28,7 +31,16 @@ export class AuthentificationModel {
   @rename("reglesSaisieMDP")
   public changePasswordRules = t.reference(ReglesSaisieMDP);
 
-  public actionsDoubleAuth = t.option(t.instance<any>()); // TODO
+  @rename("actionsDoubleAuth")
+  @deserializeWith(TypeHttpEnsembleNombre.deserializer)
+  public securityActions = t.option(t.array(t.enum(TypeActionIHMSecurisationCompte)));
+
+  @rename("modesPossibles")
+  @deserializeWith(TypeHttpEnsembleNombre.deserializer)
+  public availableSecurityModes = t.option(t.array(t.enum(TypeModeGestionDoubleAuthentification)));
+
+  @rename("messageForcerModificationMdp")
+  public forcePasswordResetMessage = t.option(t.string());
 }
 
 class ReglesSaisieMDP {
@@ -37,5 +49,5 @@ class ReglesSaisieMDP {
 
   @rename("regles")
   @deserializeWith(TypeHttpEnsembleNombre.deserializer)
-  public rules = t.array(t.number()); // TODO: find enum
+  public rules = t.array(t.enum(TypeOptionGenerationMotDePasse));
 }
