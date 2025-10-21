@@ -1,6 +1,6 @@
 import { Instance, StudentLogin } from "../src-new";
 
-const instance = Instance.fromURL("http://pronote-vm.dev/pronote/eleve.html");
+const instance = Instance.fromURL(Bun.env.URL!);
 const login = new StudentLogin(instance);
 await login.initializeWithCredentials(Bun.env.USERNAME!, Bun.env.PASSWORD!);
 
