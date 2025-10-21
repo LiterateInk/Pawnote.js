@@ -6,6 +6,13 @@ import { IdentificationModel } from "./response";
 
 export type IdentificationResponse = ResponseFunctionWrapper<IdentificationModel>;
 
+export enum IdentificationMode {
+  Credentials,
+  Token,
+  CAS,
+  QR
+}
+
 export class Identification extends RequestFunction<IdentificationRequest> {
   private static readonly name = "Identification";
 
@@ -21,10 +28,13 @@ export class Identification extends RequestFunction<IdentificationRequest> {
   public async send(
     username: string,
     uuid: string,
-    token = false,
-    cas = false,
-    qr = false
+    mode: IdentificationMode
   ): Promise<IdentificationResponse> {
+
+    const token = mode === IdentificationMode.Token;
+    const cas = mode === IdentificationMode.CAS;
+    const qr = mode === IdentificationMode.QR;
+
     const response = await this.execute({
       genreConnexion: 0,
       genreEspace: this.session.homepage.webspace,
