@@ -10,47 +10,134 @@ import { deserialize } from "desero";
 import { Session } from "./Session";
 import { FonctionParametres } from "src-new/api/FonctionParametres";
 import { Parameters } from "./Parameters";
-import { Identification } from "src-new/api/Identification";
-import { sha256 } from "@noble/hashes/sha2.js";
-import { bytesToHex, utf8ToBytes } from "@noble/hashes/utils.js";
-import { bytesToUtf8, hexToBytes } from "@noble/ciphers/utils.js";
+import { Identification, IdentificationMode } from "src-new/api/Identification";
 import { Authentification } from "src-new/api/Authentification";
-import { BadCredentialsError } from "./Errors/BadCredentialsError";
+import { Identity } from "./Identity";
+import { Authentication } from "./Authentication";
+import { Student } from "./Student";
 
-abstract class Login {
-  private _session?: Session;
-  public requires2FA = false;
+/**
+ * An intermediate class where a user is half authenticated.
+ *
+ * Login portal might wait for additional data
+ * such as PIN code or password change for example.
+ */
+class PendingLogin {
+  public constructor(
+    public readonly session: Session,
+    public readonly parameters: Parameters,
+    public readonly authentication: Authentication
+  ) {}
 
+  public get shouldCustomPassword(): boolean {
+    return false;
+  }
+  public get shouldCustomDoubleAuth(): boolean {
+    return false;
+  }
+  public get shouldEnterPIN(): boolean {
+    return false;
+  }
+  public get shouldRegisterDevice(): boolean {
+    return false;
+  }
+}
+
+abstract class LoginPortal {
   protected constructor (
     protected readonly _instance: Instance
   ) {}
 
-  protected async _initializeWithCredentials(
+  protected async _credentials(
     webspace: Webspace,
     username: string,
     password: string,
     deviceUUID: string,
     navigatorIdentifier: string | null
-  ): Promise<void> {
+  ): Promise<PendingLogin> {
     const instance = await this._instance.getInformation();
     const homepage = await this._getWebspaceHomepageSession(webspace);
 
-    this._session = new Session(instance, homepage, this._instance.base);
+    const session = new Session(instance, homepage, this._instance.base);
+
     const parameters = new Parameters(
-      await new FonctionParametres(this._session).send(navigatorIdentifier)
+      await new FonctionParametres(session).send(navigatorIdentifier)
     );
 
-    const { data: identity } = await new Identification(this._session).send(username, deviceUUID);
+    const identity = new Identity(
+      await new Identification(session).send(username, deviceUUID, IdentificationMode.Credentials)
+    );
 
-    if (identity.lowerUsername) username = username.toLowerCase();
-    if (identity.lowerPassword) password = password.toLowerCase();
+    const key = identity.createMiddlewareKey(username, password);
+    const challenge = identity.solveChallenge(session, key);
 
-    const key = this._createMiddlewareKey(identity.seed, username, password);
-    const challenge = this._solveChallenge(identity.challenge, key);
-    const { data: authentication } = await new Authentification(this._session).send(challenge);
+    const authentication = new Authentication(
+      await new Authentification(session).send(challenge)
+    );
 
-    this._switchDefinitiveKey(key, authentication.key);
-    this.requires2FA = Boolean(authentication.actionsDoubleAuth);
+    authentication.switchDefinitiveKey(session, key);
+
+    if (authentication.hasSecurityActions) {
+      return this._token(
+        webspace,
+        username,
+        authentication.token,
+        deviceUUID,
+        parameters.navigatorIdentifier
+      );
+    }
+
+    return new PendingLogin(
+      session,
+      parameters,
+      authentication
+    );
+  }
+
+  protected async _token(
+    webspace: Webspace,
+    username: string,
+    token: string,
+    deviceUUID: string,
+    navigatorIdentifier: string | null
+  ): Promise<PendingLogin> {
+    const instance = await this._instance.getInformation();
+    const homepage = await this._getWebspaceHomepageSession(webspace, {
+      appliMobile: "1"
+    });
+
+    const session = new Session(instance, homepage, this._instance.base);
+
+    const parameters = new Parameters(
+      await new FonctionParametres(session).send(navigatorIdentifier)
+    );
+
+    const identity = new Identity(
+      await new Identification(session).send(username, deviceUUID, IdentificationMode.Token)
+    );
+
+    const key = identity.createMiddlewareKey(username, token);
+    const challenge = identity.solveChallenge(session, key);
+
+    const authentication = new Authentication(
+      await new Authentification(session).send(challenge)
+    );
+
+    authentication.switchDefinitiveKey(session, key);
+
+    return new PendingLogin(
+      session,
+      parameters,
+      authentication
+    );
+  }
+
+  /**
+   * Sends the final payload.
+   * @returns user parameters for the logged in user
+   */
+  protected async _finish(login: PendingLogin) {
+    return "ok";
   }
 
   private async _getWebspaceHomepageSession(webspace: Webspace, cookies: Record<string, string> = {}): Promise<HomepageSession> {
@@ -102,67 +189,50 @@ abstract class Login {
 
     return deserialize(HomepageSession, json);
   }
-
-  private _createMiddlewareKey(seed: string | null, username: string, mod: string): Uint8Array {
-    try {
-      const hash = bytesToHex(sha256.create()
-        .update(utf8ToBytes(seed ?? ""))
-        .update(utf8ToBytes(mod))
-        .digest()).toUpperCase();
-
-      return utf8ToBytes(username + hash);
-    }
-    catch {
-      throw new BadCredentialsError();
-    }
-  }
-
-  private _solveChallenge(challenge: string, key: Uint8Array): Uint8Array {
-    try {
-      const pkey = this._session!.aes.key;
-      this._session!.aes.key = key; // temp switch key
-
-      const encoded = bytesToUtf8(this._session!.aes.decrypt(hexToBytes(challenge)));
-      const decoded = encoded.split("")
-        .filter((_, i) => i % 2 === 0)
-        .join("");
-
-      const response = this._session!.aes.encrypt(decoded);
-      this._session!.aes.key = pkey; // revert key
-      return response;
-    }
-    catch {
-      throw new BadCredentialsError();
-    }
-  }
-
-  private _switchDefinitiveKey(key: Uint8Array, authKey: string): void {
-    this._session!.aes.key = key; // temp switch key
-
-    const decrypted = bytesToUtf8(this._session!.aes.decrypt(hexToBytes(authKey)));
-    this._session!.aes.key = new Uint8Array(
-      decrypted.split(",").map(Number)
-    );
-  }
 }
 
-export class StudentLogin extends Login {
+export class StudentLoginPortal extends LoginPortal {
   public constructor (instance: Instance) {
     super(instance);
   }
 
-  public async initializeWithCredentials(
+  public async credentials(
     username: string,
     password: string,
     deviceUUID = crypto.randomUUID() as string,
     navigatorIdentifier: string | null = null
-  ): Promise<void> {
-    return this._initializeWithCredentials(
+  ): Promise<PendingLogin> {
+    return super._credentials(
       Webspace.Students,
       username,
       password,
       deviceUUID,
       navigatorIdentifier
+    );
+  }
+
+  public async token(
+    username: string,
+    token: string,
+    deviceUUID: string,
+    navigatorIdentifier: string | null = null
+  ): Promise<PendingLogin> {
+    return super._token(
+      Webspace.Students,
+      username,
+      token,
+      deviceUUID,
+      navigatorIdentifier
+    );
+  }
+
+  public async finish(login: PendingLogin): Promise<Student> {
+    const user = await super._finish(login);
+
+    return new Student(
+      login.session,
+      login.parameters,
+      login.authentication
     );
   }
 }
