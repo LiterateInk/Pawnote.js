@@ -6,6 +6,6 @@ export class IdentificationModel {
   @rename("modeCompLog")
   public lowerUsername = t.boolean();
   @rename("modeCompMdp")
-  public lowerPassword = t.boolean();
+  public lowerMod = t.boolean();
   public challenge = t.string();
 }
