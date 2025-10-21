@@ -1,6 +1,7 @@
 import { bytesToUtf8, hexToBytes } from "@noble/ciphers/utils.js";
 import { AuthentificationResponse } from "../api/Authentification";
 import { Session } from "./Session";
+import { TypeActionIHMSecurisationCompte } from "../api/models/TypeActionIHMSecurisationCompte";
 
 export class Authentication {
   public constructor(
@@ -11,8 +12,12 @@ export class Authentication {
     return this.authentication.data.token;
   }
 
+  public get securityActions(): TypeActionIHMSecurisationCompte[] {
+    return this.authentication.data.securityActions ?? [];
+  }
+
   public get hasSecurityActions(): boolean {
-    return Boolean(this.authentication.data.actionsDoubleAuth);
+    return Boolean(this.authentication.data.securityActions);
   }
 
   public switchDefinitiveKey(session: Session, key: Uint8Array): void {
