@@ -345,7 +345,7 @@ class General {
 
 export class FonctionParametresModel {
   @rename("identifiantNav")
-  public navigatorIdentifier = t.string();
+  public navigatorIdentifier = t.option(t.string());
 
   @rename("estAfficheDansENT")
   public isDisplayedInENT = t.string();
