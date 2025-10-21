@@ -1,20 +1,21 @@
 import { HeaderKeys, HttpRequest, HttpRequestRedirection, send } from "schwi";
 import { Instance } from "./Instance";
 import { Webspace } from "./Webspace";
-import { UA } from "src-new/core/user-agent";
+import { UA } from "../core/user-agent";
 import { SuspendedIpError } from "./Errors/SuspendedIpError";
 import { PageUnavailableError } from "./Errors/PageUnavailableError";
 import { BusyPageError } from "./Errors/BusyPageError";
 import { HomepageSession } from "./HomepageSession";
 import { deserialize } from "desero";
 import { Session } from "./Session";
-import { FonctionParametres } from "src-new/api/FonctionParametres";
+import { FonctionParametres } from "../api/FonctionParametres";
 import { Parameters } from "./Parameters";
-import { Identification, IdentificationMode } from "src-new/api/Identification";
-import { Authentification } from "src-new/api/Authentification";
+import { Identification, IdentificationMode } from "../api/Identification";
+import { Authentification } from "../api/Authentification";
 import { Identity } from "./Identity";
 import { Authentication } from "./Authentication";
 import { Student } from "./Student";
+import { TypeActionIHMSecurisationCompte } from "../api/models/TypeActionIHMSecurisationCompte";
 
 /**
  * An intermediate class where a user is half authenticated.
@@ -23,23 +24,35 @@ import { Student } from "./Student";
  * such as PIN code or password change for example.
  */
 class PendingLogin {
+  /** @internal */
   public constructor(
-    public readonly session: Session,
-    public readonly parameters: Parameters,
-    public readonly authentication: Authentication
+    /** @internal */
+    public readonly _session: Session,
+    /** @internal */
+    public readonly _parameters: Parameters,
+    /** @internal */
+    public readonly _authentication: Authentication
   ) {}
 
   public get shouldCustomPassword(): boolean {
-    return false;
+    return this._authentication.securityActions.includes(
+      TypeActionIHMSecurisationCompte.AIHMSC_PersonnalisationMotDePasse
+    );
   }
   public get shouldCustomDoubleAuth(): boolean {
-    return false;
+    return this._authentication.securityActions.includes(
+      TypeActionIHMSecurisationCompte.AIHMSC_ChoixStrategie
+    );
   }
   public get shouldEnterPIN(): boolean {
-    return false;
+    return this._authentication.securityActions.includes(
+      TypeActionIHMSecurisationCompte.AIHMSC_SaisieCodePINetSource
+    );
   }
   public get shouldRegisterDevice(): boolean {
-    return false;
+    return this._authentication.securityActions.includes(
+      TypeActionIHMSecurisationCompte.AIHMSC_SaisieSourcePourNotifSeulement
+    );
   }
 }
 
@@ -230,9 +243,9 @@ export class StudentLoginPortal extends LoginPortal {
     const user = await super._finish(login);
 
     return new Student(
-      login.session,
-      login.parameters,
-      login.authentication
+      login._session,
+      login._parameters,
+      login._authentication
     );
   }
 }
