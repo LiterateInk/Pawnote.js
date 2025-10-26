@@ -2,16 +2,17 @@ import { Session } from "src-new/models";
 import { RequestFunction } from "src-new/models/RequestFunction";
 import { ResponseFunction, ResponseFunctionWrapper } from "src-new/models/ResponseFunction";
 import { ParametresUtilisateurRequest } from "./request";
-import { ParametresUtilisateurModel } from "./response";
+import { ParametresUtilisateurModel, ParametresUtilisateurSignature } from "./response";
 
-export type ParametresUtilisateurResponse = ResponseFunctionWrapper<ParametresUtilisateurModel>;
+export type ParametresUtilisateurResponse = ResponseFunctionWrapper<ParametresUtilisateurModel, ParametresUtilisateurSignature>;
 
 export class ParametresUtilisateur extends RequestFunction<ParametresUtilisateurRequest> {
   public static readonly name = "ParametresUtilisateur";
 
   private readonly decoder = new ResponseFunction(
     this.session,
-    ParametresUtilisateurModel
+    ParametresUtilisateurModel,
+    ParametresUtilisateurSignature
   );
 
   public constructor(session: Session) {
