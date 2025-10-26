@@ -13,9 +13,6 @@ export enum HomepageSessionAccess {
 export class HomepageSession {
   /**
    * Your session ID, generated on navigation.
-   *
-   * On old versions this was a string and we had to coerce
-   * the value to a number. Since 2025, it's now always a number.
    */
   @deserializeWith((h: string | number) => Number(h))
   @rename("h")

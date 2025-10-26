@@ -10,10 +10,3 @@ export class SecurityError extends Error {
     this.handle = decodeSecurityModal(authentication, identity, initialUsername);
   }
 }
-
-export class SecuritySourceTooLongError extends Error {
-  constructor (limit: number) {
-    super(`The source name is too long, limited to ${limit} characters`);
-    this.name = "SecuritySourceTooLongError";
-  }
-}

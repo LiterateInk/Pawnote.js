@@ -29,7 +29,7 @@ export class AuthentificationModel {
   public isPinCodeFixed = t.boolean();
 
   @rename("reglesSaisieMDP")
-  public changePasswordRules = t.reference(ReglesSaisieMDP);
+  public passwordRules = t.reference(ReglesSaisieMDP);
 
   @rename("actionsDoubleAuth")
   @deserializeWith(TypeHttpEnsembleNombre.deserializer)
@@ -43,11 +43,11 @@ export class AuthentificationModel {
   public forcePasswordResetMessage = t.option(t.string());
 }
 
-class ReglesSaisieMDP {
+export class ReglesSaisieMDP {
   public min = t.number();
   public max = t.number();
 
   @rename("regles")
   @deserializeWith(TypeHttpEnsembleNombre.deserializer)
-  public rules = t.array(t.enum(TypeOptionGenerationMotDePasse));
+  public options = t.array(t.enum(TypeOptionGenerationMotDePasse));
 }
