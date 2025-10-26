@@ -7,19 +7,19 @@ import { Session } from "./Session";
 
 export class Identity {
   public constructor(
-    public readonly identity: IdentificationResponse
+    private readonly _raw: IdentificationResponse
   ) {}
 
   public createMiddlewareKey(username: string, mod: string): Uint8Array {
     try {
-      if (this.identity.data.lowerUsername)
+      if (this._raw.data.lowerUsername)
         username = username.toLowerCase();
 
-      if (this.identity.data.lowerMod)
+      if (this._raw.data.lowerMod)
         mod = mod.toLowerCase();
 
       const hash = bytesToHex(sha256.create()
-        .update(utf8ToBytes(this.identity.data.seed ?? ""))
+        .update(utf8ToBytes(this._raw.data.seed ?? ""))
         .update(utf8ToBytes(mod.trim()))
         .digest()).toUpperCase();
 
@@ -31,7 +31,6 @@ export class Identity {
   }
 
   /**
-   *
    * @param middlewareKey created with {@link createMiddlewareKey}
    */
   public solveChallenge(session: Session, middlewareKey: Uint8Array): Uint8Array {
@@ -39,7 +38,7 @@ export class Identity {
       const pkey = session.aes.key;
       session.aes.key = middlewareKey; // temp switch key
 
-      const encoded = bytesToUtf8(session.aes.decrypt(hexToBytes(this.identity.data.challenge)));
+      const encoded = bytesToUtf8(session.aes.decrypt(hexToBytes(this._raw.data.challenge)));
       const decoded = encoded.split("")
         .filter((_, i) => i % 2 === 0)
         .join("");
@@ -51,5 +50,9 @@ export class Identity {
     catch {
       throw new BadCredentialsError();
     }
+  }
+
+  public get username(): string | null {
+    return this._raw.data.username;
   }
 }
