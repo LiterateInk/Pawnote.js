@@ -4,27 +4,27 @@ const instance = Instance.fromURL(Bun.env.URL!);
 const portal = new StudentLoginPortal(instance);
 const auth = await portal.credentials(Bun.env.USERNAME!, Bun.env.PASSWORD!);
 
-console.log(`authenticating to ${instance.base}...`);
+console.info(`[*] authenticating to ${instance.base}...`);
 
 // On the first ever login, you might be asked to custom your password.
 // Also, administrators can reset your password and you will also be
 // asked to custom your password on the next login.
 if (auth.shouldCustomPassword) {
-  console.log("you have to custom the password, make sure to respect the following rules.");
-  console.log("\t- max:", auth.password.max);
-  console.log("\t- min:", auth.password.min);
+  console.info("[*] you have to custom the password, make sure to respect the following rules.");
+  console.info("\t- max:", auth.password.max);
+  console.info("\t- min:", auth.password.min);
 
   if (auth.password.withAtLeastOneLetter)
-    console.log("\t- with at least one letter");
+    console.info("\t- with at least one letter");
 
   if (auth.password.withAtLeastOneNumericCharacter)
-    console.log("\t- with at least one numeric character");
+    console.info("\t- with at least one numeric character");
 
   if (auth.password.withAtLeastOneSpecialCharacter)
-    console.log("\t- with at least one special character");
+    console.info("\t- with at least one special character");
 
   if (auth.password.withLowerAndUpperCaseMixed)
-    console.log("\t- with lower and upper case mixed");
+    console.info("\t- with lower and upper case mixed");
 
   while (true) {
     const password = prompt("new password>");
@@ -72,5 +72,7 @@ if (auth.shouldRegisterSource) {
 }
 
 const student = await portal.finish(auth);
-// await student.timetable();
-// console.log(student);
+
+console.info("[*] congratulations, you're authenticated!");
+console.info("[*] username:", student.username);
+console.info("[*] token:", student.token);
