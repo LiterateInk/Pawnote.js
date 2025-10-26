@@ -30,7 +30,6 @@ export class Identification extends RequestFunction<IdentificationRequest> {
     uuid: string,
     mode: IdentificationMode
   ): Promise<IdentificationResponse> {
-
     const token = mode === IdentificationMode.Token;
     const cas = mode === IdentificationMode.CAS;
     const qr = mode === IdentificationMode.QR;
