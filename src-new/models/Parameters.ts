@@ -2,10 +2,10 @@ import { FonctionParametresResponse } from "../api/FonctionParametres";
 
 export class Parameters {
   public constructor(
-    private readonly parameters: FonctionParametresResponse
+    private readonly _raw: FonctionParametresResponse
   ) {}
 
-  public get navigatorIdentifier(): string {
-    return this.parameters.data.navigatorIdentifier;
+  public get navigatorIdentifier(): string | null {
+    return this._raw.data.navigatorIdentifier;
   }
 }
