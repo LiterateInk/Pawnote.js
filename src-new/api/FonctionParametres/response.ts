@@ -44,7 +44,7 @@ class General {
   public languageIdentifier = t.number();
 
   @rename("listeLangues")
-  @deserializeWith(new TypeHttpElement(Langue).deserializer)
+  @deserializeWith(new TypeHttpElement(Langue).array)
   public languages = t.array(t.reference(Langue));
 
   @rename("publierMentions")
@@ -232,7 +232,7 @@ class General {
   public allowedAnnotationsTypes = t.array(t.number());
 
   @rename("ListeNiveauxDAcquisitions")
-  @deserializeWith(new TypeHttpElement(NiveauAcquisition).deserializer)
+  @deserializeWith(new TypeHttpElement(NiveauAcquisition).array)
   public skillLevels = t.array(t.reference(NiveauAcquisition));
 
   @rename("AfficherAbbreviationNiveauDAcquisition")
@@ -307,15 +307,15 @@ class General {
   public epoch = t.instance(Date);
 
   @rename("ListeHeures")
-  @deserializeWith(new TypeHttpElement(Heure).deserializer)
+  @deserializeWith(new TypeHttpElement(Heure).array)
   public startingHours = t.array(t.reference(Heure));
 
   @rename("ListeHeuresFin")
-  @deserializeWith(new TypeHttpElement(Heure).deserializer)
+  @deserializeWith(new TypeHttpElement(Heure).array)
   public endingHours = t.array(t.reference(Heure));
 
   @rename("ListeHeuresFinPourVS")
-  @deserializeWith(new TypeHttpElement(Heure).deserializer)
+  @deserializeWith(new TypeHttpElement(Heure).array)
   public endingHoursForStaff = t.array(t.reference(Heure));
 
   public sequences = t.array(t.string());
@@ -324,7 +324,7 @@ class General {
   public periods = t.array(t.reference(Periode));
 
   @rename("recreations")
-  @deserializeWith(new TypeHttpElement(Recreation).deserializer)
+  @deserializeWith(new TypeHttpElement(Recreation).array)
   public breaks = t.array(t.reference(Recreation));
 
   @rename("tailleMaxEnregistrementAudioRenduTAF")
@@ -350,7 +350,7 @@ export class FonctionParametresModel {
   @rename("estAfficheDansENT")
   public isDisplayedInENT = t.string();
 
-  @deserializeWith(new TypeHttpElement(Police).deserializer)
+  @deserializeWith(new TypeHttpElement(Police).array)
   @rename("listePolices")
   public fonts = t.array(t.reference(Police));
 

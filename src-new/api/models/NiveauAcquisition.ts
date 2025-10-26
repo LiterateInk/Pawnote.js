@@ -23,7 +23,7 @@ export class NiveauAcquisition {
   public P = t.number();
 
   @rename("listePositionnements")
-  @deserializeWith(new TypeHttpElement(Position).deserializer)
+  @deserializeWith(new TypeHttpElement(Position).array)
   public positions = t.array(t.reference(Position));
 
   @rename("positionJauge")
