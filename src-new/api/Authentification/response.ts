@@ -20,7 +20,7 @@ export class AuthentificationModel {
 
   @rename("derniereConnexion")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public lastLogin = t.instance(Date);
+  public lastLogin = t.option(t.instance(Date));
 
   @rename("jetonConnexionAppliMobile")
   public token = t.string();
