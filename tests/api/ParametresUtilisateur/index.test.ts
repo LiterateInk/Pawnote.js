@@ -6,6 +6,6 @@ import { deserialize } from "desero";
 describe("ParametresUtilisateur", () => {
   it("should decode [students]", () => {
     const parameters = deserialize(ParametresUtilisateurModel, students_1.data);
-    console.log(parameters);
+    console.dir(parameters, { depth: Infinity });
   });
 });
