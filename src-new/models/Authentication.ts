@@ -3,6 +3,7 @@ import { AuthentificationResponse } from "../api/Authentification";
 import { Session } from "./Session";
 import { TypeActionIHMSecurisationCompte } from "../api/models/TypeActionIHMSecurisationCompte";
 import { PasswordRules } from "./PasswordRules";
+import { TypeModeGestionDoubleAuthentification } from "src-new/api/models/TypeModeGestionDoubleAuthentification";
 
 export class Authentication {
   public readonly password: PasswordRules;
@@ -22,6 +23,10 @@ export class Authentication {
 
   public get hasSecurityActions(): boolean {
     return this.securityActions.length > 0;
+  }
+
+  public get modes(): TypeModeGestionDoubleAuthentification[] {
+    return this._raw.data.availableSecurityModes ?? [];
   }
 
   public switchDefinitiveKey(session: Session, key: Uint8Array): void {

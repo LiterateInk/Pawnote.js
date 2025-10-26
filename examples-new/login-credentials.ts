@@ -35,17 +35,25 @@ if (auth.shouldCustomPassword) {
   }
 }
 
-if (auth.shouldCustomDoubleAuth) {
-  console.log("CUSTOM MFA");
-  // if (auth.modes.includes(DoubleAuthMode.PIN)) {
-  //   auth.mode.pin("1234");
-  // }
-  // else {
-  //   auth.mode.nothing();
-  // }
+if (auth.shouldCustomDoubleAuthMode) {
+  if (auth.hasIgnoreMode) {
+    auth.useIgnoreMode();
+  }
+  else if (auth.hasNotificationMode) {
+    auth.useNotificationMode();
+  }
+  else if (auth.hasPinMode) {
+    while (true) {
+      const pin = prompt("new pin>");
+      if (!pin) continue;
+
+      auth.usePinMode(pin);
+      break;
+    }
+  }
 }
 
-if (auth.shouldEnterPIN) {
+if (auth.shouldEnterPin) {
   while (true) {
     const pin = prompt("pin>");
 

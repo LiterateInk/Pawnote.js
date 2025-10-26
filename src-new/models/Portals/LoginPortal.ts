@@ -111,7 +111,7 @@ export abstract class LoginPortal {
   }
 
   protected async _finish(login: PendingLogin): Promise<UserParameters> {
-    if (login.shouldCustomDoubleAuth || login.shouldCustomPassword || login.shouldEnterPIN || login.shouldRegisterSource) {
+    if (login.shouldCustomDoubleAuthMode || login.shouldCustomPassword || login.shouldEnterPin || login.shouldRegisterSource) {
       const token = await new SecurisationCompteDoubleAuth(login._session)
         .save(void 0, login._password, login._pin, login._source);
 

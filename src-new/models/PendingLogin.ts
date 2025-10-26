@@ -1,3 +1,4 @@
+import { TypeModeGestionDoubleAuthentification } from "../api/models/TypeModeGestionDoubleAuthentification";
 import { SecurisationCompteDoubleAuth } from "../api/SecurisationCompteDoubleAuth";
 import { TypeActionIHMSecurisationCompte } from "../api/models/TypeActionIHMSecurisationCompte";
 import { Authentication } from "./Authentication";
@@ -14,6 +15,18 @@ import { Session } from "./Session";
  */
 export class PendingLogin {
   /** @internal */
+  public _mode?: TypeModeGestionDoubleAuthentification;
+
+  /** @internal */
+  public _password?: string;
+
+  /** @internal */
+  public _pin?: string;
+
+  /** @internal */
+  public _source?: string;
+
+  /** @internal */
   public constructor(
     /** @internal */
     public readonly _session: Session,
@@ -28,12 +41,12 @@ export class PendingLogin {
       TypeActionIHMSecurisationCompte.AIHMSC_PersonnalisationMotDePasse
     );
   }
-  public get shouldCustomDoubleAuth(): boolean {
+  public get shouldCustomDoubleAuthMode(): boolean {
     return this._authentication.securityActions.includes(
       TypeActionIHMSecurisationCompte.AIHMSC_ChoixStrategie
     );
   }
-  public get shouldEnterPIN(): boolean {
+  public get shouldEnterPin(): boolean {
     return this._authentication.securityActions.includes(
       TypeActionIHMSecurisationCompte.AIHMSC_SaisieCodePINetSource
     );
@@ -44,6 +57,40 @@ export class PendingLogin {
     );
   }
 
+  public get hasPinMode(): boolean {
+    return this._authentication.modes.includes(TypeModeGestionDoubleAuthentification.MGDA_SaisieCodePIN);
+  }
+
+  public usePinMode(pin: string): void {
+    if (!this.hasPinMode)
+      throw new Error("this mode is not enabled");
+
+    this._pin = pin;
+    this._mode = TypeModeGestionDoubleAuthentification.MGDA_SaisieCodePIN;
+  }
+
+  public get hasIgnoreMode(): boolean {
+    return this._authentication.modes.includes(TypeModeGestionDoubleAuthentification.MGDA_Inactive);
+  }
+
+  public useIgnoreMode(): void {
+    if (!this.hasIgnoreMode)
+      throw new Error("this mode is not enabled");
+
+    this._mode = TypeModeGestionDoubleAuthentification.MGDA_Inactive;
+  }
+
+  public get hasNotificationMode(): boolean {
+    return this._authentication.modes.includes(TypeModeGestionDoubleAuthentification.MGDA_NotificationSeulement);
+  }
+
+  public useNotificationMode(): void {
+    if (!this.hasNotificationMode)
+      throw new Error("this mode is not enabled");
+
+    this._mode = TypeModeGestionDoubleAuthentification.MGDA_NotificationSeulement;
+  }
+
   /**
    * If you have to custom the password, this property
    * gives you all the rules you have to respect in
@@ -52,9 +99,6 @@ export class PendingLogin {
   public get password(): PasswordRules {
     return this._authentication.password;
   }
-
-  /** @internal */
-  public _password?: string;
 
   /**
    * Checks a given password against the password
@@ -74,9 +118,6 @@ export class PendingLogin {
     return ok;
   }
 
-  /** @internal */
-  public _pin?: string;
-
   /**
    * Verify a given PIN code.
    *
@@ -90,9 +131,6 @@ export class PendingLogin {
     if (ok) this._pin = pin;
     return ok;
   }
-
-  /** @internal */
-  public _source?: string;
 
   /**
    * Checks a given source to know if it is already known.
