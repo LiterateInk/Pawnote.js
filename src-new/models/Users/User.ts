@@ -4,6 +4,7 @@ import { Session } from "../Session";
 import { UserParameters } from "../UserParameters";
 
 export abstract class User {
+  /** @internal */
   protected constructor(
     protected readonly user: UserParameters,
     protected readonly session: Session,
@@ -17,5 +18,9 @@ export abstract class User {
 
   public get token(): string {
     return this.authentication.token;
+  }
+
+  public get uuid(): string {
+    return this.authentication.uuid;
   }
 }

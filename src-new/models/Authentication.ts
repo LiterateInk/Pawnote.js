@@ -11,7 +11,8 @@ export class Authentication {
 
   public constructor(
     private readonly _raw: AuthentificationResponse,
-    public readonly username: string
+    public readonly username: string,
+    public readonly uuid: string
   ) {
     this.password = new PasswordRules(_raw.data.passwordRules);
     this.token = _raw.data.token;

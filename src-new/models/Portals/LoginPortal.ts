@@ -49,7 +49,8 @@ export abstract class LoginPortal {
 
     const authentication = new Authentication(
       await new Authentification(session).send(challenge),
-      identity.username ?? username
+      identity.username ?? username,
+      deviceUUID
     );
 
     authentication.switchDefinitiveKey(session, key);
@@ -98,7 +99,8 @@ export abstract class LoginPortal {
 
     const authentication = new Authentication(
       await new Authentification(session).send(challenge),
-      identity.username ?? username
+      identity.username ?? username,
+      deviceUUID
     );
 
     authentication.switchDefinitiveKey(session, key);
