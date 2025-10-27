@@ -84,3 +84,4 @@ const parent = await portal.finish(auth);
 console.info("[*] congratulations, you're authenticated!");
 console.info("[*] username:", parent.username);
 console.info("[*] token:", parent.token);
+console.info("[*] uuid:", parent.uuid);
