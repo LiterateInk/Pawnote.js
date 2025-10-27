@@ -1,0 +1,1643 @@
+{
+  "data": {
+    "identifiantNav": "B73E09CB1F72B807C06ACBFFA995A6B2019C0FEAD61FF29C7BBCA004496DC408D3BD3E81D111A01FD1E43E28D1979E6EA76E755D00000000",
+    "estAfficheDansENT": false,
+    "listePolices": {
+      "_T": 24,
+      "V": [
+        {
+          "L": "@Malgun Gothic"
+        },
+        {
+          "L": "@Malgun Gothic Semilight"
+        },
+        {
+          "L": "@Microsoft JhengHei"
+        },
+        {
+          "L": "@Microsoft JhengHei Light"
+        },
+        {
+          "L": "@Microsoft JhengHei UI"
+        },
+        {
+          "L": "@Microsoft JhengHei UI Light"
+        },
+        {
+          "L": "@Microsoft YaHei"
+        },
+        {
+          "L": "@Microsoft YaHei Light"
+        },
+        {
+          "L": "@Microsoft YaHei UI"
+        },
+        {
+          "L": "@Microsoft YaHei UI Light"
+        },
+        {
+          "L": "@MingLiU_HKSCS-ExtB"
+        },
+        {
+          "L": "@MingLiU_MSCS-ExtB"
+        },
+        {
+          "L": "@MingLiU-ExtB"
+        },
+        {
+          "L": "@MS Gothic"
+        },
+        {
+          "L": "@MS PGothic"
+        },
+        {
+          "L": "@MS UI Gothic"
+        },
+        {
+          "L": "@NSimSun"
+        },
+        {
+          "L": "@PMingLiU-ExtB"
+        },
+        {
+          "L": "@SimSun"
+        },
+        {
+          "L": "@SimSun-ExtB"
+        },
+        {
+          "L": "@SimSun-ExtG"
+        },
+        {
+          "L": "@Yu Gothic"
+        },
+        {
+          "L": "@Yu Gothic Light"
+        },
+        {
+          "L": "@Yu Gothic Medium"
+        },
+        {
+          "L": "@Yu Gothic UI"
+        },
+        {
+          "L": "@Yu Gothic UI Light"
+        },
+        {
+          "L": "@Yu Gothic UI Semibold"
+        },
+        {
+          "L": "@Yu Gothic UI Semilight"
+        },
+        {
+          "L": "Arial"
+        },
+        {
+          "L": "Arial Black"
+        },
+        {
+          "L": "Bahnschrift"
+        },
+        {
+          "L": "Bahnschrift Condensed"
+        },
+        {
+          "L": "Bahnschrift Light"
+        },
+        {
+          "L": "Bahnschrift Light Condensed"
+        },
+        {
+          "L": "Bahnschrift Light SemiCondensed"
+        },
+        {
+          "L": "Bahnschrift SemiBold"
+        },
+        {
+          "L": "Bahnschrift SemiBold Condensed"
+        },
+        {
+          "L": "Bahnschrift SemiBold SemiConden"
+        },
+        {
+          "L": "Bahnschrift SemiCondensed"
+        },
+        {
+          "L": "Bahnschrift SemiLight"
+        },
+        {
+          "L": "Bahnschrift SemiLight Condensed"
+        },
+        {
+          "L": "Bahnschrift SemiLight SemiConde"
+        },
+        {
+          "L": "Calibri"
+        },
+        {
+          "L": "Calibri Light"
+        },
+        {
+          "L": "Cambria"
+        },
+        {
+          "L": "Cambria Math"
+        },
+        {
+          "L": "Candara"
+        },
+        {
+          "L": "Candara Light"
+        },
+        {
+          "L": "Comic Sans MS"
+        },
+        {
+          "L": "Consolas"
+        },
+        {
+          "L": "Constantia"
+        },
+        {
+          "L": "Corbel"
+        },
+        {
+          "L": "Corbel Light"
+        },
+        {
+          "L": "Courier"
+        },
+        {
+          "L": "Courier New"
+        },
+        {
+          "L": "Ebrima"
+        },
+        {
+          "L": "Fixedsys"
+        },
+        {
+          "L": "Franklin Gothic Medium"
+        },
+        {
+          "L": "Gabriola"
+        },
+        {
+          "L": "Gadugi"
+        },
+        {
+          "L": "Georgia"
+        },
+        {
+          "L": "Impact"
+        },
+        {
+          "L": "Ink Free"
+        },
+        {
+          "L": "Javanese Text"
+        },
+        {
+          "L": "Leelawadee UI"
+        },
+        {
+          "L": "Leelawadee UI Semilight"
+        },
+        {
+          "L": "Lucida Console"
+        },
+        {
+          "L": "Lucida Sans Unicode"
+        },
+        {
+          "L": "Malgun Gothic"
+        },
+        {
+          "L": "Malgun Gothic Semilight"
+        },
+        {
+          "L": "Marlett"
+        },
+        {
+          "L": "Microsoft Himalaya"
+        },
+        {
+          "L": "Microsoft JhengHei"
+        },
+        {
+          "L": "Microsoft JhengHei Light"
+        },
+        {
+          "L": "Microsoft JhengHei UI"
+        },
+        {
+          "L": "Microsoft JhengHei UI Light"
+        },
+        {
+          "L": "Microsoft New Tai Lue"
+        },
+        {
+          "L": "Microsoft PhagsPa"
+        },
+        {
+          "L": "Microsoft Sans Serif"
+        },
+        {
+          "L": "Microsoft Tai Le"
+        },
+        {
+          "L": "Microsoft YaHei"
+        },
+        {
+          "L": "Microsoft YaHei Light"
+        },
+        {
+          "L": "Microsoft YaHei UI"
+        },
+        {
+          "L": "Microsoft YaHei UI Light"
+        },
+        {
+          "L": "Microsoft Yi Baiti"
+        },
+        {
+          "L": "MingLiU_HKSCS-ExtB"
+        },
+        {
+          "L": "MingLiU_MSCS-ExtB"
+        },
+        {
+          "L": "MingLiU-ExtB"
+        },
+        {
+          "L": "Modern"
+        },
+        {
+          "L": "Mongolian Baiti"
+        },
+        {
+          "L": "MS Gothic"
+        },
+        {
+          "L": "MS PGothic"
+        },
+        {
+          "L": "MS Sans Serif"
+        },
+        {
+          "L": "MS Serif"
+        },
+        {
+          "L": "MS UI Gothic"
+        },
+        {
+          "L": "MV Boli"
+        },
+        {
+          "L": "Myanmar Text"
+        },
+        {
+          "L": "Nirmala Text"
+        },
+        {
+          "L": "Nirmala Text Semilight"
+        },
+        {
+          "L": "Nirmala UI"
+        },
+        {
+          "L": "Nirmala UI Semilight"
+        },
+        {
+          "L": "NSimSun"
+        },
+        {
+          "L": "Palatino Linotype"
+        },
+        {
+          "L": "PMingLiU-ExtB"
+        },
+        {
+          "L": "Roman"
+        },
+        {
+          "L": "Sans Serif Collection"
+        },
+        {
+          "L": "Script"
+        },
+        {
+          "L": "Segoe Fluent Icons"
+        },
+        {
+          "L": "Segoe MDL2 Assets"
+        },
+        {
+          "L": "Segoe Print"
+        },
+        {
+          "L": "Segoe Script"
+        },
+        {
+          "L": "Segoe UI"
+        },
+        {
+          "L": "Segoe UI Black"
+        },
+        {
+          "L": "Segoe UI Emoji"
+        },
+        {
+          "L": "Segoe UI Historic"
+        },
+        {
+          "L": "Segoe UI Light"
+        },
+        {
+          "L": "Segoe UI Semibold"
+        },
+        {
+          "L": "Segoe UI Semilight"
+        },
+        {
+          "L": "Segoe UI Symbol"
+        },
+        {
+          "L": "Segoe UI Variable Display"
+        },
+        {
+          "L": "Segoe UI Variable Display Light"
+        },
+        {
+          "L": "Segoe UI Variable Display Semib"
+        },
+        {
+          "L": "Segoe UI Variable Display Semil"
+        },
+        {
+          "L": "Segoe UI Variable Small"
+        },
+        {
+          "L": "Segoe UI Variable Small Light"
+        },
+        {
+          "L": "Segoe UI Variable Small Semibol"
+        },
+        {
+          "L": "Segoe UI Variable Small Semilig"
+        },
+        {
+          "L": "Segoe UI Variable Text"
+        },
+        {
+          "L": "Segoe UI Variable Text Light"
+        },
+        {
+          "L": "Segoe UI Variable Text Semibold"
+        },
+        {
+          "L": "Segoe UI Variable Text Semiligh"
+        },
+        {
+          "L": "SimSun"
+        },
+        {
+          "L": "SimSun-ExtB"
+        },
+        {
+          "L": "SimSun-ExtG"
+        },
+        {
+          "L": "Sitka Banner"
+        },
+        {
+          "L": "Sitka Banner Semibold"
+        },
+        {
+          "L": "Sitka Display"
+        },
+        {
+          "L": "Sitka Display Semibold"
+        },
+        {
+          "L": "Sitka Heading"
+        },
+        {
+          "L": "Sitka Heading Semibold"
+        },
+        {
+          "L": "Sitka Small"
+        },
+        {
+          "L": "Sitka Small Semibold"
+        },
+        {
+          "L": "Sitka Subheading"
+        },
+        {
+          "L": "Sitka Subheading Semibold"
+        },
+        {
+          "L": "Sitka Text"
+        },
+        {
+          "L": "Sitka Text Semibold"
+        },
+        {
+          "L": "Small Fonts"
+        },
+        {
+          "L": "Sylfaen"
+        },
+        {
+          "L": "Symbol"
+        },
+        {
+          "L": "System"
+        },
+        {
+          "L": "Tahoma"
+        },
+        {
+          "L": "Terminal"
+        },
+        {
+          "L": "Times New Roman"
+        },
+        {
+          "L": "Trebuchet MS"
+        },
+        {
+          "L": "Verdana"
+        },
+        {
+          "L": "Webdings"
+        },
+        {
+          "L": "Wingdings"
+        },
+        {
+          "L": "Yu Gothic"
+        },
+        {
+          "L": "Yu Gothic Light"
+        },
+        {
+          "L": "Yu Gothic Medium"
+        },
+        {
+          "L": "Yu Gothic UI"
+        },
+        {
+          "L": "Yu Gothic UI Light"
+        },
+        {
+          "L": "Yu Gothic UI Semibold"
+        },
+        {
+          "L": "Yu Gothic UI Semilight"
+        }
+      ]
+    },
+    "avecMembre": true,
+    "pourNouvelleCaledonie": false,
+    "genreImageConnexion": 4,
+    "urlImageConnexion": "",
+    "tableauVersion": [
+      2025,
+      2,
+      6
+    ],
+    "logoProduitCss": "Image_Logo_PronoteBarreHaut",
+    "labelLienProduit": "Aller sur le site de Pronote",
+    "urlConfidentialite": {
+      "_T": 23,
+      "V": "https://www.index-education.com/redirect.php?produit=pn&page=politique-confidentialite-espaces&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent"
+    },
+    "mentionsPagesPubliques": {
+      "lien": {
+        "_T": 27,
+        "V": ""
+      }
+    },
+    "DateServeurHttp": {
+      "_T": 7,
+      "V": "26/10/2025 21:58:02"
+    },
+    "URLEspace": "parent.html",
+    "Nom": "Espace Parents",
+    "General": {
+      "urlSiteIndexEducation": {
+        "_T": 23,
+        "V": "https://www.index-education.com/redirect.php?produit=pn&page=LogoPronote&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent"
+      },
+      "urlSiteInfosHebergement": {
+        "_T": 23,
+        "V": "https://www.index-education.com/redirect.php?produit=pn&page=InfosHeb&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent"
+      },
+      "version": "PRONOTE 2025.2.6 gestion de vie scolaire, notes, compétences, absences/retards/dispenses, incidents/punitions/sanctions, stages... INDEX ÉDUCATION",
+      "versionPN": "2025.2.6",
+      "millesime": "2025",
+      "nomProduit": "PRONOTE",
+      "langue": "fr",
+      "langID": 1036,
+      "listeLangues": {
+        "_T": 24,
+        "V": [
+          {
+            "langID": 1036,
+            "description": "Français"
+          },
+          {
+            "langID": 1033,
+            "description": "English"
+          },
+          {
+            "langID": 3082,
+            "description": "Español"
+          },
+          {
+            "langID": 1040,
+            "description": "Italiano"
+          }
+        ]
+      },
+      "publierMentions": true,
+      "estHebergeEnFrance": false,
+      "avecForum": false,
+      "UrlAide": {
+        "_T": 23,
+        "V": "https://doc.index-education.com/index.php?p=FR&lg=fr&l=pn&m=2025&e=7&c=%s&cl=%s"
+      },
+      "urlAccesVideos": {
+        "_T": 23,
+        "V": ""
+      },
+      "urlAccesTwitter": {
+        "_T": 23,
+        "V": ""
+      },
+      "urlFAQEnregistrementDoubleAuth": {
+        "_T": 23,
+        "V": "https://www.index-education.com/redirect.php?produit=pn&page=DoubleAuthentification&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent&type=LienDocProduit"
+      },
+      "urlTutoVideoSecurite": {
+        "_T": 23,
+        "V": "https://www.index-education.com/redirect.php?produit=pn&page=securiser_son_compte&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent&type=LienDocProduit"
+      },
+      "urlTutoEnregistrerAppareils": {
+        "_T": 23,
+        "V": "https://www.index-education.com/redirect.php?produit=pn&page=EnregistrerAppareils&version=2025.2.6.0&distrib=FR&lg=fr&flag=Mobile_Parent&type=LienDocProduit"
+      },
+      "urlCanope": {
+        "_T": 23,
+        "V": ""
+      },
+      "accessibiliteNonConforme": true,
+      "urlDeclarationAccessibilite": "",
+      "AvecChoixConnexion": false,
+      "NomEtablissement": "SITE DE DEMONSTRATION",
+      "NomEtablissementConnexion": "SITE DE DEMONSTRATION",
+      "numeroPremiereSemaine": 1,
+      "AnneeScolaire": "2025-2026",
+      "dateDebutPremierCycle": {
+        "_T": 7,
+        "V": "01/09/2025"
+      },
+      "PremierLundi": {
+        "_T": 7,
+        "V": "01/09/2025"
+      },
+      "PremiereDate": {
+        "_T": 7,
+        "V": "01/09/2025"
+      },
+      "DerniereDate": {
+        "_T": 7,
+        "V": "30/08/2026"
+      },
+      "PlacesParJour": 20,
+      "PlacesParHeure": 2,
+      "DureeSequence": 0.0416666666666667,
+      "PlaceDemiJourneeAbsence": 10,
+      "saisirAbsencesParDJ": 0,
+      "valeurDefautPresenceDispense": false,
+      "activationDemiPension": false,
+      "debutDemiPension": 8,
+      "finDemiPension": 11,
+      "AvecHeuresPleinesApresMidi": true,
+      "JourOuvre": {
+        "_T": 7,
+        "V": "27/10/2025"
+      },
+      "JoursOuvres": {
+        "_T": 11,
+        "V": "[1..5]"
+      },
+      "JoursDemiPension": {
+        "_T": 26,
+        "V": "[0..4]"
+      },
+      "ActivationMessagerieEntreParents": false,
+      "GestionParcoursExcellence": true,
+      "activerBlog": true,
+      "joursOuvresParCycle": 5,
+      "premierJourSemaine": 2,
+      "grillesEDTEnCycle": 0,
+      "setOfJoursCycleOuvre": {
+        "_T": 26,
+        "V": "[0..4]"
+      },
+      "DemiJourneesOuvrees": [
+        {
+          "_T": 26,
+          "V": "[0..5]"
+        },
+        {
+          "_T": 26,
+          "V": "[0,1,3..5]"
+        }
+      ],
+      "DomainesFrequences": [
+        {
+          "_T": 8,
+          "V": "[1..52]"
+        },
+        {
+          "_T": 8,
+          "V": "[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51]"
+        },
+        {
+          "_T": 8,
+          "V": "[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52]"
+        }
+      ],
+      "LibellesFrequences": [
+        "",
+        "Q1",
+        "Q2",
+        ""
+      ],
+      "BaremeNotation": {
+        "_T": 10,
+        "V": "20"
+      },
+      "BaremeMaxDevoirs": {
+        "_T": 10,
+        "V": "999"
+      },
+      "NbJDecalageDatePublicationParDefaut": 1,
+      "NbJDecalagePublicationAuxParents": 1,
+      "AvecAffichageDecalagePublicationNotesAuxParents": true,
+      "AvecAffichageDecalagePublicationEvalsAuxParents": true,
+      "listeAnnotationsAutorisees": {
+        "_T": 26,
+        "V": "[1..7]"
+      },
+      "ListeNiveauxDAcquisitions": {
+        "_T": 24,
+        "V": [
+          {
+            "L": "Aucune évaluation",
+            "N": "0",
+            "G": 0,
+            "P": 0,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Aucun",
+                  "abbreviation": ""
+                },
+                {
+                  "G": 2,
+                  "L": "Aucun",
+                  "abbreviation": ""
+                }
+              ]
+            },
+            "positionJauge": 5,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "",
+            "raccourci": "0",
+            "raccourciPositionnement": "0"
+          },
+          {
+            "L": "Très bonne maîtrise",
+            "N": "93#bkkxZHRS3uSwkH8ixpse5_ykX6He35WqfhLkqQ40BGo",
+            "G": 1,
+            "P": 1,
+            "positionJauge": 11,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "A+",
+            "raccourci": "6",
+            "raccourciPositionnement": "4",
+            "couleur": "#008000",
+            "ponderation": {
+              "_T": 10,
+              "V": "50"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "50"
+            },
+            "estAcqui": true,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Très bonne maîtrise",
+                  "abbreviation": "4",
+                  "abbreviationAvecPrefixe": "Pos.4"
+                },
+                {
+                  "G": 2,
+                  "L": "Objectifs dépassés",
+                  "abbreviation": "4",
+                  "abbreviationAvecPrefixe": "Pos.4"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Maîtrise satisfaisante",
+            "N": "93#JZ0a8W8PPJhWP20WsAcNR6elid-tWgIFWA01ET4YBCM",
+            "G": 2,
+            "P": 2,
+            "positionJauge": 10,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "A",
+            "raccourci": "5",
+            "raccourciPositionnement": "3",
+            "couleur": "#45B851",
+            "ponderation": {
+              "_T": 10,
+              "V": "40"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "40"
+            },
+            "estAcqui": true,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Maîtrise satisfaisante",
+                  "abbreviation": "3",
+                  "abbreviationAvecPrefixe": "Pos.3"
+                },
+                {
+                  "G": 2,
+                  "L": "Objectifs atteints",
+                  "abbreviation": "3",
+                  "abbreviationAvecPrefixe": "Pos.3"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Presque maîtrisé",
+            "N": "93#AXZwIF7sWnnLd8ruvczD1IWGg4wNFXaGHFhUBX0stww",
+            "G": 3,
+            "P": 3,
+            "positionJauge": 9,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0]"
+            },
+            "abbreviation": "B",
+            "raccourci": "4",
+            "couleur": "#ADDE1F",
+            "ponderation": {
+              "_T": 10,
+              "V": "33"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": ""
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Presque maîtrisé",
+                  "abbreviation": "",
+                  "abbreviationAvecPrefixe": ""
+                },
+                {
+                  "G": 2,
+                  "L": "Presque maîtrisé",
+                  "abbreviation": "",
+                  "abbreviationAvecPrefixe": ""
+                }
+              ]
+            }
+          },
+          {
+            "L": "Maîtrise fragile",
+            "N": "93#NP5_wBZbtGJDITT9AJ4AIRmrUG6WCbVjjAwNZLbBToE",
+            "G": 4,
+            "P": 4,
+            "positionJauge": 8,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "C",
+            "raccourci": "3",
+            "raccourciPositionnement": "2",
+            "couleur": "#FFDA01",
+            "ponderation": {
+              "_T": 10,
+              "V": "25"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "25"
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Maîtrise fragile",
+                  "abbreviation": "2",
+                  "abbreviationAvecPrefixe": "Pos.2"
+                },
+                {
+                  "G": 2,
+                  "L": "Objectifs partiellement atteints",
+                  "abbreviation": "2",
+                  "abbreviationAvecPrefixe": "Pos.2"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Début de maîtrise",
+            "N": "93#z7lj6qhXYWEBAOsV6SIvKJHxDuAt707r526Uqvjrucc",
+            "G": 5,
+            "P": 5,
+            "positionJauge": 7,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0]"
+            },
+            "abbreviation": "D",
+            "raccourci": "2",
+            "couleur": "#FF880F",
+            "ponderation": {
+              "_T": 10,
+              "V": "18"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": ""
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Début de maîtrise",
+                  "abbreviation": "",
+                  "abbreviationAvecPrefixe": ""
+                },
+                {
+                  "G": 2,
+                  "L": "Début de maîtrise",
+                  "abbreviation": "",
+                  "abbreviationAvecPrefixe": ""
+                }
+              ]
+            }
+          },
+          {
+            "L": "Maîtrise insuffisante",
+            "N": "93#ElFref_hhdtjB7iBF65bhcCkMssgzGs4HG9NuQpjvLU",
+            "G": 6,
+            "P": 6,
+            "positionJauge": 6,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "E",
+            "raccourci": "1",
+            "raccourciPositionnement": "1",
+            "couleur": "#F80A0A",
+            "ponderation": {
+              "_T": 10,
+              "V": "10"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "10"
+            },
+            "estAcqui": false,
+            "estNonAcqui": true,
+            "estNotantPourTxReussite": true,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Maîtrise insuffisante",
+                  "abbreviation": "1",
+                  "abbreviationAvecPrefixe": "Pos.1"
+                },
+                {
+                  "G": 2,
+                  "L": "Objectifs non atteints",
+                  "abbreviation": "1",
+                  "abbreviationAvecPrefixe": "Pos.1"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Absent",
+            "N": "93#g3B_D4PLR4UO2iwhxRXMc6jBUMrrWXabBub3iEMr2kA",
+            "G": 7,
+            "P": 7,
+            "positionJauge": 4,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "Abs",
+            "raccourci": "a",
+            "raccourciPositionnement": "a",
+            "couleur": "#FFFFFF",
+            "ponderation": {
+              "_T": 10,
+              "V": "|1"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "|1"
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": false,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Absent",
+                  "abbreviation": "Abs",
+                  "abbreviationAvecPrefixe": "Abs"
+                },
+                {
+                  "G": 2,
+                  "L": "Absent",
+                  "abbreviation": "Abs",
+                  "abbreviationAvecPrefixe": "Abs"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Non évalué",
+            "N": "93#EUhq2NAtVBtiS0Wdva0u9b48mG2iScYU5mOzGkqEs-Q",
+            "G": 8,
+            "P": 8,
+            "positionJauge": 3,
+            "actifPour": {
+              "_T": 26,
+              "V": "[1]"
+            },
+            "abbreviation": "Ne",
+            "raccourci": "n",
+            "raccourciPositionnement": "n",
+            "couleur": "#FFFFFF",
+            "ponderation": {
+              "_T": 10,
+              "V": "|3"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": ""
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": false,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Non évalué",
+                  "abbreviation": "Ne",
+                  "abbreviationAvecPrefixe": "Ne"
+                },
+                {
+                  "G": 2,
+                  "L": "Non évalué",
+                  "abbreviation": "Ne",
+                  "abbreviationAvecPrefixe": "Ne"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Dispensé",
+            "N": "93#088f5Qd6_m76WI8cM7NDbiqt0ysY0ztGfYFFTt8UTOU",
+            "G": 9,
+            "P": 9,
+            "positionJauge": 2,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0,1]"
+            },
+            "abbreviation": "Dsp",
+            "raccourci": "d",
+            "raccourciPositionnement": "d",
+            "couleur": "#FFFFFF",
+            "ponderation": {
+              "_T": 10,
+              "V": "|2"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "|2"
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": false,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Dispensé",
+                  "abbreviation": "Dsp",
+                  "abbreviationAvecPrefixe": "Dsp"
+                },
+                {
+                  "G": 2,
+                  "L": "Dispensé",
+                  "abbreviation": "Dsp",
+                  "abbreviationAvecPrefixe": "Dsp"
+                }
+              ]
+            }
+          },
+          {
+            "L": "Non rendu",
+            "N": "93#g6sPcN0kKY8QldKPndY22k2_RUEYspcWzilO9WR02KM",
+            "G": 10,
+            "P": 10,
+            "positionJauge": 1,
+            "actifPour": {
+              "_T": 26,
+              "V": "[0]"
+            },
+            "abbreviation": "Nr",
+            "raccourci": "r",
+            "couleur": "#FFFFFF",
+            "ponderation": {
+              "_T": 10,
+              "V": "|5"
+            },
+            "nombrePointsBrevet": {
+              "_T": 10,
+              "V": "|5"
+            },
+            "estAcqui": false,
+            "estNonAcqui": false,
+            "estNotantPourTxReussite": false,
+            "listePositionnements": {
+              "_T": 24,
+              "V": [
+                {
+                  "G": 1,
+                  "L": "Non rendu",
+                  "abbreviation": "Nr",
+                  "abbreviationAvecPrefixe": "Nr"
+                },
+                {
+                  "G": 2,
+                  "L": "Non rendu",
+                  "abbreviation": "Nr",
+                  "abbreviationAvecPrefixe": "Nr"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "AfficherAbbreviationNiveauDAcquisition": false,
+      "AvecEvaluationHistorique": true,
+      "SansValidationNivIntermediairesDsValidAuto": false,
+      "NeComptabiliserQueEvalsAnneeScoDsValidAuto": false,
+      "PondererMatieresSelonLeurCoeffDsDomaine": false,
+      "AvecGestionNiveauxCECRL": false,
+      "couleurActiviteLangagiere": "#800000",
+      "minBaremeQuestionQCM": 1,
+      "maxBaremeQuestionQCM": 20,
+      "maxNbPointQCM": 999,
+      "maxNiveauQCM": 3,
+      "tailleLibelleElementGrilleCompetence": 500,
+      "tailleCommentaireDevoir": 40,
+      "AvecRecuperationInfosConnexion": false,
+      "Police": "arial,helvetica,sans-serif",
+      "TaillePolice": 11,
+      "AvecElevesRattaches": false,
+      "maskTelephone": "!99 99 99 99 99 99;0;–",
+      "maxECTS": 10000,
+      "TailleMaxAppreciation": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "listeJoursFeries": {
+        "_T": 24,
+        "V": []
+      },
+      "afficherSequences": false,
+      "PremiereHeure": {
+        "_T": 7,
+        "V": "30/12/1899 08:00:00"
+      },
+      "ListeHeures": {
+        "_T": 24,
+        "V": [
+          {
+            "G": 0,
+            "L": "08h00"
+          },
+          {
+            "G": 1,
+            "L": "08h30",
+            "A": false
+          },
+          {
+            "G": 2,
+            "L": "09h00"
+          },
+          {
+            "G": 3,
+            "L": "09h30",
+            "A": false
+          },
+          {
+            "G": 4,
+            "L": "10h00"
+          },
+          {
+            "G": 5,
+            "L": "10h30",
+            "A": false
+          },
+          {
+            "G": 6,
+            "L": "11h00"
+          },
+          {
+            "G": 7,
+            "L": "11h30",
+            "A": false
+          },
+          {
+            "G": 8,
+            "L": "12h00"
+          },
+          {
+            "G": 9,
+            "L": "12h30",
+            "A": false
+          },
+          {
+            "G": 10,
+            "L": "13h00",
+            "A": false
+          },
+          {
+            "G": 11,
+            "L": "13h30"
+          },
+          {
+            "G": 12,
+            "L": "14h00",
+            "A": false
+          },
+          {
+            "G": 13,
+            "L": "14h30"
+          },
+          {
+            "G": 14,
+            "L": "15h00",
+            "A": false
+          },
+          {
+            "G": 15,
+            "L": "15h30"
+          },
+          {
+            "G": 16,
+            "L": "16h00",
+            "A": false
+          },
+          {
+            "G": 17,
+            "L": "16h30"
+          },
+          {
+            "G": 18,
+            "L": "17h00",
+            "A": false
+          },
+          {
+            "G": 19,
+            "L": "17h30"
+          },
+          {
+            "G": 20,
+            "L": "18h00"
+          }
+        ]
+      },
+      "ListeHeuresFin": {
+        "_T": 24,
+        "V": [
+          {
+            "G": 0,
+            "L": "08h30",
+            "A": false
+          },
+          {
+            "G": 1,
+            "L": "09h00"
+          },
+          {
+            "G": 2,
+            "L": "09h30",
+            "A": false
+          },
+          {
+            "G": 3,
+            "L": "10h00"
+          },
+          {
+            "G": 4,
+            "L": "10h30",
+            "A": false
+          },
+          {
+            "G": 5,
+            "L": "11h00"
+          },
+          {
+            "G": 6,
+            "L": "11h30",
+            "A": false
+          },
+          {
+            "G": 7,
+            "L": "12h00"
+          },
+          {
+            "G": 8,
+            "L": "12h30",
+            "A": false
+          },
+          {
+            "G": 9,
+            "L": "13h00"
+          },
+          {
+            "G": 10,
+            "L": "13h30",
+            "A": false
+          },
+          {
+            "G": 11,
+            "L": "14h00"
+          },
+          {
+            "G": 12,
+            "L": "14h30",
+            "A": false
+          },
+          {
+            "G": 13,
+            "L": "15h00"
+          },
+          {
+            "G": 14,
+            "L": "15h30",
+            "A": false
+          },
+          {
+            "G": 15,
+            "L": "16h00"
+          },
+          {
+            "G": 16,
+            "L": "16h30",
+            "A": false
+          },
+          {
+            "G": 17,
+            "L": "17h00"
+          },
+          {
+            "G": 18,
+            "L": "17h30",
+            "A": false
+          },
+          {
+            "G": 19,
+            "L": "18h00"
+          },
+          {
+            "G": 20,
+            "L": "18h00",
+            "A": false
+          }
+        ]
+      },
+      "ListeHeuresFinPourVS": {
+        "_T": 24,
+        "V": [
+          {
+            "G": 0,
+            "L": "08h30"
+          },
+          {
+            "G": 1,
+            "L": "09h00"
+          },
+          {
+            "G": 2,
+            "L": "09h30"
+          },
+          {
+            "G": 3,
+            "L": "10h00"
+          },
+          {
+            "G": 4,
+            "L": "10h30"
+          },
+          {
+            "G": 5,
+            "L": "11h00"
+          },
+          {
+            "G": 6,
+            "L": "11h30"
+          },
+          {
+            "G": 7,
+            "L": "12h00"
+          },
+          {
+            "G": 8,
+            "L": "12h30"
+          },
+          {
+            "G": 9,
+            "L": "13h00"
+          },
+          {
+            "G": 10,
+            "L": "13h30"
+          },
+          {
+            "G": 11,
+            "L": "14h00"
+          },
+          {
+            "G": 12,
+            "L": "14h30"
+          },
+          {
+            "G": 13,
+            "L": "15h00"
+          },
+          {
+            "G": 14,
+            "L": "15h30"
+          },
+          {
+            "G": 15,
+            "L": "16h00"
+          },
+          {
+            "G": 16,
+            "L": "16h30"
+          },
+          {
+            "G": 17,
+            "L": "17h00"
+          },
+          {
+            "G": 18,
+            "L": "17h30"
+          },
+          {
+            "G": 19,
+            "L": "18h00"
+          },
+          {
+            "G": 20,
+            "L": "18h00"
+          }
+        ]
+      },
+      "sequences": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "ListePeriodes": [
+        {
+          "L": "Trimestre 1",
+          "N": "105#3PV0eosGlHWV-jr9s3vetLPE3GkJQ2TDyhXK3pj_czU",
+          "G": 1,
+          "periodeNotation": 0,
+          "dateDebut": {
+            "_T": 7,
+            "V": "01/09/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "23/11/2025"
+          }
+        },
+        {
+          "L": "Trimestre 2",
+          "N": "105#LlOQHp7QUDOCYCwXvvKGT5njaUZfu2ZppfujyTYkfXk",
+          "G": 1,
+          "periodeNotation": 1,
+          "dateDebut": {
+            "_T": 7,
+            "V": "24/11/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "01/03/2026"
+          }
+        },
+        {
+          "L": "Trimestre 3",
+          "N": "105#-i2WNMD4oQJ0NB6BZWpKq93veBcBe4S5qZVdsECxmgI",
+          "G": 1,
+          "periodeNotation": 2,
+          "dateDebut": {
+            "_T": 7,
+            "V": "02/03/2026"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "30/08/2026"
+          }
+        },
+        {
+          "L": "Semestre 1",
+          "N": "105#scJFY3_zwKZe3QvXaQRjj_gYnB1UFK0_dE3LTl5eYGg",
+          "G": 2,
+          "periodeNotation": 3,
+          "dateDebut": {
+            "_T": 7,
+            "V": "01/09/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "18/01/2026"
+          }
+        },
+        {
+          "L": "Semestre 2",
+          "N": "105#3Rmp3jpvD64nQG_Ap2EhrFLnRARoyMysAzJbixyg7mM",
+          "G": 2,
+          "periodeNotation": 4,
+          "dateDebut": {
+            "_T": 7,
+            "V": "19/01/2026"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "30/08/2026"
+          }
+        },
+        {
+          "L": "Année continue",
+          "N": "105#6bDLz7_BNn9UUDKwqdaeMcp7vmAQ2Yt5ib9EpnMsQV8",
+          "G": 3,
+          "periodeNotation": 5,
+          "dateDebut": {
+            "_T": 7,
+            "V": "01/09/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "30/08/2026"
+          }
+        },
+        {
+          "L": "Hors période",
+          "N": "105#nD6CWpG3b8wiOkMld6v0aDMAF-wXCUW7hnnLcYhHa4c",
+          "G": 0,
+          "periodeNotation": 6,
+          "dateDebut": {
+            "_T": 7,
+            "V": "01/09/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "30/08/2026"
+          }
+        },
+        {
+          "L": "Contrôle en cours de formation",
+          "N": "105#WqYBSZq78p4JIzTCdzRVtCT6g4okGrBFP86cKZSljkE",
+          "G": 0,
+          "periodeNotation": 6,
+          "dateDebut": {
+            "_T": 7,
+            "V": "01/09/2025"
+          },
+          "dateFin": {
+            "_T": 7,
+            "V": "30/08/2026"
+          }
+        }
+      ],
+      "urlLogo": {
+        "_T": 23,
+        "V": "fichierurlpublique/logo.png?param=7DA3DEB97ED4E736E373FCE0BB40DB42AC879602986CB34F10F3D41CD9542A23AD283E956D835851F0B44CCE88798BB418B6810F2D31F33E119310A86589C243BE5AE3D8A707BDD96735A524E252AEDD"
+      },
+      "recreations": {
+        "_T": 24,
+        "V": [
+          {
+            "L": "Récréation du matin",
+            "place": 4
+          }
+        ]
+      },
+      "tailleMaxEnregistrementAudioRenduTAF": 3,
+      "genresRenduTAFValable": {
+        "_T": 26,
+        "V": "[0..2]"
+      },
+      "nomCookieAppli": "validationAppliMobile",
+      "aideContextuelle": {},
+      "Collectivite": {
+        "L": "Collectivite",
+        "genreCollectivite": 0
+      }
+    }
+  },
+  "nom": "FonctionParametres",
+  "Signature": {
+    "ModeExclusif": false
+  }
+}

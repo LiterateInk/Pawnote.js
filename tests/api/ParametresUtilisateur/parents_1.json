@@ -1,0 +1,1076 @@
+{
+  "data": {
+    "ressource": {
+      "L": "Mme ABADIE Christine",
+      "N": "128#xMVFenuL4cOCk8mRU-uTmbGK-RM26OKycQIlc2Y9A5o",
+      "G": 5,
+      "listeRessources": [
+        {
+          "L": "ARNAL Jean-Baptiste",
+          "N": "46#ww-ahLgg-GALoacdwylM7hyQ9ti2G4BQnsaBd3iI4NU",
+          "G": 4,
+          "P": 8,
+          "Etablissement": {
+            "_T": 24,
+            "V": {
+              "L": "SITE DE DEMONSTRATION",
+              "N": "50#oeC3QLtA1TxxA7jeDTM17OQSW1KBfCNUrJpe4KUqNLs"
+            }
+          },
+          "classeDEleve": {
+            "L": "5B",
+            "N": "23#3G1XH86sEXN_yM4V08_cGgm3HGxe3-J81ikwKFVS12o"
+          },
+          "estClasseRattachementduJour": false,
+          "listeClassesHistoriques": {
+            "_T": 24,
+            "V": [
+              {
+                "L": "5B",
+                "N": "23#3G1XH86sEXN_yM4V08_cGgm3HGxe3-J81ikwKFVS12o",
+                "courant": true,
+                "AvecNote": true,
+                "AvecFiliere": false
+              }
+            ]
+          },
+          "listeGroupes": {
+            "_T": 24,
+            "V": [
+              {
+                "L": "5ITAGR.1",
+                "N": "60#1dgxMida6p4bk6duwMsx-CvyfDRwgX4nWKWI2T5oD0w"
+              }
+            ]
+          },
+          "listeOngletsPourPeriodes": {
+            "_T": 24,
+            "V": [
+              {
+                "G": 12,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 198,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 13,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 19,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "G": 1,
+                      "L": "Année (Trois trimestres)"
+                    },
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 230,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 100,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 219,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 216,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 41,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 111,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1,
+                      "datePublication": {
+                        "_T": 7,
+                        "V": "23/11/2025"
+                      }
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1,
+                      "datePublication": {
+                        "_T": 7,
+                        "V": "01/03/2026"
+                      }
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1,
+                      "datePublication": {
+                        "_T": 7,
+                        "V": "30/08/2026"
+                      }
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 99,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 201,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 277,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              },
+              {
+                "G": 278,
+                "listePeriodes": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Trimestre 1",
+                      "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 2",
+                      "N": "105#Cq03gjRxRPPSsTEYE6pYb16vGXKkVAVs97KMnacSVO0",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Trimestre 3",
+                      "N": "105#EQQEg22GKOsYRoGVCyFno9PkFRtenCygGEPCMbLxc00",
+                      "G": 2,
+                      "A": true,
+                      "GenreNotation": 1
+                    },
+                    {
+                      "L": "Hors période",
+                      "N": "105#wOnlsCMNmYJOEQYSP37YKzmawSa9Y37GfPja-hBdXBE",
+                      "G": 4,
+                      "A": true,
+                      "GenreNotation": 0
+                    }
+                  ]
+                },
+                "periodeParDefaut": {
+                  "_T": 24,
+                  "V": {
+                    "L": "Trimestre 1",
+                    "N": "105#Mq1LJMbWM6aU0sU1ukQOBfB6Muv2tbu5Xd0XLeOJB9Y"
+                  }
+                }
+              }
+            ]
+          },
+          "listeOngletsPourPiliers": {
+            "_T": 24,
+            "V": [
+              {
+                "G": 45,
+                "listePaliers": {
+                  "_T": 24,
+                  "V": [
+                    {
+                      "L": "Cycle 4",
+                      "N": "100#g_WYXkzhpUNivEjU-Y8oyiXbD2O46aMGbo7LGiOXBJw",
+                      "G": 27,
+                      "listePiliers": {
+                        "_T": 24,
+                        "V": [
+                          {
+                            "L": "D1.1 - Langue française à l'oral et à l'écrit",
+                            "N": "107#snfryyx3RyhloBnp6gY6eypYb05eigjRBJXCz9CD49c",
+                            "G": 23,
+                            "P": 1,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D1.3 - Langages mathématiques, scientifiques et informatiques",
+                            "N": "107#RwbnYEyfqUeuToCf9oQ9ye8HCyQvyBmNnax91Bo0Wl8",
+                            "G": 23,
+                            "P": 3,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D1.4 - Langage des arts et du corps",
+                            "N": "107#4fud5mOgbCVN-NbdR9fLNztUFMtOA4sjEtnLqhvHskg",
+                            "G": 23,
+                            "P": 4,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D2 - Les méthodes et outils pour apprendre",
+                            "N": "107#dqwaBBcR3eDW6vFdr0ziuiMOaq5hXtKIINxfhGhnznI",
+                            "G": 23,
+                            "P": 5,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D3 - La formation de la personne et du citoyen",
+                            "N": "107#TEYlipZpbIrzM6E5IRF7Do98H3WoKVFXhxYh5txF2R0",
+                            "G": 23,
+                            "P": 6,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D4 - Les systèmes naturels et les systèmes techniques",
+                            "N": "107#AiEynUznxbyoUZkrc8gYki6cjhFupPzFv5x3tvlu5BU",
+                            "G": 23,
+                            "P": 7,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D5 - Les représentations du monde et l'activité humaine",
+                            "N": "107#QKNE8BDFcGafu7-W7ZeJ52abSyUM4ZvrEtX4OChxe38",
+                            "G": 23,
+                            "P": 8,
+                            "estPilierLVE": false,
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D1.2 - Langues étrangères et régionales - ANGLAIS LV1",
+                            "N": "107#l56cexg2jXfLLv89vH_HZVOhTzpQZckZgy_BD_N0a0Q",
+                            "G": 23,
+                            "P": 2,
+                            "estPilierLVE": true,
+                            "Service": {
+                              "_T": 24,
+                              "V": {
+                                "L": "ANGLAIS LV1",
+                                "N": "131#j86ZwV0f21xSWD9sDcpOJL1wRNyVVC7GZOT1mYFW2g4"
+                              }
+                            },
+                            "estSocleCommun": true
+                          },
+                          {
+                            "L": "D1.2 - Langues étrangères et régionales - ITALIEN LV2",
+                            "N": "107#l56cexg2jXfLLv89vH_HZVOhTzpQZckZgy_BD_N0a0Q",
+                            "G": 23,
+                            "P": 2,
+                            "estPilierLVE": true,
+                            "Service": {
+                              "_T": 24,
+                              "V": {
+                                "L": "ITALIEN LV2",
+                                "N": "131#wocbpqkXgikjssbiU7Enw2YqANmGpDviKyHU9RxLWs8"
+                              }
+                            },
+                            "estSocleCommun": true
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "G": 249,
+                "listePaliers": {
+                  "_T": 24,
+                  "V": []
+                }
+              }
+            ]
+          },
+          "listeMatieresDeclarationDispense": {
+            "_T": 24,
+            "V": []
+          }
+        }
+      ],
+      "listeClassesDelegue": {
+        "_T": 24,
+        "V": [
+          {
+            "L": "5B",
+            "N": "23#3G1XH86sEXN_yM4V08_cGgm3HGxe3-J81ikwKFVS12o",
+            "G": 1
+          }
+        ]
+      },
+      "estDelegue": false,
+      "estMembreCA": false,
+      "avecDiscussionResponsables": false,
+      "listeNumerosUtiles": {
+        "_T": 24,
+        "V": []
+      }
+    },
+    "listeInformationsEtablissements": {
+      "_T": 24,
+      "V": [
+        {
+          "L": "SITE DE DEMONSTRATION",
+          "N": "50#oeC3QLtA1TxxA7jeDTM17OQSW1KBfCNUrJpe4KUqNLs",
+          "urlLogo": {
+            "_T": 23,
+            "V": "fichierurlpublique/logo.png?param=7DA3DEB97ED4E736E373FCE0BB40DB42AC879602986CB34F10F3D41CD9542A23AD283E956D835851F0B44CCE88798BB418B6810F2D31F33E119310A86589C243BE5AE3D8A707BDD96735A524E252AEDD"
+          },
+          "Coordonnees": {
+            "Adresse1": "Rue Paul Langevin",
+            "Adresse2": "",
+            "Adresse3": "",
+            "Adresse4": "",
+            "CodePostal": "13013",
+            "LibellePostal": "",
+            "LibelleVille": "Marseille",
+            "Province": "",
+            "Pays": "",
+            "SiteInternet": "https://demo.index-education.net/pronote/"
+          },
+          "avecInformations": true
+        }
+      ]
+    },
+    "listeMotifsAbsences": {
+      "_T": 24,
+      "V": [
+        {
+          "L": "DIVERS",
+          "N": "89#20HDBA7zR1aK4_OTaJhc1mXljnQoaySmtyDZg0qbFkQ"
+        },
+        {
+          "L": "MALADIE AVEC CERTIFICAT",
+          "N": "89#ltV5428aIZuP6oy8lCVaa6hb_vLfuOcgMjJ1fRE2l_s"
+        },
+        {
+          "L": "MALADIE SANS CERTIFICAT",
+          "N": "89#zK70KyN3mZqBPIgb814GZPyQ2fAkSJi9gfWZR8WgM3M"
+        },
+        {
+          "L": "PROBLEME DE TRANSPORT",
+          "N": "89#q4QIa6MBBubfTqsGFDEmm4O93CNQ0hi8Ue979IIrL8s"
+        },
+        {
+          "L": "RAISON FAMILIALE",
+          "N": "89#qQT2TJe6eNaFwhG1RC59GrawC9RNVkZk572yR1FO6GQ"
+        }
+      ]
+    },
+    "listeMotifsRetards": {
+      "_T": 24,
+      "V": [
+        {
+          "L": "DIVERS",
+          "N": "90#JUsaLOphPOYf0i3-z5XuETZlWA8n60ZNKayy4RKfTwk"
+        },
+        {
+          "L": "PROBLEME DE TRANSPORT",
+          "N": "90#Co3E_MOFYHb0b03BZBQ6oys3joVh9U1L02musCIQlmU"
+        },
+        {
+          "L": "RAISONS FAMILIALES",
+          "N": "90#VaNsJr4N8J0Z7oRLm6yAu71Bog-V5X9wboYDYA6J4Hc"
+        }
+      ]
+    },
+    "parametresUtilisateur": {
+      "version": 1,
+      "EDT": {
+        "afficherCoursAnnules": true,
+        "axeInverseEDT": false,
+        "axeInversePlanningHebdo": true,
+        "axeInversePlanningJour": false,
+        "axeInversePlanningJour2": false,
+        "nbJours": 0,
+        "nbRessources": 0,
+        "nbJoursEDT": 0,
+        "nbSequences": 0
+      },
+      "Communication": {
+        "DiscussionNonLues": false
+      }
+    },
+    "autorisationsSession": {
+      "fonctionnalites": {
+        "gestionTwitter": true,
+        "attestationEtendue": false,
+        "gestionARBulletins": true
+      }
+    },
+    "autorisations": {
+      "AvecDiscussion": true,
+      "AvecDiscussionPersonnels": true,
+      "AvecDiscussionProfesseurs": true,
+      "AvecDiscussionParents": true,
+      "AvecSaisieObservationsParents": true,
+      "accesDecrochage": true,
+      "incidents": {},
+      "intendance": {},
+      "services": {},
+      "cours": {
+        "domaineConsultationEDT": {
+          "_T": 8,
+          "V": "[1..62]"
+        },
+        "domaineModificationCours": {
+          "_T": 8,
+          "V": "[]"
+        },
+        "masquerPartiesDeClasse": true
+      },
+      "tailleMaxDocJointEtablissement": 5242880,
+      "tailleTravailAFaire": 1000,
+      "tailleCirconstance": 10000,
+      "tailleCommentaire": 1000,
+      "consulterDonneesAdministrativesAutresEleves": true,
+      "compte": {
+        "avecSaisieMotDePasse": true,
+        "avecSaisieMotDePasseEleve": true,
+        "avecInformationsPersonnelles": true,
+        "avecSaisieInfosPersoCoordonnees": true,
+        "avecSaisieInfosPersoAutorisations": true
+      },
+      "autoriserImpressionBulletinReleveBrevet": true
+    },
+    "tabEtablissementsModeleGrille": [],
+    "listeOnglets": [
+      {
+        "G": 7
+      },
+      {
+        "G": 16
+      },
+      {
+        "G": 61,
+        "Onglet": [
+          {
+            "G": 89
+          },
+          {
+            "G": 88
+          },
+          {
+            "G": 275
+          },
+          {
+            "G": 250
+          }
+        ]
+      },
+      {
+        "G": 5,
+        "Onglet": [
+          {
+            "G": 37
+          },
+          {
+            "G": 19
+          }
+        ]
+      },
+      {
+        "G": 3,
+        "Onglet": [
+          {
+            "G": 198
+          },
+          {
+            "G": 12
+          },
+          {
+            "G": 13
+          },
+          {
+            "G": 41
+          }
+        ]
+      },
+      {
+        "G": 55,
+        "Onglet": [
+          {
+            "G": 201
+          },
+          {
+            "G": 100
+          }
+        ]
+      },
+      {
+        "G": 90
+      },
+      {
+        "G": 52,
+        "Onglet": [
+          {
+            "G": 288
+          },
+          {
+            "G": 42
+          },
+          {
+            "G": 101
+          }
+        ]
+      },
+      {
+        "G": 40,
+        "Onglet": [
+          {
+            "G": 15
+          }
+        ]
+      },
+      {
+        "G": 2,
+        "Onglet": [
+          {
+            "G": 131
+          },
+          {
+            "G": 8
+          },
+          {
+            "G": 284
+          },
+          {
+            "G": 9
+          },
+          {
+            "G": 10
+          }
+        ]
+      },
+      {
+        "G": 6,
+        "Onglet": [
+          {
+            "G": 49
+          },
+          {
+            "G": 22
+          },
+          {
+            "G": 148
+          }
+        ]
+      }
+    ],
+    "listeOngletsInvisibles": [
+      90,
+      250,
+      288
+    ],
+    "listeOngletsNotification": [
+      131,
+      148,
+      8,
+      275
+    ]
+  },
+  "nom": "ParametresUtilisateur",
+  "Signature": {
+    "notifications": {
+      "compteurCentraleNotif": 1
+    },
+    "notificationsCommunication": [
+      {
+        "onglet": 131,
+        "nb": 0
+      },
+      {
+        "onglet": 148,
+        "nb": 0
+      },
+      {
+        "onglet": 8,
+        "nb": 0
+      },
+      {
+        "onglet": 275,
+        "nb": 0
+      }
+    ],
+    "actualisationMessage": true
+  }
+}
