@@ -184,7 +184,7 @@ export class Pilier {
   @rename("P")
   public position = t.number();
   public estPilierLVE = t.boolean();
-  public estSocleCommun = t.boolean();
+  public estSocleCommun = t.option(t.boolean());
   @rename("Service")
   @deserializeWith(new TypeHttpElement(Service).single)
   public service = t.option(t.reference(Service));
@@ -295,7 +295,8 @@ export class Ressource {
   @rename("G")
   public kind = t.number();
 
-  public listeRessources = t.option(t.array(t.reference(InnerResource)));
+  @rename("listeRessources")
+  public inner = t.option(t.array(t.reference(InnerResource)));
 
   @rename("P")
   public position = t.option(t.number());
