@@ -74,6 +74,9 @@ export class Autorisations {
   AvecDiscussion = t.boolean();
   AvecDiscussionPersonnels = t.boolean();
   AvecDiscussionProfesseurs = t.boolean();
+  AvecDiscussionParents = t.option(t.boolean());
+  AvecSaisieObservationsParents = t.option(t.boolean());
+  accesDecrochage = t.option(t.boolean());
 
   // TODO: incidents
   // TODO: intendance
@@ -81,7 +84,7 @@ export class Autorisations {
   // TODO: cours
 
   tailleMaxDocJointEtablissement = t.number();
-  tailleMaxRenduTafEleve = t.number();
+  tailleMaxRenduTafEleve = t.option(t.number());
   tailleTravailAFaire = t.number();
   tailleCirconstance = t.number();
   tailleCommentaire = t.number();
@@ -90,12 +93,32 @@ export class Autorisations {
   autoriserImpressionBulletinReleveBrevet = t.boolean();
 }
 
+export class MotifAbsence {
+  @rename("L")
+  public name = t.string();
+  @rename("N")
+  public id = t.string();
+}
+
+export class MotifRetard {
+  @rename("L")
+  public name = t.string();
+  @rename("N")
+  public id = t.string();
+}
+
 export class ParametresUtilisateurModel {
   @rename("ressource")
   public resource = t.reference(Ressource);
 
   @deserializeWith(new TypeHttpElement(InformationEtablissement).array)
   public listeInformationsEtablissements = t.array(t.reference(InformationEtablissement));
+
+  @deserializeWith(new TypeHttpElement(MotifAbsence).array)
+  public listeMotifsAbsences = t.option(t.array(t.reference(MotifAbsence)));
+
+  @deserializeWith(new TypeHttpElement(MotifRetard).array)
+  public listeMotifsRetards = t.option(t.array(t.reference(MotifRetard)));
 
   public parametresUtilisateur = t.reference(ParametresUtilisateur);
 
@@ -223,7 +246,7 @@ export class NumeroUtile {
   // TODO
 }
 
-export class Ressource {
+export class InnerResource {
   @rename("L")
   public name = t.string();
 
@@ -243,7 +266,7 @@ export class Ressource {
   @rename("classeDEleve")
   public studentClass = t.reference(ClasseEleve);
 
-  estClasseRattachementduJour = t.boolean();
+  public estClasseRattachementduJour = t.boolean();
 
   @rename("listeClassesHistoriques")
   @deserializeWith(new TypeHttpElement(Etablissement).array)
@@ -254,13 +277,58 @@ export class Ressource {
   public groups = t.array(t.reference(Groupe));
 
   @deserializeWith(new TypeHttpElement(OngletPourPilier).array)
-  listeOngletsPourPiliers = t.array(t.reference(OngletPourPilier));
+  public listeOngletsPourPiliers = t.array(t.reference(OngletPourPilier));
 
   @deserializeWith(new TypeHttpElement(OngletPourPeriode).array)
-  listeOngletsPourPeriodes = t.array(t.reference(OngletPourPeriode));
+  public listeOngletsPourPeriodes = t.array(t.reference(OngletPourPeriode));
+
+  // TODO: `listeMatieresDeclarationDispense` (24 / .array)
+}
+
+export class Ressource {
+  @rename("L")
+  public name = t.string();
+
+  @rename("N")
+  public id = t.string();
+
+  @rename("G")
+  public kind = t.number();
+
+  public listeRessources = t.option(t.array(t.reference(InnerResource)));
+
+  @rename("P")
+  public position = t.option(t.number());
+
+  @rename("Etablissement")
+  @deserializeWith(new TypeHttpElement(Etablissement).single)
+  public school = t.option(t.reference(Etablissement));
+
+  @rename("classeDEleve")
+  public studentClass = t.option(t.reference(ClasseEleve));
+
+  public estClasseRattachementduJour = t.option(t.boolean());
+
+  @rename("listeClassesHistoriques")
+  @deserializeWith(new TypeHttpElement(Etablissement).array)
+  public studentClassesHistory = t.option(t.array(t.reference(Etablissement)));
+
+  @rename("listeGroupes")
+  @deserializeWith(new TypeHttpElement(Groupe).array)
+  public groups = t.option(t.array(t.reference(Groupe)));
+
+  @deserializeWith(new TypeHttpElement(OngletPourPilier).array)
+  public listeOngletsPourPiliers = t.option(t.array(t.reference(OngletPourPilier)));
+
+  @deserializeWith(new TypeHttpElement(OngletPourPeriode).array)
+  public listeOngletsPourPeriodes = t.option(t.array(t.reference(OngletPourPeriode)));
+
+  public estDelegue = t.option(t.boolean());
+  public estMembreCA = t.option(t.boolean());
+  public avecDiscussionResponsables = t.option(t.boolean());
 
   @deserializeWith(new TypeHttpElement(NumeroUtile).array)
-  listeNumerosUtiles = t.array(t.reference(NumeroUtile));
+  public listeNumerosUtiles = t.array(t.reference(NumeroUtile));
 }
 
 export class Notifications {

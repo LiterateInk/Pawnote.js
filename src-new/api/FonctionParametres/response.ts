@@ -277,8 +277,11 @@ class General {
   @rename("AvecRecuperationInfosConnexion")
   public withLoginInfoRetrieval = t.boolean();
 
+  /**
+   * Only defined on students webspace.
+   */
   @rename("parentAutoriseChangerMDP")
-  public isParentAllowedToChangePassword = t.boolean();
+  public isParentAllowedToChangePassword = t.option(t.boolean());
 
   @rename("Police")
   public fontName = t.string();
@@ -322,6 +325,8 @@ class General {
 
   @rename("ListePeriodes")
   public periods = t.array(t.reference(Periode));
+
+  // TODO: `urlLogo` (23)
 
   @rename("recreations")
   @deserializeWith(new TypeHttpElement(Recreation).array)

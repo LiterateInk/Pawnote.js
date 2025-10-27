@@ -39,6 +39,8 @@ export class AuthentificationModel {
   @deserializeWith(TypeHttpEnsembleNombre.deserializer)
   public availableSecurityModes = t.option(t.array(t.enum(TypeModeGestionDoubleAuthentification)));
 
+  public changementStrategieImpose = t.option(t.boolean());
+
   @rename("messageForcerModificationMdp")
   public forcePasswordResetMessage = t.option(t.string());
 }
