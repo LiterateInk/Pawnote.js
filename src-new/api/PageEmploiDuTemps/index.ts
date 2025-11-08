@@ -53,7 +53,11 @@ export class PageEmploiDuTemps extends RequestFunction<
 
       ...data
     }, {
-      onglet: 13
+      onglet: 16,
+      membre: this.resource instanceof Child ? {
+        G: this.resource.kind,
+        N: this.resource.id
+      } : void 0
     });
 
     return this.decoder.decode(response);

@@ -52,5 +52,9 @@ export type PageEmploiDuTempsRequestData = PageEmploiDuTempsRequestDataBase & (
 
 
 export interface PageEmploiDuTempsRequestSignature {
-  onglet: 13; // TODO: find enum
+  onglet: 16; // TODO: find enum
+  membre?: {
+    G: number
+    N: string
+  }
 }
