@@ -56,7 +56,7 @@ export class NiveauAcquisition {
   public affectsSuccessRate = t.option(t.boolean());
 
   @rename("raccourci")
-  public shortcut = t.string();
+  public shortcut = t.option(t.string());
 
   @rename("raccourciPositionnement")
   public shortcutPosition = t.option(t.string());
