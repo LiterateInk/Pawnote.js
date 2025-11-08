@@ -5,9 +5,9 @@ import { Session } from "../../models/Session";
 import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
 import type { PageEmploiDuTempsRequestData, PageEmploiDuTempsRequestSignature, RequestDataIntervals, RequestDataResource, RequestDataWeekNumber } from "./request";
 import { Child } from "src-new/models/Users/Parent";
-import { PageEmploiDuTempsModel, PageEmploiDuTempsSignature } from "./response";
+import { PageEmploiDuTempsModel } from "./response";
 
-export type PageEmploiDuTempsResponse = ResponseFunctionWrapper<PageEmploiDuTempsModel, PageEmploiDuTempsSignature>;
+export type PageEmploiDuTempsResponse = ResponseFunctionWrapper<PageEmploiDuTempsModel>;
 
 export class PageEmploiDuTemps extends RequestFunction<
   PageEmploiDuTempsRequestData,
@@ -17,8 +17,7 @@ export class PageEmploiDuTemps extends RequestFunction<
 
   private readonly decoder = new ResponseFunction(
     this.session,
-    PageEmploiDuTempsModel,
-    PageEmploiDuTempsSignature
+    PageEmploiDuTempsModel
   );
 
   public constructor(session: Session, private readonly resource: Student | Child) {
