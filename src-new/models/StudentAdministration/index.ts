@@ -2,6 +2,7 @@ import { PageEmploiDuTemps } from "src-new/api/PageEmploiDuTemps";
 import { Child } from "../Users/Parent";
 import { User } from "../Users/User";
 import { Student } from "../Users/Student";
+import { Timetable } from "./Timetable";
 
 export class StudentAdministration {
   /** @internal */
@@ -16,11 +17,17 @@ export class StudentAdministration {
     else return this._sub!;
   }
 
-  public async getTimetableFromIntervals(start: Date, end?: Date) {
-    const data = await new PageEmploiDuTemps(this._user.session, this._resource).sendIntervals(start, end);
+  public async getTimetableFromIntervals(start: Date, end?: Date): Promise<Timetable> {
+    return new Timetable(
+      await new PageEmploiDuTemps(this._user.session, this._resource)
+        .sendIntervals(start, end)
+    );
   }
 
-  public async getTimetableFromWeek(week: number) {
-    const data = await new PageEmploiDuTemps(this._user.session, this._resource).sendWeekNumber(week);
+  public async getTimetableFromWeek(week: number): Promise<Timetable> {
+    return new Timetable(
+      await new PageEmploiDuTemps(this._user.session, this._resource)
+        .sendWeekNumber(week)
+    );
   }
 }
