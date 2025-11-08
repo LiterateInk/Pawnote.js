@@ -19,7 +19,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "skipLibCheck": true
+    "stripInternal": true,
+    "skipLibCheck": true,
   },
 
   "include": ["src", "src-new", "examples", "examples-new", "tests", "eslint.config.ts", "tsup.config.ts"],
