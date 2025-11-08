@@ -1,0 +1,944 @@
+{
+  "data": {
+    "jourCycleSelectionne": 0,
+    "avecCoursAnnule": true,
+    "prefsGrille": {
+      "genreRessource": 4
+    },
+    "ListeCours": [
+      {
+        "N": "29#MOeV6wZtcDK1uRJc8V7bOiKyVDMmUjeg_hC3nfn8HWQ",
+        "G": 0,
+        "P": 414,
+        "place": 64,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "18/09/2025 10:00:00"
+        },
+        "CouleurFond": "#2338BB",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "FRANCAIS",
+              "N": "79#0NQbPyF4b4cz7RvXpD4KO0xCyVcfd5V5AGizaVB_Tks",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "GALLET B."
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#oIN42XFpsDTG1GBxN5U4llYbQMD-fs8ZpPjkTV_6OEw",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#vk_BBnllBUulU2GQGlWgDgLhnI5MVJZzx_JqA598w0g",
+        "G": 0,
+        "P": 410,
+        "place": 42,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "17/09/2025 09:00:00"
+        },
+        "CouleurFond": "#173ED9",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ARTS PLASTIQUES",
+              "N": "79#fNLUZS1VOVoHHwv-0t7wIOKucfj0g_OfSKyqKpB58kM",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "DIALO H."
+            },
+            {
+              "L": "205",
+              "N": "129#oAmDwlg6TKbdAD3f7WUt3IKIguLrTpy9PyRLERASvsA",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#PUhHJfNEufjFp9lFkjqU8m4SJ0RvAv_tw1h8nt1IUpM",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#LsTMo5dRlQ6Aa4dFdU7wIhRRS41D_RPUDC9PRapOK1k",
+        "G": 0,
+        "P": 415,
+        "place": 35,
+        "duree": 4,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "16/09/2025 15:30:00"
+        },
+        "CouleurFond": "#2BD5F3",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "HISTOIRE-GÉOGRAPHIE",
+              "N": "79#z6PbZ1qnv1j7KPTOz3JJitSY34G_8xLL4_-SoRiLk-c",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "MOREAU C."
+            },
+            {
+              "L": "206",
+              "N": "129#GcxYDB1VuABB0vJ1dD8J6qjE_NLsyw8zwXwtqm3Y1a0",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#cS_DoLH7be_qkujPZsR9mXiTt1WqXU9v4c15_v4hK-g",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#gT5U7atO1uWKAUg1Oy-ncTJmG5NHtQAuKU6ZbCqsu_g",
+        "G": 0,
+        "P": 422,
+        "place": 71,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "18/09/2025 13:30:00"
+        },
+        "CouleurFond": "#E19C84",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "TECHNOLOGIE",
+              "N": "79#NLs-9o-2B9kBAeprtreAYO9DtSLQYBllJ79idy7dM68",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "DEJEAN Y."
+            },
+            {
+              "L": "105",
+              "N": "129#pyPEMsWuugqXyISEmzf-Pix8uR-GeVRU9ohVWU43rUk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#D9P0G1oIN0Rg-NnoOf0XCGXibuzwPcEBTgin-43TVTQ",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#wnWCpj10FZrqgY157zQ7dyvNtwzwvSOOPij8vxVRRKU",
+        "G": 0,
+        "P": 411,
+        "place": 66,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "18/09/2025 11:00:00"
+        },
+        "CouleurFond": "#E55748",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "MUSIQUE",
+              "N": "79#mAwxWhNTG_8KLpY8H0_QA4dslvwCuI-D5_G0O5rzWac",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "VERNET M."
+            },
+            {
+              "L": "Salle de musique",
+              "N": "129#6chTiQXmW1CIQ2Y6t5fZr6jJhQoEVVTZkEKYF5P5rvk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#TCJiysVY9AzVY5TkFnQ2wCad_-FIxS85pN1WcAaJkv4",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#DX00gDP-N7ZqPsnsSW2d2TPQZoF-FA_mqbeWebQqqB4",
+        "G": 0,
+        "P": 418,
+        "Statut": "Prof. absent",
+        "estAnnule": true,
+        "place": 6,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 11:00:00"
+        },
+        "CouleurFond": "#FF8040",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "MATHÉMATIQUES",
+              "N": "79#4EDPYtKbwwg7rsJqLwk9SzFB3FCGcC7t-0hoTVJXHww",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "PROFESSEUR M."
+            },
+            {
+              "L": "207",
+              "N": "129#jsSsgofXB_QODR0_6pD9sFD97XkFRlYfLKi351iIjAc",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#G_Zsv0lwJqUOAmwqk7DAShUByXLkMQZ7LfxI82r5yMM",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#Zq6-JOsntfK8x6cSTRTwMKLXCiBie_1B9aVC4PcpRNM",
+        "G": 0,
+        "P": 419,
+        "place": 60,
+        "duree": 4,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "18/09/2025 08:00:00"
+        },
+        "CouleurFond": "#FF8040",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "MATHÉMATIQUES",
+              "N": "79#4EDPYtKbwwg7rsJqLwk9SzFB3FCGcC7t-0hoTVJXHww",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "PROFESSEUR M."
+            },
+            {
+              "L": "207",
+              "N": "129#jsSsgofXB_QODR0_6pD9sFD97XkFRlYfLKi351iIjAc",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#2UEVFOcfdwLq2q-P1DL7LHRZNijpSWfdeL9m69TNEG8",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#Y2bKw8K9PXkFq2fR8RUlgS9N92Gvi5sU5TwFPm0Spy0",
+        "G": 0,
+        "P": 426,
+        "place": 46,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "17/09/2025 11:00:00"
+        },
+        "CouleurFond": "#4777A9",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "EPI (danse)",
+              "N": "79#KQ-gG2yE-1Aj66NkUgtosmOulpgjaq-gHvDD0wfjScI",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "GALLET B."
+            },
+            {
+              "L": "105",
+              "N": "129#pyPEMsWuugqXyISEmzf-Pix8uR-GeVRU9ohVWU43rUk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false
+      },
+      {
+        "N": "29#CugfGjFqYfcAiFr-gUsh1SznyP4m4dCMUKSNuilIpg0",
+        "G": 0,
+        "P": 412,
+        "place": 2,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 09:00:00"
+        },
+        "CouleurFond": "#2338BB",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "FRANCAIS",
+              "N": "79#0NQbPyF4b4cz7RvXpD4KO0xCyVcfd5V5AGizaVB_Tks",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "GALLET B."
+            },
+            {
+              "L": "105",
+              "N": "129#pyPEMsWuugqXyISEmzf-Pix8uR-GeVRU9ohVWU43rUk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#rucgyw7bpz1y4F8A77ooFyCfHcSDTwqA0mrbhcbIjZ0",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#yInvlYUVEpTi_XJe4rVQ8Z8vOs1M6vYrS2yNsmHUX8o",
+        "G": 0,
+        "P": 499,
+        "place": 26,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "16/09/2025 11:00:00"
+        },
+        "CouleurFond": "#2338BB",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "FRANCAIS",
+              "N": "79#0NQbPyF4b4cz7RvXpD4KO0xCyVcfd5V5AGizaVB_Tks",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "GALLET B."
+            },
+            {
+              "L": "105",
+              "N": "129#pyPEMsWuugqXyISEmzf-Pix8uR-GeVRU9ohVWU43rUk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#irgMHAjf-rgT_X_Sx6GJC_Vdx6CpE10qjld6XNmXr6o",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#twMvO0_U4jiV9Cz2MRHHTfKU_D0peyogXAW0RbCDhZU",
+        "G": 0,
+        "P": 408,
+        "place": 82,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "19/09/2025 09:00:00"
+        },
+        "CouleurFond": "#E0E5A4",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ANGLAIS LV1",
+              "N": "79#KB0EoHb5oNZz30VKvkm4GGo8vR3w8NkD2kRpD3rfDmM",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "BROWN J."
+            },
+            {
+              "L": "102",
+              "N": "129#jMW0XOBv_DLTnVYLrnbDBkIRb2VVOQMi-kid479wo14",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#1y1WuozKpcSHLr66g0lOeANF2NyDY_WX5hyNJ_85_cE",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#g0qQO5_fl00lR_9ds_sGb37aNaUDl4IUEkAeYYCwPF0",
+        "G": 0,
+        "P": 413,
+        "place": 44,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "17/09/2025 10:00:00"
+        },
+        "CouleurFond": "#2338BB",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "FRANCAIS",
+              "N": "79#0NQbPyF4b4cz7RvXpD4KO0xCyVcfd5V5AGizaVB_Tks",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "GALLET B."
+            },
+            {
+              "L": "105",
+              "N": "129#pyPEMsWuugqXyISEmzf-Pix8uR-GeVRU9ohVWU43rUk",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#2A5S3BNif4OSvaA_Bf-eQOCmRTwlx1CDd6Ps9UEeQpc",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#Q18xY8szWWFIiMcdQ0hp0aVQ_jIpTUkfL0fp1EJVqj0",
+        "G": 0,
+        "P": 409,
+        "place": 13,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 14:30:00"
+        },
+        "CouleurFond": "#E0E5A4",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ANGLAIS LV1",
+              "N": "79#KB0EoHb5oNZz30VKvkm4GGo8vR3w8NkD2kRpD3rfDmM",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "BROWN J."
+            },
+            {
+              "L": "103",
+              "N": "129#k-x-brja8KZuj2zQco7lfYZcOzhEf3TpainmYAc5E0g",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#mASVfJtI1VZaiwUAcGR8AaW6bKkjuYANdH3mgsJR9qM",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#9ZuFtfHv4ANhTWqCTzTXpC_rb59aokoSrQMeeLOR4PI",
+        "G": 0,
+        "P": 443,
+        "place": 11,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 13:30:00"
+        },
+        "CouleurFond": "#050347",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "SCIENCES DE LA VIE ET DE LA TERRE",
+              "N": "79#RDhaXO3U7K9_I92FDVzFyBX_s8SxOpTZ1k0en8yDsrI",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "TESSIER A."
+            },
+            {
+              "L": "Labo 2",
+              "N": "129#p57FVsN2SCUe1db2Mw3nu_nJR2AWYhpdQ9Vw7AmmqJU",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#iBQAILsUW97lxhQYZkZ30MtDgLIpd4GuGVUXjo-5Ub4",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#UimVM4Xgf6HSsaBxRUYw8eVAyOvEMXszwP0IuNyVUEk",
+        "G": 0,
+        "P": 416,
+        "place": 4,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 10:00:00"
+        },
+        "CouleurFond": "#2BD5F3",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "HISTOIRE-GÉOGRAPHIE",
+              "N": "79#z6PbZ1qnv1j7KPTOz3JJitSY34G_8xLL4_-SoRiLk-c",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "MOREAU C."
+            },
+            {
+              "L": "206",
+              "N": "129#GcxYDB1VuABB0vJ1dD8J6qjE_NLsyw8zwXwtqm3Y1a0",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#WAMBD_AZAjF4RrwAPXpnRi7dFepqwBiMTgFxNKut3Jw",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#2GDIF6qi3wc-a_bIoeukKsbYyK74ufcFvknJqR6LpEo",
+        "G": 0,
+        "P": 417,
+        "place": 24,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "16/09/2025 10:00:00"
+        },
+        "CouleurFond": "#FF8040",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "MATHÉMATIQUES",
+              "N": "79#4EDPYtKbwwg7rsJqLwk9SzFB3FCGcC7t-0hoTVJXHww",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "PROFESSEUR M."
+            },
+            {
+              "L": "207",
+              "N": "129#jsSsgofXB_QODR0_6pD9sFD97XkFRlYfLKi351iIjAc",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#La4znUYiIQa-GVzVmPAx-82_S7dOKKnS0B5ljQOooAE",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#GE-b8nSt9T4tmqGNUbA78fUMsTQXacOwtayFTXI1Z5M",
+        "G": 0,
+        "P": 424,
+        "place": 15,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "15/09/2025 15:30:00"
+        },
+        "CouleurFond": "#80FF00",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ÉDUCATION PHYSIQUE ET SPORTIVE",
+              "N": "79#CPJOnO-LSzyvvWOwYlkAeV0gu8rGHaMfNEv784S0wmU",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "ROUX N."
+            },
+            {
+              "L": "Piscine municipale",
+              "N": "129#7sqpWhbMfPnuz5APzCvbELANSS8mv7fon4_wo73mvos",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#HNpfgnBV7td_MRuy4cdnHR1jE6vamaAB19K_VAs-0vY",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#FecK7xLtVjT0xHHTMHomRx0666j8eCjDHxMXJ3a7pvU",
+        "G": 0,
+        "P": 425,
+        "place": 84,
+        "duree": 4,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "19/09/2025 10:00:00"
+        },
+        "CouleurFond": "#80FF00",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ÉDUCATION PHYSIQUE ET SPORTIVE",
+              "N": "79#CPJOnO-LSzyvvWOwYlkAeV0gu8rGHaMfNEv784S0wmU",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "ROUX N."
+            },
+            {
+              "L": "Piscine municipale",
+              "N": "129#7sqpWhbMfPnuz5APzCvbELANSS8mv7fon4_wo73mvos",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#TCfRWCtBD31_1qKR8TG5cNyirshtx-1YhX9Q0qjbUdg",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#MssONrpuTzRVrpwA8XOIhZS9oDZd3pO9PVkYamR6pEY",
+        "G": 0,
+        "P": 432,
+        "place": 91,
+        "duree": 4,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "19/09/2025 13:30:00"
+        },
+        "CouleurFond": "#BC7B90",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "EPI (big data)",
+              "N": "79#RtGnuAbqecE2qmh7_yCNBsF1Drlo5pZpx5BLPQNxzuY",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "TESSIER A."
+            },
+            {
+              "L": "Labo 2",
+              "N": "129#p57FVsN2SCUe1db2Mw3nu_nJR2AWYhpdQ9Vw7AmmqJU",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#NrZKSnbwHi062bSKAnZ6YkxFjuTor-TXPk99p-HHios",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      },
+      {
+        "N": "29#2Gn_-0SdbVR_KhQAd7qPNr81iQps8S8JrhXnkkDhsvI",
+        "G": 0,
+        "P": 407,
+        "Statut": "Prof./pers. absent",
+        "estAnnule": true,
+        "place": 33,
+        "duree": 2,
+        "DateDuCours": {
+          "_T": 7,
+          "V": "16/09/2025 14:30:00"
+        },
+        "CouleurFond": "#E0E5A4",
+        "ListeContenus": {
+          "_T": 24,
+          "V": [
+            {
+              "L": "ANGLAIS LV1",
+              "N": "79#KB0EoHb5oNZz30VKvkm4GGo8vR3w8NkD2kRpD3rfDmM",
+              "G": 16
+            },
+            {
+              "G": 3,
+              "L": "BROWN J."
+            },
+            {
+              "L": "103",
+              "N": "129#k-x-brja8KZuj2zQco7lfYZcOzhEf3TpainmYAc5E0g",
+              "G": 17
+            }
+          ]
+        },
+        "AvecTafPublie": false,
+        "cahierDeTextes": {
+          "_T": 24,
+          "V": {
+            "N": "18#40h2aXptUVZqiElr_FNRwBMPT1zTRgRtjK-eLUnzi2M",
+            "originesCategorie": {
+              "_T": 24,
+              "V": []
+            }
+          }
+        },
+        "AvecCdT": true
+      }
+    ],
+    "premierePlaceHebdoDuJour": 80,
+    "debutDemiPensionHebdo": 88,
+    "finDemiPensionHebdo": 91,
+    "absences": {
+      "joursCycle": {
+        "_T": 24,
+        "V": [
+          {
+            "jourCycle": 0,
+            "numeroSemaine": 3,
+            "DP": {
+              "midi": {
+                "icone": {
+                  "text": "",
+                  "check": true
+                },
+                "hint": "L'élève était présent au repas de midi"
+              }
+            }
+          },
+          {
+            "jourCycle": 1,
+            "numeroSemaine": 3,
+            "DP": {
+              "midi": {
+                "icone": {
+                  "text": "",
+                  "check": true
+                },
+                "hint": "L'élève était présent au repas de midi"
+              }
+            }
+          },
+          {
+            "jourCycle": 2,
+            "numeroSemaine": 3,
+            "DP": {
+              "midi": {
+                "icone": {
+                  "text": "",
+                  "check": true
+                },
+                "hint": "L'élève était présent au repas de midi"
+              }
+            }
+          },
+          {
+            "jourCycle": 3,
+            "numeroSemaine": 3,
+            "DP": {
+              "midi": {
+                "icone": {
+                  "text": "",
+                  "check": true
+                },
+                "hint": "L'élève était présent au repas de midi"
+              }
+            }
+          },
+          {
+            "jourCycle": 4,
+            "numeroSemaine": 3,
+            "DP": {
+              "midi": {
+                "icone": {
+                  "text": "",
+                  "check": true
+                },
+                "hint": "L'élève était présent au repas de midi"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "recreations": {
+      "_T": 24,
+      "V": [
+        {
+          "L": "Récréation du matin",
+          "place": 4
+        }
+      ]
+    }
+  },
+  "nom": "PageEmploiDuTemps"
+}
