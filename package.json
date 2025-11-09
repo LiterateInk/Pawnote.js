@@ -22,7 +22,7 @@
   },
   "scripts": {
     "example": "bun --env-file examples-new/.env",
-    "build": "tsup"
+    "build": "bunup"
   },
   "files": [
     "dist"
@@ -46,11 +46,10 @@
     "@types/node-forge": "^1.3.11",
     "@types/pako": "^2.0.3",
     "@typescript-eslint/parser": "^8.4.0",
+    "bunup": "^0.15.14",
     "dotenv": "^16.4.5",
     "eslint": "^9.10.0",
-    "terser": "^5.31.6",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@literate.ink/utilities": "1.0.0-10641118381.1",
