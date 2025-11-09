@@ -4,13 +4,12 @@
 
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "~/*": ["./src/*"],
+      "~/*": ["./src-new/*"],
       "@!/*": ["./tests/*"],
-      "pawnote": ["./src/index.ts"]
+      "pawnote": ["./src-new/index.ts"]
     },
 
     "strict": true,
@@ -23,6 +22,6 @@
     "skipLibCheck": true,
   },
 
-  "include": ["src", "src-new", "examples", "examples-new", "tests", "eslint.config.ts", "tsup.config.ts"],
+  "include": ["src-new", "examples-new", "tests"],
   "exclude": ["node_modules", "dist"]
 }

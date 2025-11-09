@@ -1,4 +1,4 @@
-import { Instance, StudentLoginPortal } from "../../src-new";
+import { Instance, StudentLoginPortal } from "pawnote";
 
 const instance = Instance.fromURL(Bun.env.URL!);
 const portal = new StudentLoginPortal(instance);
