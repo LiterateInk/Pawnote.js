@@ -54,7 +54,7 @@ export class PeriodeDemiPension {
 }
 
 export class DemiPension {
-  public midi = t.reference(PeriodeDemiPension);
+  public midi = t.option(t.reference(PeriodeDemiPension));
 }
 
 export class JourCycle {
