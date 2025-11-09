@@ -1,6 +1,6 @@
-import { Session } from "src-new/models";
-import { RequestFunction } from "src-new/models/RequestFunction";
-import { ResponseFunction, ResponseFunctionWrapper } from "src-new/models/ResponseFunction";
+import { Session } from "~/models";
+import { RequestFunction } from "~/models/RequestFunction";
+import { ResponseFunction, ResponseFunctionWrapper } from "~/models/ResponseFunction";
 import { ParametresUtilisateurRequest } from "./request";
 import { ParametresUtilisateurModel, ParametresUtilisateurSignature } from "./response";
 

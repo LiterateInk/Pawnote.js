@@ -1,4 +1,4 @@
-import { PageEmploiDuTempsResponse } from "src-new/api/PageEmploiDuTemps";
+import { PageEmploiDuTempsResponse } from "~/api/PageEmploiDuTemps";
 
 export class Timetable {
   public constructor(private _raw: PageEmploiDuTempsResponse) {}

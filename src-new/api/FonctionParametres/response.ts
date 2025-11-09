@@ -1,5 +1,5 @@
 import { deserializeWith, rename, t } from "desero";
-import { Version } from "src-new/models/Version";
+import { Version } from "~/models/Version";
 import { TypeHttpElement } from "../HttpVariables/TypeHttpElement";
 import { Police } from "../models/Police";
 import { TypeHttpChaineBrute } from "../HttpVariables/TypeHttpChaineBrute";

@@ -1,6 +1,6 @@
 import parents_1 from "./parents_1.json";
 
-import { PageEmploiDuTempsModel } from "../../../src-new/api/PageEmploiDuTemps/response";
+import { PageEmploiDuTempsModel } from "~/api/PageEmploiDuTemps/response";
 import { describe, it } from "bun:test";
 import { deserialize } from "desero";
 

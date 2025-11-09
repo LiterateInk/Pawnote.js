@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { TypeHttpDomaine } from "../../src-new/api/HttpVariables/TypeHttpDomaine";
+import { TypeHttpDomaine } from "~/api/HttpVariables/TypeHttpDomaine";
 
 describe("TypeHttpDomaine", () => {
   it("should create a new domain", () => {

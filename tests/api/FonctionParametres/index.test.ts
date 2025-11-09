@@ -1,7 +1,7 @@
 import students_1 from "./students_1.json";
 import parents_1 from "./parents_1.json";
 
-import { FonctionParametresModel } from "../../../src-new/api/FonctionParametres/response";
+import { FonctionParametresModel } from "~/api/FonctionParametres/response";
 import { describe, it } from "bun:test";
 import { deserialize } from "desero";
 

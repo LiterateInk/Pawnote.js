@@ -1,6 +1,6 @@
 import { deserialize } from "desero";
 import { HeaderKeys, HttpRequest, send } from "schwi";
-import { UA } from "src-new/core/user-agent";
+import { UA } from "~/core/user-agent";
 import { InstanceInformation } from "./InstanceInformation";
 
 /**

@@ -1,7 +1,7 @@
 import instanceinformation from "@!/instanceinformation.json";
 import { describe, expect, it } from "bun:test";
 import { deserialize } from "desero";
-import { InstanceInformation } from "src-new";
+import { InstanceInformation } from "pawnote";
 
 describe("InstanceInformation", () => {
   it("should deserialize global metadata correctly", () => {

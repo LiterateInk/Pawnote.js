@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { Instance } from "src-new";
+import { Instance } from "pawnote";
 
 describe("Instance.base", () => {
   it("should convert webspace to base", () => {

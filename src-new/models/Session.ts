@@ -13,7 +13,6 @@ export class Session {
   public readonly aes: SessionAES;
   public readonly api: SessionAPI;
 
-  /** @internal */
   public constructor(
     public readonly instance: InstanceInformation,
     public readonly homepage: HomepageSession,

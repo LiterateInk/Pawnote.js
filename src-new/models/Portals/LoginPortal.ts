@@ -20,10 +20,13 @@ import { deserialize } from "desero";
 import { HomepageSession } from "../HomepageSession";
 
 export abstract class LoginPortal {
+  /** @internal */
   protected constructor (
+    /** @internal */
     protected readonly _instance: Instance
   ) {}
 
+  /** @internal */
   protected async _credentials(
     webspace: Webspace,
     username: string,
@@ -72,6 +75,7 @@ export abstract class LoginPortal {
     );
   }
 
+  /** @internal */
   protected async _token(
     webspace: Webspace,
     username: string,
@@ -112,6 +116,7 @@ export abstract class LoginPortal {
     );
   }
 
+  /** @internal */
   protected async _finish(login: PendingLogin): Promise<UserParameters> {
     if (login.shouldCustomDoubleAuthMode || login.shouldCustomPassword || login.shouldEnterPin || login.shouldRegisterSource) {
       const token = await new SecurisationCompteDoubleAuth(login._session)
@@ -123,6 +128,7 @@ export abstract class LoginPortal {
     return new UserParameters(await new ParametresUtilisateur(login._session).send());
   }
 
+  /** @internal */
   private async _getWebspaceHomepageSession(webspace: Webspace, cookies: Record<string, string> = {}): Promise<HomepageSession> {
     const params = new URLSearchParams();
 

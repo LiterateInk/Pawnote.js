@@ -3,7 +3,7 @@ import { AuthentificationResponse } from "../api/Authentification";
 import { Session } from "./Session";
 import { TypeActionIHMSecurisationCompte } from "../api/models/TypeActionIHMSecurisationCompte";
 import { PasswordRules } from "./PasswordRules";
-import { TypeModeGestionDoubleAuthentification } from "src-new/api/models/TypeModeGestionDoubleAuthentification";
+import { TypeModeGestionDoubleAuthentification } from "~/api/models/TypeModeGestionDoubleAuthentification";
 
 export class Authentication {
   public readonly password: PasswordRules;

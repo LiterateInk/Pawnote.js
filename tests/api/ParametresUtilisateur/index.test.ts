@@ -2,7 +2,7 @@ import students_1 from "./students_1.json";
 import parents_1 from "./parents_1.json";
 import parents_2 from "./parents_2.json";
 
-import { ParametresUtilisateurModel } from "../../../src-new/api/ParametresUtilisateur/response";
+import { ParametresUtilisateurModel } from "~/api/ParametresUtilisateur/response";
 import { describe, it } from "bun:test";
 import { deserialize } from "desero";
 

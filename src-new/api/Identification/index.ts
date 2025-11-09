@@ -1,6 +1,6 @@
-import { ResponseFunction, ResponseFunctionWrapper } from "src-new/models/ResponseFunction";
-import { RequestFunction } from "../../models/RequestFunction";
-import { Session } from "src-new/models";
+import { ResponseFunction, ResponseFunctionWrapper } from "~/models/ResponseFunction";
+import { RequestFunction } from "~/models/RequestFunction";
+import { Session } from "~/models/Session";
 import { IdentificationRequest } from "./request";
 import { IdentificationModel } from "./response";
 

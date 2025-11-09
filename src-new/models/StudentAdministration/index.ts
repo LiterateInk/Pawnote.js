@@ -1,4 +1,4 @@
-import { PageEmploiDuTemps } from "src-new/api/PageEmploiDuTemps";
+import { PageEmploiDuTemps } from "~/api/PageEmploiDuTemps";
 import { Child } from "../Users/Parent";
 import { User } from "../Users/User";
 import { Student } from "../Users/Student";

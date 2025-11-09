@@ -1,10 +1,10 @@
-import { Student } from "src-new/models";
+import { Student } from "~/models";
 import { RequestFunction } from "../../models/RequestFunction";
 import { ResponseFunction, ResponseFunctionWrapper } from "../../models/ResponseFunction";
 import { Session } from "../../models/Session";
 import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
 import type { PageEmploiDuTempsRequestData, PageEmploiDuTempsRequestSignature, RequestDataIntervals, RequestDataResource, RequestDataWeekNumber } from "./request";
-import { Child } from "src-new/models/Users/Parent";
+import { Child } from "~/models/Users/Parent";
 import { PageEmploiDuTempsModel } from "./response";
 
 export type PageEmploiDuTempsResponse = ResponseFunctionWrapper<PageEmploiDuTempsModel>;

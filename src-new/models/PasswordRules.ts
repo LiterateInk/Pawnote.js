@@ -1,5 +1,5 @@
-import { ReglesSaisieMDP } from "src-new/api/Authentification/response";
-import { TypeOptionGenerationMotDePasse } from "src-new/api/models/TypeOptionGenerationMotDePasse";
+import { ReglesSaisieMDP } from "~/api/Authentification/response";
+import { TypeOptionGenerationMotDePasse } from "~/api/models/TypeOptionGenerationMotDePasse";
 
 /**
  * Password rules when the user must change it, either manually or required.

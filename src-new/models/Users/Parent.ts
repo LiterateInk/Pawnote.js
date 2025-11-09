@@ -1,4 +1,4 @@
-import { InnerResource } from "src-new/api/ParametresUtilisateur/response";
+import { InnerResource } from "~/api/ParametresUtilisateur/response";
 import { Authentication } from "../Authentication";
 import { Parameters } from "../Parameters";
 import { Session } from "../Session";
@@ -12,7 +12,6 @@ export class Child {
 
   /** @internal */
   public constructor(
-    /** @internal */
     public readonly parent: Parent,
     private readonly _raw: InnerResource
   ) {
