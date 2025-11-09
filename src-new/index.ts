@@ -1,1 +1,11 @@
-export * from "./models";
+export { Instance } from "./models/Instance";
+export { PendingLogin } from "./models/PendingLogin";
+export { PasswordRules } from "./models/PasswordRules";
+export { LoginPortal } from "./models/Portals/LoginPortal";
+export { ParentLoginPortal } from "./models/Portals/ParentLoginPortal";
+export { StudentLoginPortal } from "./models/Portals/StudentLoginPortal";
+export { Parent, Child } from "./models/Users/Parent";
+export { Student } from "./models/Users/Student";
+export { User } from "./models/Users/User";
+export { StudentAdministration } from "./models/StudentAdministration";
+export { Timetable } from "./models/StudentAdministration/Timetable";
