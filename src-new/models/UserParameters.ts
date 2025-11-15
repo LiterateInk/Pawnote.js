@@ -3,10 +3,10 @@ import { Ressource } from "../api/ParametresUtilisateur/response";
 
 export class UserParameters {
   public constructor(
-    private readonly _raw: ParametresUtilisateurResponse
+    private readonly user: ParametresUtilisateurResponse
   ) {}
 
-  public get ressource(): Ressource {
-    return this._raw.data.resource;
+  public get resource(): Ressource {
+    return this.user.data.resource;
   }
 }

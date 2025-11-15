@@ -3,22 +3,19 @@ import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
 
 export class Periode {
   @rename("L")
-  public label = t.string();
+  public l = t.string();
 
   @rename("N")
-  public id = t.string();
+  public n = t.string();
 
   @rename("G")
-  public kind = t.number();
+  public g = t.number();
 
-  @rename("periodeNotation")
-  public gradingPeriod = t.number();
+  public periodeNotation = t.number();
 
-  @rename("dateDebut")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public startDate = t.instance(Date);
+  public dateDebut = t.instance(Date);
 
-  @rename("dateFin")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public endDate = t.instance(Date);
+  public dateFin = t.instance(Date);
 }

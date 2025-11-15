@@ -287,36 +287,34 @@ export class InnerResource {
 
 export class Ressource {
   @rename("L")
-  public name = t.string();
+  public l = t.string();
 
   @rename("N")
-  public id = t.string();
+  public n = t.string();
 
   @rename("G")
-  public kind = t.number();
+  public g = t.number();
 
-  @rename("listeRessources")
-  public inner = t.option(t.array(t.reference(InnerResource)));
+  public listeRessources = t.option(t.array(t.reference(InnerResource)));
 
   @rename("P")
-  public position = t.option(t.number());
+  public p = t.option(t.number());
 
   @rename("Etablissement")
   @deserializeWith(new TypeHttpElement(Etablissement).single)
-  public school = t.option(t.reference(Etablissement));
+  public etablissement = t.option(t.reference(Etablissement));
 
   @rename("classeDEleve")
-  public studentClass = t.option(t.reference(ClasseEleve));
+  public classeEleve = t.option(t.reference(ClasseEleve));
 
-  public estClasseRattachementduJour = t.option(t.boolean());
+  @rename("estClasseRattachementduJour")
+  public estClasseRattachementDuJour = t.option(t.boolean());
 
-  @rename("listeClassesHistoriques")
   @deserializeWith(new TypeHttpElement(Etablissement).array)
-  public studentClassesHistory = t.option(t.array(t.reference(Etablissement)));
+  public listeClassesHistoriques = t.option(t.array(t.reference(Etablissement)));
 
-  @rename("listeGroupes")
   @deserializeWith(new TypeHttpElement(Groupe).array)
-  public groups = t.option(t.array(t.reference(Groupe)));
+  public listeGroupes = t.option(t.array(t.reference(Groupe)));
 
   @deserializeWith(new TypeHttpElement(OngletPourPilier).array)
   public listeOngletsPourPiliers = t.option(t.array(t.reference(OngletPourPilier)));

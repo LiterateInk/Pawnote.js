@@ -16,7 +16,11 @@ import { Periode } from "../models/Periode";
 import { Recreation } from "../models/Recreation";
 import { Collectivite } from "../models/Collectivite";
 
-class General {
+export class JourFerie {
+  // TODO
+}
+
+export class General {
   @rename("urlSiteIndexEducation")
   @deserializeWith(TypeHttpChaineBrute.deserializer)
   public indexEducationUrl = t.string();
@@ -111,21 +115,21 @@ class General {
 
   @rename("PremierLundi")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public firstMondayDate = t.instance(Date);
+  public premierLundi = t.instance(Date);
 
   @rename("PremiereDate")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public firstDate = t.instance(Date);
+  public premiereDate = t.instance(Date);
 
   @rename("DerniereDate")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public lastDate = t.instance(Date);
+  public derniereDate = t.instance(Date);
 
   @rename("PlacesParJour")
-  public slotsPerDay = t.number();
+  public placesParJour = t.number();
 
   @rename("PlacesParHeure")
-  public slotsPerHour = t.number();
+  public placesParHeure = t.number();
 
   @rename("DureeSequence")
   public sequenceDuration = t.number();
@@ -153,7 +157,7 @@ class General {
 
   @rename("JourOuvre")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public openingDate = t.instance(Date);
+  public jourOuvre = t.instance(Date);
 
   @rename("JoursOuvres")
   @deserializeWith(TypeHttpEnsembleCardinal.deserializer)
@@ -191,10 +195,10 @@ class General {
 
   @rename("DomainesFrequences")
   @deserializeWith((value: Array<Domaine>) => value.map(TypeHttpDomaine.deserializer))
-  public frequenciesDomains = t.array(t.array(t.number()));
+  public domainesFrequences = t.array(t.array(t.number()));
 
   @rename("LibellesFrequences")
-  public frequenciesLabels = t.array(t.string());
+  public libellesFrequences = t.array(t.string());
 
   @rename("BaremeNotation")
   @deserializeWith(TypeHttpNote.deserializer)
@@ -301,7 +305,8 @@ class General {
   public maxCommentLength = t.array(t.number());
 
   // TODO: find test data for this!
-  // public listeJoursFeries = t.array();
+  @deserializeWith(new TypeHttpElement(JourFerie).array)
+  public listeJoursFeries = t.array(t.reference(JourFerie));
 
   public afficherSequences = t.boolean();
 
@@ -315,7 +320,7 @@ class General {
 
   @rename("ListeHeuresFin")
   @deserializeWith(new TypeHttpElement(Heure).array)
-  public endingHours = t.array(t.reference(Heure));
+  public listeHeuresFin = t.array(t.reference(Heure));
 
   @rename("ListeHeuresFinPourVS")
   @deserializeWith(new TypeHttpElement(Heure).array)
@@ -324,7 +329,7 @@ class General {
   public sequences = t.array(t.string());
 
   @rename("ListePeriodes")
-  public periods = t.array(t.reference(Periode));
+  public listePeriodes = t.array(t.reference(Periode));
 
   // TODO: `urlLogo` (23)
 
@@ -347,6 +352,8 @@ class General {
   @rename("Collectivite")
   public localAuthority = t.reference(Collectivite);
 }
+
+
 
 export class FonctionParametresModel {
   @rename("identifiantNav")

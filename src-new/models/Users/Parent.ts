@@ -13,21 +13,21 @@ export class Child {
   /** @internal */
   public constructor(
     public readonly parent: Parent,
-    private readonly _raw: InnerResource
+    private readonly inner: InnerResource
   ) {
     this.administration = new StudentAdministration(parent, this);
   }
 
   public get id(): string {
-    return this._raw.id;
+    return this.inner.id;
   }
 
   public get name(): string {
-    return this._raw.name;
+    return this.inner.name;
   }
 
   public get kind(): number {
-    return this._raw.kind;
+    return this.inner.kind;
   }
 }
 
@@ -42,6 +42,6 @@ export class Parent extends User {
     authentication: Authentication
   ) {
     super(user, session, parameters, authentication);
-    this.children = this.user.ressource.inner!.map((item) => new Child(this, item));
+    this.children = this.user.resource.listeRessources!.map((item) => new Child(this, item));
   }
 }

@@ -10,16 +10,16 @@ export class Authentication {
   public token: string;
 
   public constructor(
-    private readonly _raw: AuthentificationResponse,
+    private readonly auth: AuthentificationResponse,
     public readonly username: string,
     public readonly uuid: string
   ) {
-    this.password = new PasswordRules(_raw.data.passwordRules);
-    this.token = _raw.data.token;
+    this.password = new PasswordRules(auth.data.passwordRules);
+    this.token = auth.data.token;
   }
 
   public get securityActions(): TypeActionIHMSecurisationCompte[] {
-    return this._raw.data.securityActions ?? [];
+    return this.auth.data.securityActions ?? [];
   }
 
   public get hasSecurityActions(): boolean {
@@ -27,13 +27,13 @@ export class Authentication {
   }
 
   public get modes(): TypeModeGestionDoubleAuthentification[] {
-    return this._raw.data.availableSecurityModes ?? [];
+    return this.auth.data.availableSecurityModes ?? [];
   }
 
   public switchDefinitiveKey(session: Session, key: Uint8Array): void {
     session.aes.key = key; // temp switch key
 
-    const decrypted = bytesToUtf8(session.aes.decrypt(hexToBytes(this._raw.data.key)));
+    const decrypted = bytesToUtf8(session.aes.decrypt(hexToBytes(this.auth.data.key)));
     session.aes.key = new Uint8Array(
       decrypted.split(",").map(Number)
     );
