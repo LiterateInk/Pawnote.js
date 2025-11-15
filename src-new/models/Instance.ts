@@ -1,7 +1,8 @@
 import { deserialize } from "desero";
-import { HeaderKeys, HttpRequest, send } from "schwi";
+import { HeaderKeys, HttpRequest, HttpRequestMethod, send } from "schwi";
 import { UA } from "~/core/user-agent";
 import { InstanceInformation } from "./InstanceInformation";
+import { GeolocalisationValeur, GeolocatedInstance } from "./GeolocatedInstance";
 
 /**
  * @example
@@ -59,5 +60,51 @@ export class Instance {
     const json = await response.toJSON();
 
     return deserialize(InstanceInformation, json);
+  }
+
+  /**
+   * Search for instances in a 20km radius from the given position.
+   */
+  public static async findNear(
+    latitude: number, longitude: number
+  ): Promise<Array<GeolocatedInstance>> {
+    const body = new URLSearchParams();
+    body.set("data", JSON.stringify({
+      nomFonction: "geoLoc",
+      lat: latitude.toString(),
+      long: longitude.toString()
+    }));
+
+    const request = new HttpRequest.Builder("https://www.index-education.com/swie/geoloc.php")
+      .setMethod(HttpRequestMethod.POST)
+      .setFormUrlEncodedBody(body)
+      .build();
+
+    const response = await send(request);
+    const json = await response.toJSON();
+
+    if (!Array.isArray(json)) return [];
+
+    const instances = json.map(
+      (instance) => new GeolocatedInstance(
+        deserialize(GeolocalisationValeur, instance),
+        latitude,
+        longitude
+      )
+    );
+
+    // Apply PRONOTE sorting they use in their mobile app.
+    instances.sort((a, b) => a.distance > b.distance
+      ? 1
+      : a.distance < b.distance
+        ? -1
+        : a.name > b.name
+          ? 1
+          : a.name < b.name
+            ? -1
+            : 0
+    );
+
+    return instances;
   }
 }

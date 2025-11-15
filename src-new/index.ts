@@ -1,4 +1,5 @@
 export { Instance } from "./models/Instance";
+export { GeolocatedInstance } from "./models/GeolocatedInstance";
 export { PendingLogin } from "./models/PendingLogin";
 export { PasswordRules } from "./models/PasswordRules";
 export { LoginPortal } from "./models/Portals/LoginPortal";
