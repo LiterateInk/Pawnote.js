@@ -1,0 +1,212 @@
+{
+    "data": {
+        "jourCycleSelectionne": 0,
+        "avecCoursAnnule": true,
+        "placeCourante": 19,
+        "prefsGrille": {
+            "genreRessource": 4
+        },
+        "ListeCours": [
+            {
+                "N": "29#86dIThCr6rUije7ffUcGkMmDlSVHQH-6sdVhDp6EI7c",
+                "G": 0,
+                "P": 132,
+                "place": 11,
+                "duree": 2,
+                "DateDuCours": {
+                    "_T": 7,
+                    "V": "17/11/2025 13:30:00"
+                },
+                "CouleurFond": "#2338BB",
+                "ListeContenus": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "L": "FRANCAIS",
+                            "N": "79#nKdqV3GXON2TM_U4U2cUW1ztFaj94LQDda7M8OIc7GM",
+                            "G": 16
+                        },
+                        {
+                            "G": 3,
+                            "L": "GALLET B."
+                        }
+                    ]
+                },
+                "AvecTafPublie": false
+            },
+            {
+                "N": "29#pxTrI0YFaHeJjaYbwBLE7-aIlQCBJToX98bSm9JFjUE",
+                "G": 0,
+                "P": 135,
+                "place": 13,
+                "duree": 2,
+                "DateDuCours": {
+                    "_T": 7,
+                    "V": "17/11/2025 14:30:00"
+                },
+                "CouleurFond": "#2BD5F3",
+                "ListeContenus": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "L": "HISTOIRE-G\u00C9OGRAPHIE",
+                            "N": "79#Xfk4CID_T26E2D08tJKyxYABJGu7zbv8xfYR9vorOL8",
+                            "G": 16
+                        },
+                        {
+                            "G": 3,
+                            "L": "JOLY A."
+                        },
+                        {
+                            "L": "109",
+                            "N": "129#CHQzOQb5o0mcBLlsWOOGyEu5b7RiKKYcGzVQ8jYYMD0",
+                            "G": 17
+                        }
+                    ]
+                },
+                "AvecTafPublie": false
+            },
+            {
+                "N": "29#sBdM0Tgh4wfMR6TDwMNX63K-SEK6aKinyg6Cs_rSrF4",
+                "G": 0,
+                "P": 125,
+                "place": 15,
+                "duree": 2,
+                "DateDuCours": {
+                    "_T": 7,
+                    "V": "17/11/2025 15:30:00"
+                },
+                "CouleurFond": "#173ED9",
+                "ListeContenus": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "L": "ARTS PLASTIQUES",
+                            "N": "79#Y7-YyYjvXKEWAGgAOL-rqedGKemR887h6BQdgRp_zIA",
+                            "G": 16
+                        },
+                        {
+                            "G": 3,
+                            "L": "DIALO H."
+                        },
+                        {
+                            "L": "205",
+                            "N": "129#89RB_7AgfKkCK5GLipHJPoBu-FIVorxpgu48MfLZ-cI",
+                            "G": 17
+                        }
+                    ]
+                },
+                "AvecTafPublie": false
+            },
+            {
+                "N": "29#FcMoU_hBpdTOAhDB8PQxfigAjErPGWAaUU1TphS5L9A",
+                "G": 0,
+                "P": 137,
+                "place": 4,
+                "duree": 4,
+                "DateDuCours": {
+                    "_T": 7,
+                    "V": "17/11/2025 10:00:00"
+                },
+                "CouleurFond": "#FF8040",
+                "ListeContenus": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "L": "MATH\u00C9MATIQUES",
+                            "N": "79#nXZtigXG0JPz9Bav0HchBZLblMFO53zqW-CJLctOP-E",
+                            "G": 16
+                        },
+                        {
+                            "G": 3,
+                            "L": "DALIAOUI K."
+                        }
+                    ]
+                },
+                "AvecTafPublie": false
+            },
+            {
+                "N": "29#wlIYWswEBjvdzEX5jf-zDp_e5C_8Ztljk8ODdPPkHDs",
+                "G": 0,
+                "P": 123,
+                "place": 2,
+                "duree": 2,
+                "DateDuCours": {
+                    "_T": 7,
+                    "V": "17/11/2025 09:00:00"
+                },
+                "CouleurFond": "#E0E5A4",
+                "ListeContenus": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "L": "ANGLAIS LV1",
+                            "N": "79#fUboKN2XHIO5oe5Dntce66riBGWwZOOeuiFEuiEnB8o",
+                            "G": 16
+                        },
+                        {
+                            "G": 3,
+                            "L": "DOUCET L."
+                        },
+                        {
+                            "L": "104",
+                            "N": "129#UW3YqJx7xRJ8N8l2ROfbaK-SAekrTxw5FeVLwJvDTE8",
+                            "G": 17
+                        }
+                    ]
+                },
+                "AvecTafPublie": false,
+                "cahierDeTextes": {
+                    "_T": 24,
+                    "V": {
+                        "N": "18#ztGBIGYmo1xE8PVw8oKfiuTiNzSMhl2ZEgFRsTSSPCE",
+                        "originesCategorie": {
+                            "_T": 24,
+                            "V": []
+                        }
+                    }
+                },
+                "AvecCdT": true
+            }
+        ],
+        "premierePlaceHebdoDuJour": 0,
+        "debutDemiPensionHebdo": 8,
+        "finDemiPensionHebdo": 11,
+        "absences": {
+            "joursCycle": {
+                "_T": 24,
+                "V": [
+                    {
+                        "jourCycle": 0,
+                        "numeroSemaine": 12
+                    },
+                    {
+                        "jourCycle": 1,
+                        "numeroSemaine": 12
+                    },
+                    {
+                        "jourCycle": 2,
+                        "numeroSemaine": 12
+                    },
+                    {
+                        "jourCycle": 3,
+                        "numeroSemaine": 12
+                    },
+                    {
+                        "jourCycle": 4,
+                        "numeroSemaine": 12
+                    }
+                ]
+            }
+        },
+        "recreations": {
+            "_T": 24,
+            "V": [
+                {
+                    "L": "R\u00E9cr\u00E9ation du matin",
+                    "place": 4
+                }
+            ]
+        }
+    }
+}
