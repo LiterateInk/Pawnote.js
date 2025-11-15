@@ -1,40 +1,101 @@
 import { deserializeWith, rename, t } from "desero";
 import { TypeHttpElement } from "../HttpVariables/TypeHttpElement";
 import { TypeHttpDateTime } from "../HttpVariables/TypeHttpDateTime";
+import { TypeOrigineCreationCategorieCahierDeTexte } from "../models/TypeOrigineCreationCategorieCahierDeTexte";
+import { TypeHttpChaineBrute } from "../HttpVariables/TypeHttpChaineBrute";
 
 export class Contenu {
   @rename("L")
-  public name = t.string();
+  public l = t.string();
   @rename("N")
-  public id = t.option(t.string());
+  public n = t.option(t.string());
   @rename("G")
-  public kind = t.number();
+  public g = t.option(t.number());
+
+  public estHoraire = t.option(t.boolean());
+  public estServiceGroupe = t.option(t.boolean());
+}
+
+export class OrigineCategorie {
+  @rename("G")
+  public g = t.enum(TypeOrigineCreationCategorieCahierDeTexte);
+  @rename("L")
+  public l = t.string();
+  public libelleIcone = t.string();
 }
 
 export class CahierDeTextes {
   @rename("N")
-  public id = t.string();
-  // TODO: originesCategorie
+  public n = t.string();
+  public estDevoir = t.option(t.boolean());
+  @deserializeWith(new TypeHttpElement(OrigineCategorie).array)
+  public originesCategorie = t.array(t.reference(OrigineCategorie));
+}
+
+export class Visio {
+  @rename("N")
+  public n = t.string();
+  @deserializeWith(TypeHttpChaineBrute.deserializer)
+  public url = t.string();
+  public libelleLien = t.option(t.string());
+  public commentaire = t.option(t.string());
 }
 
 export class Cours {
   @rename("N")
-  public id = t.string();
+  public n = t.string();
+
   @rename("G")
-  public kind = t.number();
-  public P = t.number();
-  @rename("place")
-  public slot = t.number();
-  @rename("duree")
-  public duration = t.number();
+  public g = t.number();
+
+  @rename("P")
+  public p = t.number();
+
+  public place = t.number();
+  public duree = t.number();
+
   @rename("CouleurFond")
-  public color = t.string();
-  public AvecTafPublie = t.boolean();
-  public AvecCdT = t.option(t.boolean());
+  public couleurFond = t.option(t.string());
+
+  @rename("AvecTafPublie")
+  public avecTafPublie = t.boolean();
+
+  @rename("AvecCdT")
+  public avecCdt = t.option(t.boolean());
+  @deserializeWith(new TypeHttpElement(CahierDeTextes).single)
+  public cahierDeTextes = t.option(t.reference(CahierDeTextes));
+
+  @deserializeWith(new TypeHttpElement(Visio).array)
+  public listeVisios = t.option(t.array(t.reference(Visio)));
+
+  @rename("Statut")
+  public statut = t.option(t.string());
+
+  @rename("ListeContenus")
   @deserializeWith(new TypeHttpElement(Contenu).array)
-  public ListeContenus = t.array(t.reference(Contenu));
+  public listeContenus = t.array(t.reference(Contenu));
+
+  @rename("DateDuCours")
   @deserializeWith(TypeHttpDateTime.deserializer)
-  public DateDuCours = t.instance(Date);
+  public dateDuCours = t.instance(Date);
+
+  @rename("DateDuCoursFin")
+  @deserializeWith(TypeHttpDateTime.deserializer)
+  public dateDuCoursFin = t.option(t.instance(Date));
+
+  public estSortiePedagogique = t.option(t.boolean());
+  public estRetenue = t.option(t.boolean());
+  public memo = t.option(t.string());
+
+  // Might be only for lessons.
+  public estAnnule = t.option(t.boolean());
+  public dispenseEleve = t.option(t.boolean());
+
+  // Will always be available for activities.
+  public accompagnateurs = t.option(t.array(t.string()));
+  public strGenreRess = t.option(t.string());
+  public strRess = t.option(t.string());
+  public motif = t.option(t.string());
 }
 
 export class Recreation {
@@ -60,7 +121,8 @@ export class DemiPension {
 export class JourCycle {
   public jourCycle = t.number();
   public numeroSemaine = t.number();
-  public DP = t.reference(DemiPension);
+  @rename("DP")
+  public dp = t.option(t.reference(DemiPension));
 }
 
 export class Absences {
