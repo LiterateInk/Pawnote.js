@@ -7,26 +7,28 @@ import { Timetable } from "./Timetable";
 export class StudentAdministration {
   /** @internal */
   public constructor(
-    private readonly _user: User,
-    private readonly _sub?: Child
+    private readonly user: User,
+    private readonly sub?: Child
   ) {}
 
-  private get _resource(): Student | Child {
-    if (this._user instanceof Student)
-      return this._user;
-    else return this._sub!;
+  private get resource(): Student | Child {
+    if (this.user instanceof Student)
+      return this.user;
+    else return this.sub!;
   }
 
   public async getTimetableFromIntervals(start: Date, end?: Date): Promise<Timetable> {
     return new Timetable(
-      await new PageEmploiDuTemps(this._user.session, this._resource)
+      this.user.parameters,
+      await new PageEmploiDuTemps(this.user.session, this.resource)
         .sendIntervals(start, end)
     );
   }
 
   public async getTimetableFromWeek(week: number): Promise<Timetable> {
     return new Timetable(
-      await new PageEmploiDuTemps(this._user.session, this._resource)
+      this.user.parameters,
+      await new PageEmploiDuTemps(this.user.session, this.resource)
         .sendWeekNumber(week)
     );
   }
