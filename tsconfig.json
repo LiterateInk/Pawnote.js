@@ -8,8 +8,7 @@
     "moduleResolution": "Bundler",
     "paths": {
       "~/*": ["./src-new/*"],
-      "@!/*": ["./tests/*"],
-      "pawnote": ["./src-new/index.ts"]
+      "@!/*": ["./tests/*"]
     },
 
     "strict": true,
