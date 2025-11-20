@@ -26,7 +26,7 @@ bun add pawnote
 
 ## Documentation
 
-You can find documentation with guides at [docs.literate.ink/pawnote](https://docs.literate.ink/pawnote).
+You can find documentation with guides at [pawnote.docs.literate.ink](https://pawnote.docs.literate.ink/).
 
 If it's not enough you can also take a look at the [`examples`](https://github.com/LiterateInk/Pawnote/tree/js/examples) folder in the GitHub repository for inspiration.
 
